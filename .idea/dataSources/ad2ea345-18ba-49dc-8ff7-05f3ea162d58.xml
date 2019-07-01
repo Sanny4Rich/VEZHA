@@ -936,7 +936,7 @@
       <Charset>utf8mb4</Charset>
       <DefaultForCharset>0</DefaultForCharset>
     </collation>
-    <table id="237" parent="2" name="user">
+    <table id="237" parent="2" name="users">
       <Collation>utf8mb4_unicode_ci</Collation>
     </table>
     <column id="238" parent="237" name="id">
@@ -946,10 +946,105 @@
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="239" parent="237" name="PRIMARY">
+    <column id="239" parent="237" name="username">
+      <Position>2</Position>
+      <DataType>varchar(180)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="240" parent="237" name="username_canonical">
+      <Position>3</Position>
+      <DataType>varchar(180)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="241" parent="237" name="email">
+      <Position>4</Position>
+      <DataType>varchar(180)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="242" parent="237" name="email_canonical">
+      <Position>5</Position>
+      <DataType>varchar(180)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="243" parent="237" name="enabled">
+      <Position>6</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="244" parent="237" name="salt">
+      <Position>7</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="245" parent="237" name="password">
+      <Position>8</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="246" parent="237" name="last_login">
+      <Position>9</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="247" parent="237" name="confirmation_token">
+      <Position>10</Position>
+      <DataType>varchar(180)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="248" parent="237" name="password_requested_at">
+      <Position>11</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="249" parent="237" name="roles">
+      <Position>12</Position>
+      <Comment>(DC2Type:array)</Comment>
+      <DataType>longtext|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="250" parent="237" name="name">
+      <Position>13</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="251" parent="237" name="UNIQ_1483A5E992FC23A8">
+      <ColNames>username_canonical</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="252" parent="237" name="UNIQ_1483A5E9A0D96FBF">
+      <ColNames>email_canonical</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <index id="253" parent="237" name="UNIQ_1483A5E9C05FB297">
+      <ColNames>confirmation_token</ColNames>
+      <Unique>1</Unique>
+      <Type>btree</Type>
+    </index>
+    <key id="254" parent="237" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
+    </key>
+    <key id="255" parent="237" name="UNIQ_1483A5E992FC23A8">
+      <ColNames>username_canonical</ColNames>
+      <UnderlyingIndexName>UNIQ_1483A5E992FC23A8</UnderlyingIndexName>
+    </key>
+    <key id="256" parent="237" name="UNIQ_1483A5E9A0D96FBF">
+      <ColNames>email_canonical</ColNames>
+      <UnderlyingIndexName>UNIQ_1483A5E9A0D96FBF</UnderlyingIndexName>
+    </key>
+    <key id="257" parent="237" name="UNIQ_1483A5E9C05FB297">
+      <ColNames>confirmation_token</ColNames>
+      <UnderlyingIndexName>UNIQ_1483A5E9C05FB297</UnderlyingIndexName>
     </key>
   </database-model>
 </dataSource>

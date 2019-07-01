@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -30,6 +31,23 @@ class Products
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $shortDescription;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : true}, nullable=true))
+     */
+    private $isVisible;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : true}, nullable=true))
+     */
+    private $isTop;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : true}, nullable=true))
+     */
+    private $isOnHomePage;
+
+
 
     public function getId(): ?int
     {
@@ -68,6 +86,42 @@ class Products
     public function setShortDescription(string $shortDescription): self
     {
         $this->shortDescription = $shortDescription;
+
+        return $this;
+    }
+
+    public function getIsVisible(): ?bool
+    {
+        return $this->isVisible;
+    }
+
+    public function setIsVisible(bool $isVisible): self
+    {
+        $this->isVisible = $isVisible;
+
+        return $this;
+    }
+
+    public function getIsTop(): ?bool
+    {
+        return $this->isTop;
+    }
+
+    public function setIsTop(bool $isTop): self
+    {
+        $this->isTop = $isTop;
+
+        return $this;
+    }
+
+    public function getIsOnHomePage(): ?bool
+    {
+        return $this->isOnHomePage;
+    }
+
+    public function setIsOnHomePage(bool $isOnHomePage): self
+    {
+        $this->isOnHomePage = $isOnHomePage;
 
         return $this;
     }
