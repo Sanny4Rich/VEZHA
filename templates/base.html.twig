@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="{{ asset('images/favicon/favicon.png') }}">
+        <link rel="apple-touch-icon" href="{{ asset('images/favicon/apple-touch-icon.png') }}">
+        <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/favicon/apple-touch-icon-72x72.png') }}">
+        <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/favicon/apple-touch-icon-114x114.png') }}">
+        <title>Bauhaus - Architecture & Interior HTML Template</title>
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7CPoppins:300,400,500,600,700"
+              rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
+        <link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
+    </head>
+    <body class="body-full-page">
+    <div class="animsition">
+
+        <div class="click-capture"></div>
+
+        <div class="menu">
+            <span class="close-menu icon-cross2 right-boxed"></span>
+            {#<div class="menu-lang right-boxed">#}
+                {#<a href="{{-#}
+                {#path(app.request.get('_route'),#}
+                    {#app.request.get('_route_params')|merge({'_locale' : 'ua'}))#}
+                {#-}}" class="active">UA</a>#}
+                {#<a href="{{-#}
+                {#path(app.request.get('_route'),#}
+                    {#app.request.get('_route_params')|merge({'_locale' : 'ru'}))#}
+                {#-}}">RU</a>#}
+                {#<a href="{{-#}
+                {#path(app.request.get('_route'),#}
+                    {#app.request.get('_route_params')|merge({'_locale' : 'en'}))#}
+                {#-}}">ENG</a>#}
+            {#</div>#}
+            <ul class="menu-list right-boxed">
+                <li class="active">
+                    <a href="{{ path('home_page') }}">Главная</a>
+                </li>
+                <li>
+                    <a href="http://paul-themes.com/html/bauhaus/demo/dark/works.html">Товары</a>
+                    <ul>
+                        <li><a href="works-grid.html">Grid</a></li>
+                        <li><a href="works-masonry.html">Masonry</a></li>
+                        <li><a href="works-carousel.html">Carousel</a></li>
+                        <li><a href="project-detail.html">Project Detail</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="home-fullpage.html#">Статьи</a>
+                    <ul>
+                        <li><a href="news-grid.html">Grid</a></li>
+                        <li><a href="news-listing.html">Listing</a></li>
+                        <li><a href="news-masonry.html">Masonry</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="home-fullpage.html#">Портфолио</a>
+                    <ul>
+                        <li><a href="post-image.html">Фотографии</a></li>
+                        <li><a href="post-gallery.html">Галерея</a></li>
+                        <li><a href="post-video.html">Видео</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="home-fullpage.html#">Наша компания</a>
+                    <ul>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="contact.html">Контакты</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="menu-footer right-boxed">
+                <div class="social-list">
+                    <a href="" class="icon ion-social-twitter"></a>
+                    <a href="" class="icon ion-social-facebook"></a>
+                    <a href="" class="icon ion-social-googleplus"></a>
+                    <a href="" class="icon ion-social-linkedin"></a>
+                    <a href="" class="icon ion-social-dribbble-outline"></a>
+                </div>
+            </div>
+        </div>
+
+        <header class="navbar navbar-2 navbar-white boxed">
+            <div class="navbar-bg"></div>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse"
+                    aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="{{ path('home_page') }}">
+                <img class="brand-img" alt="" src="{{ asset('images/brand.png') }}">
+
+            </a>
+            <address class="navbar-address visible-lg"><span class="text-dark"><i class="fas fa-phone"></i> (099)99-99-999</span>
+            </address>
+            <div class="social-list hidden-xs">
+                <a href="" class="icon ion-social-twitter"></a>
+                <a href="" class="icon ion-social-facebook"></a>
+                <a href="" class="icon ion-social-googleplus"></a>
+                <a href="" class="icon ion-social-linkedin"></a>
+                <a href="" class="icon ion-social-dribbble-outline"></a>
+            </div>
+        </header>
+
+        {% block body %}{% endblock %}
+
+        {% block javascripts %}
+
+            {#<script data-cfasync="false" src="../../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>#}
+            <script src="{{ asset('js/jquery.min.js') }}"></script>
+            <script src="{{ asset('js/animsition.min.js') }}"></script>
+            <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+            <script src="{{ asset('js/smoothscroll.js') }}"></script>
+            <script src="{{ asset('js/jquery.validate.min.js') }}"></script>
+            <script src="{{ asset('js/wow.min.js') }}"></script>
+            <script src="{{ asset('js/jquery.stellar.min.js') }}"></script>
+            <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
+            <script src="{{ asset('js/jquery.pagepiling.js') }}"></script>
+            <script src="{{ asset('js/jquery.magnific-popup.min.js') }}"></script>
+            <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}"></script>
+            <script src="{{ asset('js/plugins.js') }}"></script>
+            <script src="{{ asset('js/sly.min.js') }}"></script>
+            <script src="http://maps.google.com/maps/api/js?key=AIzaSyCwVuYiM-83l2IdjpT9uC0lg4jBm8-w4j8"></script>
+            <script src="{{ asset('js/gmap.js') }}"></script>
+            <script src="https://kit.fontawesome.com/58f9f01d84.js"></script>
+            <script src="{{ asset('js/isotope.pkgd.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/jquery.themepunch.tools.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/jquery.themepunch.revolution.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/revolution.extension.actions.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/revolution.extension.carousel.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/revolution.extension.kenburn.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/revolution.extension.layeranimation.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/revolution.extension.migration.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/revolution.extension.navigation.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/revolution.extension.parallax.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/revolution.extension.slideanims.min.js') }}"></script>
+            <script src="{{ asset('js/rev-slider/revolution.extension.video.min.js') }}"></script>
+            <script src="https://kit.fontawesome.com/58f9f01d84.js"></script>
+            <script src="{{ asset('js/scripts.js') }}"></script>
+            <script src="{{ asset('js/rev-slider-init.js') }}"></script>
+
+        {% endblock %}
+    </body>
+</html>
