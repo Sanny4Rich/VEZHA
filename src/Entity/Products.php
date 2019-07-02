@@ -45,14 +45,14 @@ class Products
     private $isTop;
 
     /**
-     * @ORM\Column(type="boolean", options={"default" : true}, nullable=true))
+     * @ORM\Column(type="boolean", options={"default" : false}, nullable=true))
      */
     private $isOnHomePage;
 
     /**
      * @var ProductImages[]|ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="App\Entity\ProductImages", mappedBy="machines", cascade={"persist"} )
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductImages", mappedBy="product", cascade={"persist"} )
      */
     private $images;
 
@@ -60,6 +60,11 @@ class Products
      * @ORM\ManyToMany(targetEntity="App\Entity\Categories", inversedBy="products")
      */
     private $categories;
+
+    public function __toString()
+    {
+        return (string)$this->getName();
+    }
 
     public function __construct()
     {

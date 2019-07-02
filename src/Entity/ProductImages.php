@@ -32,7 +32,7 @@ class ProductImages
     /**
      * @var File
      *
-     * @Vich\UploadableField(mapping="products_images", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
      */
     private $imageFile;
 
@@ -60,7 +60,7 @@ class ProductImages
      * @return Products
      */
 
-    public function getProducts(): ?Products
+    public function getProduct(): ?Products
     {
         return $this->product;
     }
@@ -73,7 +73,7 @@ class ProductImages
      * @return ProductImages
      */
 
-    public function setProducts(?Products $products): self
+    public function setProduct(?Products $products): self
     {
         $this->product = $products;
 

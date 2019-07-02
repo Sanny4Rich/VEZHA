@@ -25,10 +25,21 @@ class CategoryAdmin extends AbstractAdmin
 
     protected function configureFormFields(FormMapper $form)
     {
-        //Основаня информация о технике
+        //Основаня информация о категории
         $form
+            ->tab('Основная информация')
             ->add('name')
+            ->add('description')
+            ->add('shortDescription')
+            ->add('isVisible')
+            ->add('isOnHomePage')
+            ->end()
             ->end();
-        //Услуги
+        $form
+            ->tab('Главная страница')
+            ->add('isOnHomePage')
+            ->add('onHomePagePosition')
+            ->end()
+            ->end();
     }
 }

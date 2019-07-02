@@ -38,6 +38,21 @@ class Categories
      */
     private $products;
 
+    /**
+     * @ORM\Column(type="boolean", options={"default" : false})
+     */
+    private $isVisible;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : false})
+     */
+    private $isOnHomePage;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $onHomePagePosition;
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
@@ -108,6 +123,42 @@ class Categories
             $this->products->removeElement($product);
             $product->removeCategory($this);
         }
+
+        return $this;
+    }
+
+    public function getIsVisible(): ?bool
+    {
+        return $this->isVisible;
+    }
+
+    public function setIsVisible(bool $isVisible): self
+    {
+        $this->isVisible = $isVisible;
+
+        return $this;
+    }
+
+    public function getIsOnHomePage(): ?bool
+    {
+        return $this->isOnHomePage;
+    }
+
+    public function setIsOnHomePage(bool $isOnHomePage): self
+    {
+        $this->isOnHomePage = $isOnHomePage;
+
+        return $this;
+    }
+
+    public function getOnHomePagePosition(): ?int
+    {
+        return $this->onHomePagePosition;
+    }
+
+    public function setOnHomePagePosition(int $onHomePagePosition): self
+    {
+        $this->onHomePagePosition = $onHomePagePosition;
 
         return $this;
     }
