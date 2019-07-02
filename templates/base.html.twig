@@ -22,20 +22,20 @@
 
         <div class="menu">
             <span class="close-menu icon-cross2 right-boxed"></span>
-            {#<div class="menu-lang right-boxed">#}
-                {#<a href="{{-#}
-                {#path(app.request.get('_route'),#}
-                    {#app.request.get('_route_params')|merge({'_locale' : 'ua'}))#}
-                {#-}}" class="active">UA</a>#}
-                {#<a href="{{-#}
-                {#path(app.request.get('_route'),#}
-                    {#app.request.get('_route_params')|merge({'_locale' : 'ru'}))#}
-                {#-}}">RU</a>#}
-                {#<a href="{{-#}
-                {#path(app.request.get('_route'),#}
-                    {#app.request.get('_route_params')|merge({'_locale' : 'en'}))#}
-                {#-}}">ENG</a>#}
-            {#</div>#}
+            <div class="menu-lang right-boxed">
+                <a href="{{-
+                path(app.request.get('_route'),
+                    app.request.get('_route_params')|merge({'_locale' : 'ua'}))
+                -}}" class="active">UA</a>
+                <a href="{{-
+                path(app.request.get('_route'),
+                    app.request.get('_route_params')|merge({'_locale' : 'ru'}))
+                -}}">RU</a>
+                <a href="{{-
+                path(app.request.get('_route'),
+                    app.request.get('_route_params')|merge({'_locale' : 'en'}))
+                -}}">ENG</a>
+            </div>
             <ul class="menu-list right-boxed">
                 <li class="active">
                     <a href="{{ path('home_page') }}">Главная</a>

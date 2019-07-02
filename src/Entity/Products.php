@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -47,7 +48,17 @@ class Products
      */
     private $isOnHomePage;
 
+    /**
+     * @var ProductImages[]|ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductImages", mappedBy="machines", cascade={"persist"} )
+     */
+    private $images;
 
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -125,4 +136,45 @@ class Products
 
         return $this;
     }
+
+    /**
+     * @return ProductImages[]|ArrayCollection
+     */
+
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    /**
+     * Add image
+     *
+     * @param ProductImages $image
+     *
+     * @return Products
+     */
+
+    public function addImage(ProductImages $image)
+    {
+        $image->setProducts($this);
+        $this->images[] = $image;
+
+        dump($image);
+
+        return $this;
+    }
+
+    public function removeImage(ProductImages $images): self
+    {
+        if ($this->images->contains($images)) {
+            $this->images->removeElement($images);
+            // set the owning side to null (unless already changed)
+            if ($images->getProducts() === $this) {
+                $images->setProducts(null);
+            }
+        }
+
+        return $this;
+    }
+
 }

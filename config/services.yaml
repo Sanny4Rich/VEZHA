@@ -4,7 +4,7 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
-    locale: 'ua'
+    locale: 'ru'
     fromEmail: noreply@myshop.ua
     fromName: MyShop
     adminEmail: admin@myshop.ua
@@ -27,10 +27,21 @@ services:
         resource: '../src/Controller'
         tags: ['controller.service_arguments']
 
+
+    App\EventSubscriber\LocaleSubscriber:
+        arguments: ['%kernel.default_locale%']
+        # uncomment the next line if you are not using autoconfigure
+        # tags: [kernel.event_subscriber]
+
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
     App\Admin\ProductAdmin:
         arguments: [~,App\Entity\Products,~ ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Техника}
+            - { name: sonata.admin, manager_type: orm, label: Продукты}
+
+    App\Admin\CategoryAdmin:
+        arguments: [~,App\Entity\Categories,~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Категории}
