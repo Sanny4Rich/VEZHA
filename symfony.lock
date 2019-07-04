@@ -99,9 +99,6 @@
     "egulias/email-validator": {
         "version": "2.1.7"
     },
-    "facebook/webdriver": {
-        "version": "1.6.0"
-    },
     "fig/link-util": {
         "version": "1.0.0"
     },
@@ -110,6 +107,9 @@
     },
     "friendsofsymfony/user-bundle": {
         "version": "v2.1.2"
+    },
+    "froala/wysiwyg-editor": {
+        "version": "v3.0.1"
     },
     "gedmo/doctrine-extensions": {
         "version": "v2.4.37"
@@ -192,6 +192,9 @@
         "files": [
             "config/packages/sensio_framework_extra.yaml"
         ]
+    },
+    "snilius/twig-sort-by-field": {
+        "version": "v0.1.5"
     },
     "sonata-project/admin-bundle": {
         "version": "3.31",
@@ -417,9 +420,6 @@
     },
     "symfony/orm-pack": {
         "version": "v1.0.6"
-    },
-    "symfony/panther": {
-        "version": "v0.3.0"
     },
     "symfony/phpunit-bridge": {
         "version": "4.1",

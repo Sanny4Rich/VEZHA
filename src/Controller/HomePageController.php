@@ -2,6 +2,9 @@
 
 namespace App\Controller;
 
+use App\Repository\CategoriesRepository;
+use App\Repository\ProductsRepository;
+use Entity\Repository\CategoryRepository;
 use phpDocumentor\Reflection\Types\String_;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -22,10 +25,16 @@ class HomePageController extends AbstractController
     /**
      * @Route("/{_locale}/", name="home_page", defaults={"locale" = "ua"}, requirements={"_locale" = "ua|ru|en" })
      */
-    public function index(Request $request)
+    public function index(Request $request, CategoriesRepository $categoriesRepository)
     {
+        $categories = $categoriesRepository->createQueryBuilder('c')
+            ->where('c.onHomePagePosition IS NOT NULL')
+            ->getQuery()
+            ->getResult();
+        
         return $this->render('home_page/index.html.twig', [
             'controller_name' => 'HomePageController',
+            'categories' => $categories
         ]);
     }
 }

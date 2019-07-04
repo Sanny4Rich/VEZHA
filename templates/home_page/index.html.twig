@@ -54,11 +54,9 @@
                                                 <h2 class="title-uppercase">Наша миссия<br> <span
                                                             class="text-primary">дизайн</span> лучшей мебели<br>  для вас</h2>
                                                 <ul class="service-list">
-                                                    <li><a href="">01. Диваны</a></li>
-                                                    <li><a href="">02. Кресла</a></li>
-                                                    <li><a href="">03. Столы</a></li>
-                                                    <li><a href="">04. Шкафы</a></li>
-                                                    <li><a href="">05. аксессуары</a></li>
+                                                    {% for category in categories|sortbyfield('onHomePagePosition') %}
+                                                    <li><a href="">{{ category.onHomePagePosition }}. {{ category.name }}</a></li>
+                                                    {% endfor %}
                                                 </ul>
                                             </div>
                                             <div class="col-md-6 col-lg-5 col-md-offset-1 col-lg-offset-2">

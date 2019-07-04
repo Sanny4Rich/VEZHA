@@ -3,6 +3,7 @@
 namespace App\Admin;
 
 
+use App\Entity\Categories;
 use App\Entity\Services;
 
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
@@ -36,8 +37,10 @@ class ProductsAdmin extends AbstractAdmin
         $form
             ->tab('Основаня информация')
             ->add('name')
-            ->add('description', CKEditorType::class, array(
-                'config' => array('toolbar' => 'full')))
+            ->add('description')
+            ->add('isOnHomePage')
+            ->add('isVisible')
+            ->add('isTop')
             ->end()
             ->end();
         //Услуги
@@ -54,20 +57,22 @@ class ProductsAdmin extends AbstractAdmin
             ->end()
             ->end();
         $form
-            ->tab('Услуги')
+            ->tab('Категории')
             ->add('categories', ModelType::class, [
                 'by_reference'          => false,
                 'multiple'              => true,
                 'expanded'              => true,     // or false
-                'class'                 => Services::class,
+                'class'                 => Categories::class,
                 'property'              => 'name',   // or any field in your media entity
-                'label'                 => 'Услуги',
+                'label'                 => 'Категории',
                 'btn_add'               => true,
                 'btn_list'              => false,
                 'btn_delete'            => true,
                 'btn_catalogue'         => 'admin',   // or your own translate catalogue in my case file admin.en.yml
             ])
+            ->end()
             ->end();
+
 
     }
 }

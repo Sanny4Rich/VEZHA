@@ -52,7 +52,7 @@ class Products
     /**
      * @var ProductImages[]|ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="App\Entity\ProductImages", mappedBy="product", cascade={"persist"} )
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductImages", mappedBy="product", cascade={"all"}, orphanRemoval=true)
      */
     private $images;
 
@@ -60,6 +60,11 @@ class Products
      * @ORM\ManyToMany(targetEntity="App\Entity\Categories", inversedBy="products")
      */
     private $categories;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $createdAt;
 
     public function __toString()
     {
@@ -70,6 +75,7 @@ class Products
     {
         $this->images = new ArrayCollection();
         $this->categories = new ArrayCollection();
+        $this->createdAt = new \DateTime('now');
     }
 
     public function getId(): ?int
@@ -168,7 +174,7 @@ class Products
 
     public function addImage(ProductImages $image)
     {
-        $image->setProducts($this);
+        $image->setProduct($this);
         $this->images[] = $image;
 
         dump($image);
@@ -181,8 +187,8 @@ class Products
         if ($this->images->contains($images)) {
             $this->images->removeElement($images);
             // set the owning side to null (unless already changed)
-            if ($images->getProducts() === $this) {
-                $images->setProducts(null);
+            if ($images->getProduct() === $this) {
+                $images->setProduct(null);
             }
         }
 
@@ -211,6 +217,18 @@ class Products
         if ($this->categories->contains($category)) {
             $this->categories->removeElement($category);
         }
+
+        return $this;
+    }
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
+    {
+        $this->createdAt = $createdAt;
 
         return $this;
     }

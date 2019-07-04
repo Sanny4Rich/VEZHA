@@ -31,6 +31,16 @@ class Services
      */
     private $shortDescription;
 
+    /**
+     * @ORM\Column(type="boolean", options={"default" : false})
+     */
+    private $isVisible;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : false})
+     */
+    private $isOnHomePage;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -68,6 +78,30 @@ class Services
     public function setShortDescription(?string $shortDescription): self
     {
         $this->shortDescription = $shortDescription;
+
+        return $this;
+    }
+
+    public function getIsVisible(): ?bool
+    {
+        return $this->isVisible;
+    }
+
+    public function setIsVisible(bool $isVisible): self
+    {
+        $this->isVisible = $isVisible;
+
+        return $this;
+    }
+
+    public function getIsOnHomePage(): ?bool
+    {
+        return $this->isOnHomePage;
+    }
+
+    public function setIsOnHomePage(bool $isOnHomePage): self
+    {
+        $this->isOnHomePage = $isOnHomePage;
 
         return $this;
     }

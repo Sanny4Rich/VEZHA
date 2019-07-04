@@ -50,3 +50,8 @@ services:
         arguments: [~,App\Entity\ProductImages,~, '@liip_imagine.cache.manager' ]
         tags:
             - { name: sonata.admin, manager_type: orm, show_in_dashboard: false}
+
+    App\Admin\ServicesAdmin:
+        arguments: [~,App\Entity\Services,~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Услуги}
