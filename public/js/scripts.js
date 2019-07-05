@@ -343,3 +343,11 @@
         });
     }
 })(jQuery);
+
+
+$('.menu-list').hover(function() {
+    $(window).scroll().disable();
+    $(this).scroll().enable();
+}, function() {
+    $(window).scroll().enable();
+});
