@@ -56,6 +56,7 @@ class Products
      */
     private $images;
 
+
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Categories", inversedBy="products")
      */
@@ -65,6 +66,11 @@ class Products
      * @ORM\Column(type="datetime", nullable=true)
      */
     private $createdAt;
+
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $url;
 
     public function __toString()
     {
@@ -229,6 +235,18 @@ class Products
     public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
         $this->createdAt = $createdAt;
+
+        return $this;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(string $url): self
+    {
+        $this->url = $url;
 
         return $this;
     }

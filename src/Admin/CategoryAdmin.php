@@ -32,7 +32,7 @@ class CategoryAdmin extends AbstractAdmin
             ->add('description')
             ->add('shortDescription')
             ->add('isVisible')
-            ->add('isOnHomePage')
+            ->add('url')
             ->end()
             ->end();
         $form

@@ -53,6 +53,11 @@ class Categories
      */
     private $onHomePagePosition;
 
+    /**
+     * @ORM\Column(type="string", length=255)
+     */
+    private $url;
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
@@ -159,6 +164,18 @@ class Categories
     public function setOnHomePagePosition(int $onHomePagePosition): self
     {
         $this->onHomePagePosition = $onHomePagePosition;
+
+        return $this;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(string $url): self
+    {
+        $this->url = $url;
 
         return $this;
     }

@@ -3,7 +3,8 @@
 {% block title %}Hello HomePageController!{% endblock %}
 
 {% block body %}
-    <div class="copy-bottom white boxed">© Bauhaus 2017.</div>
+
+    <div class="copy-bottom white boxed"></div>
     <div class="lang-bottom white boxed">
         <div class="menu-lang">
             <a href="" class="active">Eng</a>
@@ -52,16 +53,22 @@
                                             <div class="col-md-5 col-lg-5">
                                                 <p class="subtitle-top text-dark">Наша специализация</p>
                                                 <h2 class="title-uppercase">Наша миссия<br> <span
-                                                            class="text-primary">дизайн</span> лучшей мебели<br>  для вас</h2>
+                                                            class="text-primary">дизайн</span> лучшей мебели<br> для вас
+                                                </h2>
                                                 <ul class="service-list">
+                                                    {% set increment = 1 %}
                                                     {% for category in categories|sortbyfield('onHomePagePosition') %}
-                                                    <li><a href="">{{ category.onHomePagePosition }}. {{ category.name }}</a></li>
+                                                        {% if category.isVisible == true %}
+                                                            <li><a href="{{ path('category', {'locale': app.request.locale, 'url': category.url}) }}">{{ increment }}. {{ category.name }}</a></li>
+                                                            {% set increment = increment + 1 %}
+                                                        {% endif %}
                                                     {% endfor %}
                                                 </ul>
                                             </div>
                                             <div class="col-md-6 col-lg-5 col-md-offset-1 col-lg-offset-2">
                                                 <div class="dots-image-2">
-                                                    <img alt="" class="img-responsive" src="{{ asset('images/1-470x490.jpg') }}">
+                                                    <img alt="" class="img-responsive"
+                                                         src="{{ asset('images/1-470x490.jpg') }}">
                                                     <div class="dots"></div>
                                                     <div class="experience-info">
                                                         <div class="number">24</div>
@@ -81,12 +88,17 @@
         <div class="pp-scrollable text-white section section-3">
             <div class="scroll-wrap">
                 <div class="bg-changer">
-                    <div class="section-bg" style="background-image:url('{{ asset('images/bg/bg2.jpg') }}');"></div>
-                    <div class="section-bg" style="background-image:url('{{ asset('images/bg/bg2-2.jpg') }}');"></div>
-                    <div class="section-bg" style="background-image:url('{{ asset('images/bg/bg2-3.jpg') }}');"></div>
-                    <div class="section-bg" style="background-image:url('{{ asset('images/bg/bg2-4.jpg') }}');"></div>
-                    <div class="section-bg" style="background-image:url('{{ asset('images/bg/bg2-5.jpg') }}');"></div>
-                    <div class="section-bg" style="background-image:url('{{ asset('images/bg/bg2-6.jpg') }}');"></div>
+                    {% for service in services|sortbyfield('updatedAt') %}
+                        {% if service.isVisible and service.isOnHomePage %}
+                        {% if service.image is not null  %}
+                        <div class="section-bg"
+                             style="background-image:url('{{ vich_uploader_asset(service, 'imageFile') }}');"></div>
+                    {% else %}
+                        <div class="section-bg"
+                             style="background-image:url('{{asset('images/bg/bg1.jpg')}}');"></div>
+                        {% endif %}
+                        {% endif %}
+                    {% endfor %}
                 </div>
                 <div class="scrollable-content">
                     <div class="vertical-centred">
@@ -99,56 +111,21 @@
                                             <div class="col-md-12">
                                                 <h2 class="title-uppercase text-white">Последние проекты</h2>
                                                 <div class="row-project-box row">
-                                                    <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                                        <a href="" class="project-box">
-                                                            <div class="project-box-inner">
-                                                                <h5>Диван</h5>
-                                                                <div class="project-category">House Design</div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                                        <a href="" class="project-box">
-                                                            <div class="project-box-inner">
-                                                                <h5>Стул</h5>
-                                                                <div class="project-category">House Design</div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                                        <a href="" class="project-box">
-                                                            <div class="project-box-inner">
-                                                                <h5>Шкаф</h5>
-                                                                <div class="project-category">Commercial Design</div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                                        <a href="" class="project-box">
-                                                            <div class="project-box-inner">
-                                                                <h5>Шкаф</h5>
-                                                                <div class="project-category">House Design</div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                                        <a href="" class="project-box">
-                                                            <div class="project-box-inner">
-                                                                <h5>Ящик</h5>
-                                                                <div class="project-category">House Design</div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                                        <a href="" class="project-box">
-                                                            <div class="project-box-inner">
-                                                                <h5>Пуф</h5>
-                                                                <div class="project-category">House Design</div>
-                                                            </div>
-                                                        </a>
-                                                    </div>
+                                                    {% for service in services|sortbyfield('updatedAt')|reverse %}
+                                                        {% if service.isVisible and service.isOnHomePage %}
+                                                        <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
+                                                            <a href="" class="project-box">
+                                                                <div class="project-box-inner">
+                                                                    <h5>{{ service.name }}</h5>
+                                                                    <div class="project-category">{{ service.shortDescription }}</div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                        {% endif %}
+                                                    {% endfor %}
                                                 </div>
-                                                <a href="home-fullpage.html#" class="h5 link-arrow text-white">смотреть все проекты <i class="icon icon-chevron-right"></i></a>
+                                                <a href="home-fullpage.html#" class="h5 link-arrow text-white">смотреть
+                                                    все проекты <i class="icon icon-chevron-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -173,39 +150,48 @@
                                                 <h2 class="title-uppercase">Наши партнеры</h2>
                                                 <div class="row-partners">
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><img alt="" src="{{ asset('images/partners/1.png') }}">
+                                                        <div class="partner-inner"><img alt=""
+                                                                                        src="{{ asset('images/partners/1.png') }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><img alt="" src="{{ asset('images/partners/2.png') }}">
+                                                        <div class="partner-inner"><img alt=""
+                                                                                        src="{{ asset('images/partners/2.png') }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><img alt="" src="{{ asset('images/partners/3.png') }}">
+                                                        <div class="partner-inner"><img alt=""
+                                                                                        src="{{ asset('images/partners/3.png') }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><img alt="" src="{{ asset('images/partners/4.png') }}">
+                                                        <div class="partner-inner"><img alt=""
+                                                                                        src="{{ asset('images/partners/4.png') }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><img alt="" src="{{ asset('images/partners/5.png') }}">
+                                                        <div class="partner-inner"><img alt=""
+                                                                                        src="{{ asset('images/partners/5.png') }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><img alt="" src="{{ asset('images/partners/4.png') }}">
+                                                        <div class="partner-inner"><img alt=""
+                                                                                        src="{{ asset('images/partners/4.png') }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><img alt="" src="{{ asset('images/partners/3.png') }}">
+                                                        <div class="partner-inner"><img alt=""
+                                                                                        src="{{ asset('images/partners/3.png') }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><img alt="" src="{{ asset('images/partners/2.png') }}">
+                                                        <div class="partner-inner"><img alt=""
+                                                                                        src="{{ asset('images/partners/2.png') }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><img alt="" src="{{ asset('images/partners/1.png') }}">
+                                                        <div class="partner-inner"><img alt=""
+                                                                                        src="{{ asset('images/partners/1.png') }}">
                                                         </div>
                                                     </div>
                                                     <div class="col-partner">
@@ -318,13 +304,15 @@
                                                                 <h3 class="col-sm-3 col-md-4">Напишите нам</h3>
                                                                 <div class="col-right col-sm-8 col-md-7 col-sm-offset-1 col-md-offset-1">
                                                                     <div class="contact-info-row col-sm-6 col-md-12">
-                                                                        <strong class="text-dark">Главный офис</strong><br>
+                                                                        <strong class="text-dark">Главный
+                                                                            офис</strong><br>
                                                                         <a href="../../../../cdn-cgi/l/email-protection.html"
                                                                            class="__cf_email__"
                                                                            data-cfemail="2e464b4242416e4c4f5b464f5b5d004d41">[email&#160;protected]</a>
                                                                     </div>
                                                                     <div class="contact-info-row col-sm-6 col-md-12 ">
-                                                                        <strong class="text-dark">Отдел продаж</strong><br>
+                                                                        <strong class="text-dark">Отдел
+                                                                            продаж</strong><br>
                                                                         <a href="../../../../cdn-cgi/l/email-protection.html"
                                                                            class="__cf_email__"
                                                                            data-cfemail="8be2e5ede4cbe9eafee3eafef8a5e8e4">[email&#160;protected]</a>
@@ -337,11 +325,13 @@
                                                                 <h3 class="col-sm-3 col-md-4">Позвоните нам</h3>
                                                                 <div class="col-right col-sm-8 col-md-7 col-sm-offset-1 col-md-offset-1">
                                                                     <div class="contact-info-row col-sm-6 col-md-12">
-                                                                        <strong class="text-dark">Главный офис</strong><br>
+                                                                        <strong class="text-dark">Главный
+                                                                            офис</strong><br>
                                                                         (0043) 568 456 902
                                                                     </div>
                                                                     <div class="contact-info-row col-sm-6 col-md-12 ">
-                                                                        <strong class="text-dark">Отдел продаж</strong><br>
+                                                                        <strong class="text-dark">Отдел
+                                                                            продаж</strong><br>
                                                                         (00232) 568 323 901
                                                                     </div>
                                                                 </div>

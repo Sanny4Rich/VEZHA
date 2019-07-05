@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ProductController!{% endblock %}
+
+{% block body %}
+
+    <main class="page-header-2" style="padding-top: 6rem">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+                    <h1 class="display-1">{{ product.name }}</h1>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="post-gallery">
+        <div class="slider-prev icon-chevron-left hidden-xs"></div>
+        <div class="slider-next icon-chevron-right hidden-xs"></div>
+        <div class="rev_slider_wrapper">
+            <div id="rev_slider3" class="rev_slider tp-overflow-hidden fullscreenbanner">
+                <ul>
+                    {% if product.images is not empty %}
+                    {% for images in product.images %}
+                    <li data-transition="slotzoom-horizontal" data-slotamount="7" data-masterspeed="1000"
+                        data-fsmasterspeed="1000">
+
+                        <img src="{{ vich_uploader_asset(images, 'imageFile') }}" alt="" data-bgposition="center center"
+                             data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="page-content">
+        <div class="primary">
+            <div class="container">
+                <article class="post">
+                    <div class="entry-content">
+                        <div class="row">
+                            <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+                                <h3 class="entry-description">{{ product.name }}</h3>
+                                <p>{{ product.description }}</p>
+                                <p>One touch of a red-hot stove is usually all we need to avoid that kind of
+                                    discomfort in the future. The same is true as we experience the emotional
+                                    sensation of stress from our first instances of social rejection or ridicule. We
+                                    quickly learn to fear and thus automatically avoid potentially stressful
+                                    situations of all kinds, including the most common of all: making mistakes. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="entry-footer">
+                        <div class="row">
+                            <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+                                <div class="tags-links">
+                                    <span>Tags:</span>
+                                    <a href="">Inspiration</a>,
+                                    <a href="">Workspace</a>,
+                                    <a href="">Minimal</a>,
+                                    <a href="">Decoation</a>
+                                </div>
+                                <div class="post-share">
+                                    <span>Share:</span>
+                                    <a href="" class="icon ion-social-facebook"></a>
+                                    <a href="" class="icon ion-social-twitter"></a>
+                                    <a href="" class="icon ion-social-pinterest"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <section class="related-posts">
+                    <div class="row">
+                        <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+                            <h6 class="related-post-title">Related Posts</h6>
+                        </div>
+                    </div>
+                    <div class="news-carousel owl-carousel">
+                        <div class="news-item">
+                            <img alt="" src="{{ asset('images/news/1-370x370.jpg') }}">
+                            <div class="news-hover">
+                                <div class="hover-border">
+                                    <div></div>
+                                </div>
+                                <div class="content">
+                                    <div class="time">Dec 15th, 2016</div>
+                                    <h3 class="news-title">Discover Architecture Of Bario</h3>
+                                    <p class="news-description">Lorem ipsum dolor sit amet, consect etur adipiscing
+                                        elit. Mauris vel auctorol est. Integer nunc ipsum...</p>
+                                </div>
+                                <a class="read-more" href="post-gallery.html#">Continue</a>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img alt="" src="{{ asset('images/news/2-370x370.jpg') }}">
+                            <div class="news-hover">
+                                <div class="hover-border">
+                                    <div></div>
+                                </div>
+                                <div class="content">
+                                    <div class="time">Dec 15th, 2016</div>
+                                    <h3 class="news-title">Discover Architecture Of Bario</h3>
+                                    <p class="news-description">Lorem ipsum dolor sit amet, consect etur adipiscing
+                                        elit. Mauris vel auctorol est. Integer nunc ipsum...</p>
+                                </div>
+                                <a class="read-more" href="post-gallery.html#">Continue</a>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <img alt="" src="{{ asset('images/news/3-370x370.jpg') }}">
+                            <div class="news-hover">
+                                <div class="hover-border">
+                                    <div></div>
+                                </div>
+                                <div class="content">
+                                    <div class="time">Dec 15th, 2016</div>
+                                    <h3 class="news-title">Discover Architecture Of Bario</h3>
+                                    <p class="news-description">Lorem ipsum dolor sit amet, consect etur adipiscing
+                                        elit. Mauris vel auctorol est. Integer nunc ipsum...</p>
+                                </div>
+                                <a class="read-more" href="post-gallery.html#">Continue</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

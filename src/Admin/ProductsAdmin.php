@@ -41,6 +41,7 @@ class ProductsAdmin extends AbstractAdmin
             ->add('isOnHomePage')
             ->add('isVisible')
             ->add('isTop')
+            ->add('url')
             ->end()
             ->end();
         //Услуги

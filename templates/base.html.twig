@@ -26,15 +26,16 @@
                 <a href="{{-
                 path(app.request.get('_route'),
                     app.request.get('_route_params')|merge({'_locale' : 'ua'}))
-                -}}" class="active">UA</a>
+                -}}" {% if app.request.locale == 'ua' %} class="active" {% endif %}>UA</a>
+
                 <a href="{{-
                 path(app.request.get('_route'),
                     app.request.get('_route_params')|merge({'_locale' : 'ru'}))
-                -}}">RU</a>
+                -}}" {% if app.request.locale == 'ru' %} class="active" {% endif %}>RU</a>
                 <a href="{{-
                 path(app.request.get('_route'),
                     app.request.get('_route_params')|merge({'_locale' : 'en'}))
-                -}}">ENG</a>
+                -}}" {% if app.request.locale == 'en' %} class="active" {% endif %}>ENG</a>
             </div>
             <ul class="menu-list right-boxed">
                 <li class="active">

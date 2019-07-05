@@ -52,6 +52,6 @@ services:
             - { name: sonata.admin, manager_type: orm, show_in_dashboard: false}
 
     App\Admin\ServicesAdmin:
-        arguments: [~,App\Entity\Services,~ ]
+        arguments: [~,App\Entity\Services,~,'@liip_imagine.cache.manager' ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Услуги}
+            - { name: sonata.admin, manager_type: orm, label: Проекты}
