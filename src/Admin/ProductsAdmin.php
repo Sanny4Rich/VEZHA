@@ -13,6 +13,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\ModelType;
 use Sonata\Form\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ProductsAdmin extends AbstractAdmin
@@ -37,7 +38,7 @@ class ProductsAdmin extends AbstractAdmin
         $form
             ->tab('Основаня информация')
             ->add('name')
-            ->add('description')
+            ->add('description', TextareaType::class, array('attr' => array('class' => 'ckeditor')))
             ->add('isOnHomePage')
             ->add('isVisible')
             ->add('isTop')
