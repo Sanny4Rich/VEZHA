@@ -40,7 +40,7 @@
             </div>
             <ul class="menu-list right-boxed">
                 <li class="active">
-                    <a href="{{ path('home_page') }}">Главная</a>
+                    <a href="{{ path('home_page') }}">{% trans %}Головна{% endtrans %}</a>
                 </li>
                 <li>
                     <a href="{{ path('products', {'locale': app.request.locale}) }}" >Товары</a>
@@ -54,7 +54,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="home-fullpage.html#">Портфолио</a>
+                    <a href="home-fullpage.html#">{% trans %}Портфоліо{% endtrans %}</a>
                     <ul>
                         <li><a href="post-image.html">Фотографии</a></li>
                         <li><a href="post-gallery.html">Галерея</a></li>

@@ -75,6 +75,14 @@ class ProductsAdmin extends AbstractAdmin
             ->end()
             ->end();
 
+        $form
+            ->tab('Переводы')
+            ->with('name')
+            ->add('name_ru')
+            ->add('name_ua')
+            ->add('name_en')
+            ->end()
+            ->end();
 
     }
 }
