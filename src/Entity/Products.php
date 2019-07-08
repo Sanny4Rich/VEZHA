@@ -82,6 +82,7 @@ class Products
         $this->images = new ArrayCollection();
         $this->categories = new ArrayCollection();
         $this->createdAt = new \DateTime('now');
+        $this->productsTrans = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -250,5 +251,6 @@ class Products
 
         return $this;
     }
+
 
 }
