@@ -7,6 +7,13 @@ sonata_admin:
     templates:
         edit: edit.html.twig
 
+    assets:
+        extra_stylesheets:
+            - css/bootstrap.css
+
+        extra_javascripts:
+            - js/bootstrap.min.js
+
 sonata_block:
     blocks:
         sonata.admin.block.admin_list:
