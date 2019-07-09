@@ -39,7 +39,7 @@ services:
     App\Admin\ProductsAdmin:
         arguments: [~,App\Entity\Products,~, '@liip_imagine.cache.manager' ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Продукты}
+            - { name: sonata.admin, manager_type: orm, label: Товары}
 
     App\Admin\CategoryAdmin:
         arguments: [~,App\Entity\Categories,~ ]
@@ -55,3 +55,8 @@ services:
         arguments: [~,App\Entity\Services,~,'@liip_imagine.cache.manager' ]
         tags:
             - { name: sonata.admin, manager_type: orm, label: Проекты}
+
+    App\Admin\ProductsTranslationsAdmin:
+        arguments: [~,App\Entity\ProductsTranslations,~,'@liip_imagine.cache.manager' ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Переводы товаров}

@@ -3,13 +3,19 @@
 {% block title %}Hello CategoryController!{% endblock %}
 
 {% block body %}
-    {{ dump(app.request.locale) }}
+    {% set loc = app.request.locale|raw %}
     <main class="page-header-2">
         <div class="container" style="padding-top: 6rem">
             <div class="row">
                 <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
                     <div class="title-info"></div>
+                    {% if product.productsTranslations is not empty %}
+                        {% for trans in product.productsTranslations %}
+                            <h1 class="display-1">{{ trans.name }}</h1>
+                        {% endfor %}
+                    {% else %}
                     <h1 class="display-1">{{ product.name }}</h1>
+                    {% endif %}
                 </div>
             </div>
         </div>

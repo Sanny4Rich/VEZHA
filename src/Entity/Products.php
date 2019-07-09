@@ -72,6 +72,11 @@ class Products
      */
     private $url;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductsTranslations", mappedBy="product")
+     */
+    private $productsTranslations;
+
     public function __toString()
     {
         return (string)$this->getName();
@@ -83,6 +88,7 @@ class Products
         $this->categories = new ArrayCollection();
         $this->createdAt = new \DateTime('now');
         $this->productsTrans = new ArrayCollection();
+        $this->productsTranslations = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -248,6 +254,37 @@ class Products
     public function setUrl(string $url): self
     {
         $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|ProductsTranslations[]
+     */
+    public function getProductsTranslations(): Collection
+    {
+        return $this->productsTranslations;
+    }
+
+    public function addProductsTranslation(ProductsTranslations $productsTranslation): self
+    {
+        if (!$this->productsTranslations->contains($productsTranslation)) {
+            $this->productsTranslations[] = $productsTranslation;
+            $productsTranslation->setProduct($this);
+        }
+
+        return $this;
+    }
+
+    public function removeProductsTranslation(ProductsTranslations $productsTranslation): self
+    {
+        if ($this->productsTranslations->contains($productsTranslation)) {
+            $this->productsTranslations->removeElement($productsTranslation);
+            // set the owning side to null (unless already changed)
+            if ($productsTranslation->getProduct() === $this) {
+                $productsTranslation->setProduct(null);
+            }
+        }
 
         return $this;
     }

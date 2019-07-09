@@ -10,11 +10,10 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/{locale}/product/{url}", name="product")
+     * @Route("/{_locale}/product/{url}", name="product")
      */
     public function index(Products $products, ProductsRepository $productsRepository)
     {
-
         return $this->render('product/index.html.twig', [
             'controller_name' => 'ProductController',
             'product' => $products
@@ -22,7 +21,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/{locale}/products", name="products")
+     * @Route("/{_locale}/products", name="products")
      */
     public function allProducts(ProductsRepository $productsRepository){
         $products = $productsRepository->createQueryBuilder('m')

@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AboutController extends AbstractController
 {
     /**
-     * @Route("/{locale}/about", name="about")
+     * @Route("/{_locale}/about", name="about")
      */
     public function about()
     {
@@ -17,7 +17,7 @@ class AboutController extends AbstractController
     }
 
     /**
-     * @Route("/{locale}/contacts", name="contacts")
+     * @Route("/{_locale}/contacts", name="contacts")
      */
     public function contacts(){
         return $this->render('about/contact.html.twig');

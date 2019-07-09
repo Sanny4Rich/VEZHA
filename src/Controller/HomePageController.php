@@ -25,7 +25,7 @@ class HomePageController extends AbstractController
         return $this->redirectToRoute('home_page');
     }
     /**
-     * @Route("/{_locale}/", name="home_page", defaults={"locale" = "ua"}, requirements={"_locale" = "ua|ru|en" })
+     * @Route("/{_locale}/", name="home_page", defaults={"_locale" = "ua"}, requirements={"_locale" = "ua|ru|en" })
      */
     public function index(Request $request, CategoriesRepository $categoriesRepository, ServicesRepository $servicesRepository)
     {

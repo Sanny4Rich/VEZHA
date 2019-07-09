@@ -11,7 +11,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class CategoryController extends AbstractController
 {
     /**
-     * @Route("/{locale}/category/{url}", name="category")
+     * @Route("/{_locale}/category/{url}", name="category")
      */
     public function index(Categories $categories, ProductsRepository $productsRepository)
     {
