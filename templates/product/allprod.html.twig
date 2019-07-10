@@ -3,28 +3,41 @@
 {% block title %}Hello CategoryController!{% endblock %}
 
 {% block body %}
+    {% set loc = app.request.get('_locale') %}
     <div class="content" style="padding-top: 6rem">
         <div class="projects">
             <div class="grid-items js-isotope js-grid-items">
-               {% for product in products|sortbyfield('createdAt')|reverse %}
-                   {% if product.isVisible %}
-                <div class="grid-item building js-isotope-item js-grid-item">
-                    <div class="project-item">
-                        {% if product.images is not empty %}
-                            <img alt="" class="img-responsive" src="{{ vich_uploader_asset(product.images[0], 'imageFile') }}">
-                        {% endif %}
-                        <a href="{{ path('product', {'locale': app.request.locale, 'url': product.url}) }}" class="project-hover-2">
-                            <i class="icon-plus"></i>
-                            <div class="project-hover-content">
-                                <h3 class="project-title">{{ product.name|replace({' ':'<br>'})|raw}}</h3>
+                {% for product in products|sortbyfield('createdAt')|reverse %}
+                    {% if product.isVisible %}
+                        <div class="grid-item building js-isotope-item js-grid-item">
+                            <div class="project-item">
+                                {% if product.images is not empty %}
+                                    <img alt="" class="img-responsive"
+                                         src="{{ vich_uploader_asset(product.images[0], 'imageFile') }}">
+                                {% endif %}
+                                <a href="{{ path('product', {'_locale': app.request.locale, 'url': product.url}) }}"
+                                   class="project-hover-2">
+                                    <i class="icon-plus"></i>
+                                    <div class="project-hover-content">
+                                        {% if product.productsTranslations is not empty %}
+                                            {% for trans in product.productsTranslations %}
+                                                {% if trans.language == loc %}
+                                                    <h3 class="project-title">{{ trans.name|replace({' ':'<br>'})|raw }}</h3>
+                                                {% else %}
+                                                    <h3 class="project-title">{{ product.name|replace({' ':'<br>'})|raw }}</h3>
+                                                {% endif %}
+                                            {% endfor %}
+                                        {% else %}
+                                            <h3 class="project-title">{{ product.name|replace({' ':'<br>'})|raw }}</h3>
+                                        {% endif %}
+                                    </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                </div>
-                   {% endif %}
+                        </div>
+                    {% endif %}
                 {% endfor %}
             </div>
         </div>
     </div>
-{{ include('footer.html.twig') }}
+    {{ include('footer.html.twig') }}
 {% endblock %}

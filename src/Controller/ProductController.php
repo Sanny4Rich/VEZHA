@@ -20,15 +20,22 @@ class ProductController extends AbstractController
     /**
      * @Route("/{_locale}/product/{url}", name="product")
      */
-    public function index(Products $products, ProductsRepository $productsRepository, CategoriesRepository $categoriesRepository)
+    public function index(Products $product, ProductsRepository $productsRepository, CategoriesRepository $categoriesRepository)
     {
         $categories = $categoriesRepository->createQueryBuilder('c')
             ->where('c.isOnHomePage IS NOT NULL')
             ->getQuery()
             ->getResult();
+
+        $products = $productsRepository->createQueryBuilder('m')
+            ->addSelect('t')
+            ->leftJoin('m.productsTranslations', 't')
+            ->getQuery()
+            ->getResult();
         return $this->render('product/index.html.twig', [
             'categories' => $categories,
-            'product' => $products
+            'product' => $product,
+            'products' => $products
         ]);
     }
 

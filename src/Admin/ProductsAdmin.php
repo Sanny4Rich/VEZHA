@@ -56,9 +56,7 @@ class ProductsAdmin extends AbstractAdmin
             ->tab('Основаня информация')
             ->add('name')
             ->add('description', TextareaType::class, array('attr' => array('class' => 'ckeditor')))
-            ->add('isVisible')
-            ->add('isTop')
-            ->add('url')
+            ->add('isVisible', null, ['label'=> 'Отображать?'])
             ->end()
             ->end();
         //Услуги
@@ -93,9 +91,26 @@ class ProductsAdmin extends AbstractAdmin
         $form
             ->tab('Главная страница')
             ->add('isOnHomePage', null, ['label' => 'Отображать на главной?'])
-            ->add('isTop', null, ['label'=>'Отображать на главной?'])
             ->add('imageFile', VichImageType::class, [
                 'required' => false,
+                'image_uri' => function (Products $products, $resolverdUri) use ($cacheManager) {
+                    // $cacheManager is LiipImagine cache Manager
+                    if (!$resolverdUri) {
+                        return null;
+                    }
+                    return $cacheManager->getBrowserPath($resolverdUri, 'squared_thumbnail');
+                }
+            ])
+            ->end()
+            ->end();
+
+        $form
+            ->tab('Новинка')
+            ->add('isTop', null,
+                ['label'=>'Отображать в меню новинки?'])
+            ->add('imageFileTop', VichImageType::class, [
+                'required' => false,
+                'help' => 'Для коректного отображения загружать квадратные изображения',
                 'image_uri' => function (Products $products, $resolverdUri) use ($cacheManager) {
                     // $cacheManager is LiipImagine cache Manager
                     if (!$resolverdUri) {

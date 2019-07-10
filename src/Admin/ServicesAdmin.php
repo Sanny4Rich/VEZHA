@@ -8,6 +8,7 @@ use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
 use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 
 class ServicesAdmin extends AbstractAdmin
@@ -47,9 +48,9 @@ class ServicesAdmin extends AbstractAdmin
         $form
             ->tab('Основная информация')
             ->add('name')
-            ->add('description')
-            ->add('shortDescription')
-            ->add('isVisible')
+            ->add('description', TextareaType::class, array('attr' => array('class' => 'ckeditor')))
+            ->add('shortDescription', null, ['label' => 'Короткое описание'])
+            ->add('isVisible', null, ['label'=> 'Видимый?'])
             ->end()
             ->end();
         $form

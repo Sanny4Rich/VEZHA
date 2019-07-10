@@ -24,13 +24,13 @@ liip_imagine:
 
                 # scale and square the image to the given dimensions
                 thumbnail:
-                    size:          [253, 253]
+                    size:          [375, 375]
                     mode:          inset
                     allow_upscale: true
 
                 # create border by placing image on larger black background
                 background:
-                    size:           [256, 256]
+                    size:           [376, 376]
                     position:       center
                     color:          '#fff'
 
@@ -63,3 +63,18 @@ liip_imagine:
                     size:           [800,800]
                     position:       center
                     color:          '#fff'
+
+        news_thumbnail:
+            jpeg_quality:           95
+            png_compression_level:  10
+            filters:
+                auto_rotate: ~
+                strip: ~
+                thumbnail:
+                    size:           [376,376]
+                    mode:           inset
+                    allow_upscale:  true
+                background:
+                    size:           [377,377]
+                    position:       center
+                    color:          '#272727'

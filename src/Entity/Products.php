@@ -91,7 +91,7 @@ class Products
     private $image;
 
     /**
-     * @Vich\UploadableField(mapping="services_images", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
      * @var File
      */
     private $imageFile;
@@ -102,6 +102,23 @@ class Products
      */
     private $updatedAt;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @var string
+     */
+    private $imageTop;
+
+    /**
+     * @Vich\UploadableField(mapping="product_images_top", fileNameProperty="imageTop")
+     * @var File
+     */
+    private $imageFileTop;
+
+    /**
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var \DateTime
+     */
+    private $updatedAtTop;
 
     public function __toString()
     {
@@ -113,9 +130,9 @@ class Products
         $this->images = new ArrayCollection();
         $this->categories = new ArrayCollection();
         $this->createdAt = new \DateTime('now');
-        $this->productsTrans = new ArrayCollection();
         $this->productsTranslations = new ArrayCollection();
         $this->updatedAt = new \DateTime('now');
+        $this->updatedAtTop = new \DateTime('now');
     }
 
     public function getId(): ?int
@@ -346,5 +363,37 @@ class Products
     public function getUpdatedAt() :\DateTime
     {
         return $this->updatedAt;
+    }
+
+    public function setImageFileTop(File $imageTop = null)
+    {
+        $this->imageFileTop = $imageTop;
+
+        // VERY IMPORTANT:
+        // It is required that at least one field changes if you are using Doctrine,
+        // otherwise the event listeners won't be called and the file is lost
+        if ($imageTop) {
+            // if 'updatedAt' is not defined in your entity, use another property
+            $this->updatedAt = new \DateTime('now');
+        }
+    }
+    public function getImageFileTop()
+    {
+        return $this->imageFileTop;
+    }
+
+    public function setImageTop($imageTop)
+    {
+        $this->imageTop = $imageTop;
+    }
+
+    public function getImageTop()
+    {
+        return $this->imageTop;
+    }
+
+    public function getUpdatedAtTop() :\DateTime
+    {
+        return $this->updatedAtTop;
     }
 }

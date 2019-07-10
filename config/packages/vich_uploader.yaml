@@ -10,6 +10,10 @@ vich_uploader:
             uri_prefix: /images/product
             upload_destination: '%kernel.project_dir%/public/images/product'
 
+        product_images_top:
+            uri_prefix: /images/product/top
+            upload_destination: '%kernel.project_dir%/public/images/product/top'
+
         portfolio_images:
             uri_prefix: /images/portfolio
             upload_destination: '%kernel.project_dir%/public/images/portfolio'

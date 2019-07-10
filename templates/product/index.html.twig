@@ -103,48 +103,45 @@
                         </div>
                     </div>
                     <div class="news-carousel owl-carousel">
+                        {% for prod in products %}
+                        {% if prod.isVisible and prod.isTop %}
                         <div class="news-item">
-                            <img alt="" src="{{ asset('images/news/1-370x370.jpg') }}">
+                            {% if prod.imageTop is not null %}
+                                    <img alt="" src="{{ vich_uploader_asset(prod, 'imageFileTop')|imagine_filter('news_thumbnail') }}">
+                            {% endif %}
                             <div class="news-hover">
                                 <div class="hover-border">
                                     <div></div>
                                 </div>
                                 <div class="content">
-                                    <div class="time"></div>
-                                    <h3 class="news-title">Уличная мебель</h3>
-                                    <p class="news-description">Уличная мебель для отдыха на даче, в саду, кемпинг, летних площадок...</p>
+                                    {% if prod.productsTranslations is not empty %}
+                                        {% for trans in prod.productsTranslations %}
+                                            {%if trans.language == loc %}
+                                                <h3 class="news-title">{{ trans.name }}</h3>
+                                            {% else %}
+                                                <h3 class="news-title">{{ prod.name }}</h3>
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% else %}
+                                    <h3 class="news-title">{{ prod.name }}</h3>
+                                     {% endif %}
+                                    {% if prod.productsTranslations is not empty %}
+                                        {% for trans in prod.productsTranslations %}
+                                            {%if trans.language == loc %}
+                                                <p class="news-description">{{ trans.shortDescription }}</p>
+                                            {% else %}
+                                                <p class="news-description">{{ prod.shortDescription }}</p>
+                                            {% endif %}
+                                        {% endfor %}
+                                    {% else %}
+                                        <p class="news-description">{{ prod.shortDescription }}</p>
+                                    {% endif %}
                                 </div>
-                                <a class="read-more" href="post-gallery.html#">Подробнее</a>
+                                <a class="read-more" href="{{ path('product', {'_locale': app.request.locale, 'url': prod.url}) }}">Детальніше</a>
                             </div>
                         </div>
-                        <div class="news-item">
-                            <img alt="" src="{{ asset('images/news/2-370x370.jpg') }}">
-                            <div class="news-hover">
-                                <div class="hover-border">
-                                    <div></div>
-                                </div>
-                                <div class="content">
-                                    <div class="time"></div>
-                                    <h3 class="news-title">Дизайнерская мебель</h3>
-                                    <p class="news-description">Дизайнерская мебель в скандинавском стиле...</p>
-                                </div>
-                                <a class="read-more" href="post-gallery.html#">Подробнее</a>
-                            </div>
-                        </div>
-                        <div class="news-item">
-                            <img alt="" src="{{ asset('images/news/3-370x370.jpg') }}">
-                            <div class="news-hover">
-                                <div class="hover-border">
-                                    <div></div>
-                                </div>
-                                <div class="content">
-                                    <div class="time"></div>
-                                    <h3 class="news-title">Лофт дизайн</h3>
-                                    <p class="news-description">Мебель в стиле лофт из дерева и металла...</p>
-                                </div>
-                                <a class="read-more" href="post-gallery.html#">Подробнее</a>
-                            </div>
-                        </div>
+                        {% endif %}
+                        {% endfor %}
                     </div>
                 </section>
             </div>

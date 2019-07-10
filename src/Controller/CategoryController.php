@@ -32,4 +32,20 @@ class CategoryController extends AbstractController
             'categories' => $categories
         ]);
     }
+
+    /**
+     * @Route("/{_locale}/categories", name="categories")
+     */
+    public function categories(CategoriesRepository $categoriesRepository){
+        $categories = $categoriesRepository->createQueryBuilder('c')
+            ->where('c.isVisible IS NOT NULL')
+            ->addSelect('t')
+            ->leftJoin('c.categoriesTranslations', 't')
+            ->getQuery()
+            ->getResult();
+        ;
+        return $this->render('category/all.categories.html.twig', [
+            'categories' => $categories,
+        ]);
+    }
 }
