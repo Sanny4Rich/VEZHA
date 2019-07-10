@@ -3,7 +3,7 @@
 {% block title %}Hello CategoryController!{% endblock %}
 
 {% block body %}
-    {% set loc = app.request.locale|raw %}
+    {% set loc = app.request.get('_locale') %}
     <main class="page-header-2">
         <div class="container" style="padding-top: 6rem">
             <div class="row">
@@ -11,7 +11,11 @@
                     <div class="title-info"></div>
                     {% if product.productsTranslations is not empty %}
                         {% for trans in product.productsTranslations %}
+                            {%if trans.language == loc %}
                             <h1 class="display-1">{{ trans.name }}</h1>
+                            {% else %}
+                                <h1 class="display-1">{{ product.name }}</h1>
+                            {% endif %}
                         {% endfor %}
                     {% else %}
                     <h1 class="display-1">{{ product.name }}</h1>
@@ -52,8 +56,28 @@
                     <div class="entry-content">
                         <div class="row">
                             <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
-                                <h3 class="entry-description">{{ product.name }}</h3>
-                                <p>{{ product.description|raw }}</p>
+                                {% if product.productsTranslations is not empty %}
+                                    {% for trans in product.productsTranslations %}
+                                        {%if trans.language == loc %}
+                                            <h1 class="display-1">{{ trans.name }}</h1>
+                                        {% else %}
+                                            <h3 class="entry-description">{{ product.name }}</h3>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% else %}
+                                    <h3 class="entry-description">{{ product.name }}</h3>
+                                {% endif %}
+                                {% if product.productsTranslations is not empty %}
+                                    {% for trans in product.productsTranslations %}
+                                        {%if trans.language == loc %}
+                                            <p>{{ trans.description|raw }}</p>
+                                        {% else %}
+                                            <p>{{ product.description|raw }}</p>
+                                        {% endif %}
+                                    {% endfor %}
+                                {% else %}
+                                    <p>{{ product.description|raw }}</p>
+                                {% endif %}
                             </div>
                         </div>
 
@@ -62,13 +86,6 @@
                     <div class="entry-footer">
                         <div class="row">
                             <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
-                                <div class="tags-links">
-                                    <span>Tags:</span>
-                                    <a href="">Inspiration</a>,
-                                    <a href="">Workspace</a>,
-                                    <a href="">Minimal</a>,
-                                    <a href="">Decoation</a>
-                                </div>
                                 <div class="post-share">
                                     <span>Share:</span>
                                     <a href="" class="icon ion-social-facebook"></a>

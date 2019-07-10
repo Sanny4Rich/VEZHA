@@ -5,6 +5,7 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Gedmo\Mapping\Annotation as Gedmo;
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ServicesRepository")
  * @Vich\Uploadable()
@@ -60,6 +61,19 @@ class Services
      * @var \DateTime
      */
     private $updatedAt;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $onHomePagePosition;
+
+    /**
+     * @var string
+     *
+     * @Gedmo\Slug(fields={"name"})
+     * @ORM\Column(type="string", length=255, unique=true)
+     */
+    private $url;
 
     public function getId(): ?int
     {
@@ -165,5 +179,29 @@ class Services
     public function getImage()
     {
         return $this->image;
+    }
+
+    public function getOnHomePagePosition(): ?int
+    {
+        return $this->onHomePagePosition;
+    }
+
+    public function setOnHomePagePosition(?int $onHomePagePosition): self
+    {
+        $this->onHomePagePosition = $onHomePagePosition;
+
+        return $this;
+    }
+
+    public function getUrl(): ?string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(string $url): self
+    {
+        $this->url = $url;
+
+        return $this;
     }
 }

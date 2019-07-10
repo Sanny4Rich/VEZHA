@@ -14,7 +14,7 @@ services:
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-
+    
     # makes classes in src/ available to be used as services
     # this creates a service per class whose id is the fully-qualified class name
     App\:
@@ -54,7 +54,7 @@ services:
     App\Admin\ServicesAdmin:
         arguments: [~,App\Entity\Services,~,'@liip_imagine.cache.manager' ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Проекты}
+            - { name: sonata.admin, manager_type: orm, label: Услуги}
 
     App\Admin\ProductsTranslationsAdmin:
         arguments: [~,App\Entity\ProductsTranslations,~,'@liip_imagine.cache.manager' ]

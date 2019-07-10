@@ -48,7 +48,7 @@ class ProductImages
 
     public function __construct()
     {
-        $this->updatedAt = new \DateTime();
+        $this->updatedAt = new \DateTime('now');
     }
 
     public function getId(): ?int

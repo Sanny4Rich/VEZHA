@@ -2258,6 +2258,7 @@ a.brand:focus{
   text-transform: uppercase;
   letter-spacing: -0.025rem;
   margin-bottom: 0;
+  padding-top: 3rem;
 }
 
 .link-arrow.h5 .icon-chevron-right{

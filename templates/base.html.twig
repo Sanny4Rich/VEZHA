@@ -16,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
     </head>
+
     <body class="body-full-page">
     <div class="animsition">
         <div class="click-capture"></div>
@@ -41,7 +42,14 @@
                     <a href="{{ path('home_page') }}">{% trans %}Головна{% endtrans %}</a>
                 </li>
                 <li>
-                    <a href="{{ path('products', {'locale': app.request.locale}) }}" >Товары</a>
+                    <a href="{{ path('products', {'_locale': app.request.locale}) }}" >Категорії</a>
+                    <ul>
+                        {% for category in categories|sortbyfield('onHomePagePosition') %}
+                            {% if category.onHomePagePosition != 0 %}
+                                <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ category.name }}</a></li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
                 </li>
                 <li>
                     <a href="home-fullpage.html#">Статьи</a>
@@ -60,10 +68,10 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="{{ path('about',{'locale': app.request.locale}) }}">Наша компания</a>
+                    <a href="{{ path('about',{'_locale': app.request.locale}) }}">Наша компания</a>
                     <ul>
-                        <li><a href="{{ path('about',{'locale': app.request.locale}) }}">О нас</a></li>
-                        <li><a href="{{ path('contacts',{'locale': app.request.locale}) }}">Контакты</a></li>
+                        <li><a href="{{ path('about',{'_locale': app.request.locale}) }}">О нас</a></li>
+                        <li><a href="{{ path('contacts',{'_locale': app.request.locale}) }}">Контакты</a></li>
                     </ul>
                 </li>
             </ul>

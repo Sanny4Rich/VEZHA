@@ -13,7 +13,7 @@ class CategoryController extends AbstractController
     /**
      * @Route("/{_locale}/category/{url}", name="category")
      */
-    public function index(Categories $categories, ProductsRepository $productsRepository)
+    public function index(Categories $categories, ProductsRepository $productsRepository, CategoriesRepository $categoriesRepository)
     {
         $products = $productsRepository->createQueryBuilder('m')
             ->innerJoin('m.categories', 's', 'WITH', 's = :category')
@@ -22,8 +22,14 @@ class CategoryController extends AbstractController
             ->setParameter('category', $categories)
             ->getQuery()
             ->getResult();
+
+        $categories = $categoriesRepository->createQueryBuilder('c')
+            ->where('c.isOnHomePage IS NOT NULL')
+            ->getQuery()
+            ->getResult();
         return $this->render('category/index.html.twig', [
-            'products' => $products
+            'products' => $products,
+            'categories' => $categories
         ]);
     }
 }

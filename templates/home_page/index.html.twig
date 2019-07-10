@@ -3,7 +3,7 @@
 {% block title %}Hello HomePageController!{% endblock %}
 
 {% block body %}
-
+    {% set loc = app.request.get('_locale') %}
     <div class="copy-bottom white boxed"></div>
     <div class="lang-bottom white boxed">
         <div class="menu-lang">
@@ -57,10 +57,12 @@
                                                 </h2>
                                                 <ul class="service-list">
                                                     {% set increment = 1 %}
-                                                    {% for category in categories|sortbyfield('onHomePagePosition') %}
-                                                        {% if category.isVisible == true %}
-                                                            <li><a href="{{ path('category', {'locale': app.request.locale, 'url': category.url}) }}">{{ increment }}. {{ category.name }}</a></li>
+                                                    {% for service in services|sortbyfield('onHomePagePosition') %}
+                                                        {% if service.isVisible == true %}
+                                                            {% if service.isOnHomePage == true %}
+                                                            <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ increment }}. {{ service.name }}</a></li>
                                                             {% set increment = increment + 1 %}
+                                                            {% endif %}
                                                         {% endif %}
                                                     {% endfor %}
                                                 </ul>
@@ -88,11 +90,11 @@
         <div class="pp-scrollable text-white section section-3">
             <div class="scroll-wrap">
                 <div class="bg-changer">
-                    {% for service in services|sortbyfield('updatedAt') %}
-                        {% if service.isVisible and service.isOnHomePage %}
-                        {% if service.image is not null  %}
+                    {% for product in products|sortbyfield('updatedAt') %}
+                        {% if product.isVisible and product.isOnHomePage %}
+                        {% if product.image is not null  %}
                         <div class="section-bg"
-                             style="background-image:url('{{ vich_uploader_asset(service, 'imageFile') }}');"></div>
+                             style="background-image:url('{{ vich_uploader_asset(product, 'imageFile') }}');"></div>
                     {% else %}
                         <div class="section-bg"
                              style="background-image:url('{{asset('images/bg/bg1.jpg')}}');"></div>
@@ -111,20 +113,20 @@
                                             <div class="col-md-12">
                                                 <h2 class="title-uppercase text-white">Последние проекты</h2>
                                                 <div class="row-project-box row">
-                                                    {% for service in services|sortbyfield('updatedAt')|reverse %}
-                                                        {% if service.isVisible and service.isOnHomePage %}
+                                                    {% for product in products|sortbyfield('updatedAt')|reverse %}
+                                                        {% if product.isVisible and product.isOnHomePage %}
                                                         <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
-                                                            <a href="" class="project-box">
+                                                            <a href="{{ path('product', {'_locale': app.request.locale, 'url': product.url}) }}" class="project-box">
                                                                 <div class="project-box-inner">
-                                                                    <h5>{{ service.name }}</h5>
-                                                                    <div class="project-category">{{ service.shortDescription }}</div>
+                                                                    <h5>{{ product.name }}</h5>
+                                                                    <div class="project-category">{{ product.shortDescription }}</div>
                                                                 </div>
                                                             </a>
                                                         </div>
                                                         {% endif %}
                                                     {% endfor %}
                                                 </div>
-                                                <a href="home-fullpage.html#" class="h5 link-arrow text-white">смотреть
+                                                <a href="{{ path('products', {'_locale': app.request.locale}) }}" class="h5 link-arrow text-white">смотреть
                                                     все проекты <i class="icon icon-chevron-right"></i></a>
                                             </div>
                                         </div>
