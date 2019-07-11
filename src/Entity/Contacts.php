@@ -66,6 +66,56 @@ class Contacts
      */
     private $workEnd;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $viber;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : 0})
+     */
+    private $isViberShow;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $telegram;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : 0})
+     */
+    private $isTelegrammShow;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $facebook;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $twitter;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : 0})
+     */
+    private $isFacebookShow;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : 0})
+     */
+    private $isTwitterShow;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $instagram;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : 0})
+     */
+    private $isInstagramShow;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -187,6 +237,126 @@ class Contacts
     public function setWorkEnd(?string $workEnd): self
     {
         $this->workEnd = $workEnd;
+
+        return $this;
+    }
+
+    public function getViber(): ?string
+    {
+        return $this->viber;
+    }
+
+    public function setViber(?string $viber): self
+    {
+        $this->viber = $viber;
+
+        return $this;
+    }
+
+    public function getIsViberShow(): ?bool
+    {
+        return $this->isViberShow;
+    }
+
+    public function setIsViberShow(bool $isViberShow): self
+    {
+        $this->isViberShow = $isViberShow;
+
+        return $this;
+    }
+
+    public function getTelegram(): ?string
+    {
+        return $this->telegram;
+    }
+
+    public function setTelegram(?string $telegram): self
+    {
+        $this->telegram = $telegram;
+
+        return $this;
+    }
+
+    public function getIsTelegrammShow(): ?bool
+    {
+        return $this->isTelegrammShow;
+    }
+
+    public function setIsTelegrammShow(bool $isTelegrammShow): self
+    {
+        $this->isTelegrammShow = $isTelegrammShow;
+
+        return $this;
+    }
+
+    public function getFacebook(): ?string
+    {
+        return $this->facebook;
+    }
+
+    public function setFacebook(?string $facebook): self
+    {
+        $this->facebook = $facebook;
+
+        return $this;
+    }
+
+    public function getTwitter(): ?string
+    {
+        return $this->twitter;
+    }
+
+    public function setTwitter(string $twitter): self
+    {
+        $this->twitter = $twitter;
+
+        return $this;
+    }
+
+    public function getIsFacebookShow(): ?bool
+    {
+        return $this->isFacebookShow;
+    }
+
+    public function setIsFacebookShow(bool $isFacebookShow): self
+    {
+        $this->isFacebookShow = $isFacebookShow;
+
+        return $this;
+    }
+
+    public function getIsTwitterShow(): ?bool
+    {
+        return $this->isTwitterShow;
+    }
+
+    public function setIsTwitterShow(bool $isTwitterShow): self
+    {
+        $this->isTwitterShow = $isTwitterShow;
+
+        return $this;
+    }
+
+    public function getInstagram(): ?string
+    {
+        return $this->instagram;
+    }
+
+    public function setInstagram(?string $instagram): self
+    {
+        $this->instagram = $instagram;
+
+        return $this;
+    }
+
+    public function getIsInstagramShow(): ?bool
+    {
+        return $this->isInstagramShow;
+    }
+
+    public function setIsInstagramShow(bool $isInstagramShow): self
+    {
+        $this->isInstagramShow = $isInstagramShow;
 
         return $this;
     }

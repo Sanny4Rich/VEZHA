@@ -4,8 +4,10 @@ namespace App\Controller;
 
 use App\Entity\Categories;
 use App\Repository\CategoriesRepository;
+use App\Repository\ContactsRepository;
 use App\Repository\ProductsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class CategoryController extends AbstractController
@@ -13,8 +15,13 @@ class CategoryController extends AbstractController
     /**
      * @Route("/{_locale}/category/{url}", name="category")
      */
-    public function index(Categories $categories, ProductsRepository $productsRepository, CategoriesRepository $categoriesRepository)
+    public function index(Request $request, ContactsRepository $contactsRepository,Categories $categories, ProductsRepository $productsRepository, CategoriesRepository $categoriesRepository)
     {
+        $locale = $request->get('_locale');
+        $contacts = $contactsRepository->findBy(['language'=>$locale]);
+        if ($contacts == [])
+            $contacts = $contactsRepository->findBy(['language'=> $this->getParameter('kernel.default_locale')]);
+
         $products = $productsRepository->createQueryBuilder('m')
             ->innerJoin('m.categories', 's', 'WITH', 's = :category')
             ->addSelect('i')
@@ -29,14 +36,21 @@ class CategoryController extends AbstractController
             ->getResult();
         return $this->render('category/index.html.twig', [
             'products' => $products,
-            'categories' => $categories
+            'categories' => $categories,
+            'contacts' => $contacts
         ]);
     }
 
     /**
      * @Route("/{_locale}/categories", name="categories")
      */
-    public function categories(CategoriesRepository $categoriesRepository){
+    public function categories(CategoriesRepository $categoriesRepository, Request $request, ContactsRepository $contactsRepository){
+        $locale = $request->get('_locale');
+        $contacts = $contactsRepository->findBy(['language'=>$locale]);
+        if ($contacts == [])
+            $contacts = $contactsRepository->findBy(['language'=> $this->getParameter('kernel.default_locale')]);
+
+
         $categories = $categoriesRepository->createQueryBuilder('c')
             ->where('c.isVisible IS NOT NULL')
             ->addSelect('t')
@@ -46,6 +60,7 @@ class CategoryController extends AbstractController
         ;
         return $this->render('category/all.categories.html.twig', [
             'categories' => $categories,
+            'contacts' => $contacts
         ]);
     }
 }

@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Entity\Products;
 use App\Entity\Services;
 use App\Repository\CategoriesRepository;
+use App\Repository\ContactsRepository;
 use App\Repository\ProductsRepository;
 use App\Repository\ServicesRepository;
 use Entity\Repository\CategoryRepository;
@@ -30,8 +31,14 @@ class HomePageController extends AbstractController
     /**
      * @Route("/{_locale}/", name="home_page", defaults={"_locale" = "ua"}, requirements={"_locale" = "ua|ru|en" })
      */
-    public function index(Request $request, ProductsRepository $productsRepository, ServicesRepository $servicesRepository, CategoriesRepository $categoriesRepository)
+    public function index(Request $request,ContactsRepository $contactsRepository, ProductsRepository $productsRepository, ServicesRepository $servicesRepository, CategoriesRepository $categoriesRepository)
     {
+
+        $locale = $request->get('_locale');
+        $contacts = $contactsRepository->findBy(['language'=>$locale]);
+            if ($contacts == [])
+                $contacts = $contactsRepository->findBy(['language'=> $this->getParameter('kernel.default_locale')]);
+
         $services = $servicesRepository->createQueryBuilder('s')
             ->where('s.isOnHomePage IS NOT NULL')
             ->getQuery()
@@ -52,6 +59,7 @@ class HomePageController extends AbstractController
             'products' => $products,
             'services' => $services,
             'categories' => $categories,
+            'contacts' => $contacts
         ]);
     }
 

@@ -56,7 +56,7 @@ class ServicesAdmin extends AbstractAdmin
         $form
             ->tab('Главная страница')
             ->add('isOnHomePage')
-            ->add('onHomePagePosition')
+            ->add('onHomePagePosition', null, ['label' => 'Позиция на главной странице', 'help' => 'Цифра больше 0 '])
 //            ->add('imageFile', VichImageType::class, [
 //                'required' => false,
 //                'image_uri' => function (Services $services, $resolverdUri) use ($cacheManager) {
