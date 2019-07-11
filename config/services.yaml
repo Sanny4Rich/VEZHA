@@ -60,3 +60,8 @@ services:
         arguments: [~,App\Entity\ProductsTranslations,~,'@liip_imagine.cache.manager' ]
         tags:
             - { name: sonata.admin, manager_type: orm, label: Переводы товаров}
+
+    App\Admin\ContactAdmin:
+        arguments: [~,App\Entity\Contacts,~ ]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: Контакты}
