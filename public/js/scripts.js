@@ -351,3 +351,14 @@ $('.menu-list').hover(function() {
 }, function() {
     $(window).scroll().enable();
 });
+
+var map;
+
+DG.then(function () {
+    map = DG.map('map', {
+        center: [48.458932, 35.051807],
+        zoom: 17
+    });
+
+    DG.marker([48.458932, 35.051807]).addTo(map).bindPopup('ТОВ "ВЕЖА"');;
+});
