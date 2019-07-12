@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomePageController!{% endblock %}
+{% block title %}Головна сторінка{% endblock %}
 
 {% block body %}
     {% set loc = app.request.get('_locale') %}
@@ -19,15 +19,15 @@
                 <div class="scrollable-content">
                     <div class="vertical-centred">
                         <div class="boxed boxed-inner">
-                            <div class="vertical-title hidden-xs hidden-sm"><span>Вступление</span></div>
+                            <div class="vertical-title hidden-xs hidden-sm"><span>{% trans %}Вступ{% endtrans %}</span></div>
                             <div class="boxed">
                                 <div class="container">
                                     <div class="intro">
                                         <div class="row">
                                             <div class="col-md-8 col-lg-6">
-                                                <p class="subtitle-top">Добро пожаловать<br></p>
+                                                <p class="subtitle-top">{% trans %}Ласкаво просимо{% endtrans %}<br></p>
                                                 <h1 class="display-2 text-white"><span
-                                                            class="text-primary">ВАШ</span> ВИД РОСКОШИ
+                                                            class="text-primary">{% trans %}ВАШ{% endtrans %}</span>{% trans %}ВИД РОСКОШИ{% endtrans %}
                                                 </h1>
                                                 <div class="hr-bottom"></div>
                                             </div>
@@ -45,15 +45,15 @@
                 <div class="scrollable-content">
                     <div class="vertical-centred">
                         <div class="boxed boxed-inner">
-                            <div class="vertical-title text-dark hidden-xs hidden-sm"><span>что мы делаем</span></div>
+                            <div class="vertical-title text-dark hidden-xs hidden-sm"><span>{% trans %}Наші послуги{% endtrans %}</span></div>
                             <div class="boxed">
                                 <div class="container">
                                     <div class="intro">
                                         <div class="row">
                                             <div class="col-md-5 col-lg-5">
-                                                <p class="subtitle-top text-dark">Наша специализация</p>
-                                                <h2 class="title-uppercase">Наша миссия<br> <span
-                                                            class="text-primary">дизайн</span> лучшей мебели<br> для вас
+                                                <p class="subtitle-top text-dark">{% trans %}Послуги{% endtrans %}</p>
+                                                <h2 class="title-uppercase">Наша миссия??<br> <span
+                                                            class="text-primary">{% trans %}дизайн{% endtrans %}</span> лучшей мебели?<br> для вас?
                                                 </h2>
                                                 <ul class="service-list">
                                                     {% set increment = 1 %}
@@ -74,7 +74,7 @@
                                                     <div class="dots"></div>
                                                     <div class="experience-info">
                                                         <div class="number">24</div>
-                                                        <div class="text">Года<br>опыта<br>работ</div>
+                                                        <div class="text">Года?<br>опыта?<br>работ?</div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -105,13 +105,13 @@
                 <div class="scrollable-content">
                     <div class="vertical-centred">
                         <div class="boxed boxed-inner">
-                            <div class="vertical-title hidden-xs hidden-sm"><span>Наши работы</span></div>
+                            <div class="vertical-title hidden-xs hidden-sm"><span>{% trans %}Наші роботи{% endtrans %}</span></div>
                             <div class="boxed">
                                 <div class="container">
                                     <div class="intro">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h2 class="title-uppercase text-white">Последние проекты</h2>
+                                                <h2 class="title-uppercase text-white">{% trans %}Останні роботи{% endtrans %}</h2>
                                                 <div class="row-project-box row">
                                                     {% for product in products|sortbyfield('updatedAt')|reverse %}
                                                         {% if product.isVisible and product.isOnHomePage %}
@@ -126,8 +126,7 @@
                                                         {% endif %}
                                                     {% endfor %}
                                                 </div>
-                                                <a href="{{ path('products', {'_locale': app.request.locale}) }}" class="h5 link-arrow text-white">смотреть
-                                                    все проекты <i class="icon icon-chevron-right"></i></a>
+                                                <a href="{{ path('products', {'_locale': app.request.locale}) }}" class="h5 link-arrow text-white">{% trans %}Дивитися усі роботи{% endtrans %}<i class="icon icon-chevron-right"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -143,13 +142,13 @@
                 <div class="scrollable-content">
                     <div class="vertical-centred">
                         <div class="boxed boxed-inner">
-                            <div class="vertical-title text-dark hidden-xs hidden-sm"><span>Наши партнеры</span></div>
+                            <div class="vertical-title text-dark hidden-xs hidden-sm"><span>{% trans %}Наші партнери{% endtrans %}</span></div>
                             <div class="boxed">
                                 <div class="container">
                                     <div class="intro overflow-hidden">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h2 class="title-uppercase">Наши партнеры</h2>
+                                                <h2 class="title-uppercase">{% trans %}Наші партнери{% endtrans %}</h2>
                                                 <div class="row-partners">
                                                     <div class="col-partner">
                                                         <div class="partner-inner"><img alt=""
@@ -218,14 +217,14 @@
                 <div class="scrollable-content">
                     <div class="vertical-centred">
                         <div class="boxed boxed-inner">
-                            <div class="vertical-title hidden-xs hidden-sm"><span>testimonials</span></div>
+                            <div class="vertical-title hidden-xs hidden-sm"><span>{% trans %}Відгуки{% endtrans %}</span></div>
                             <div class="boxed">
                                 <div class="container">
                                     <div class="intro">
                                         <div class="row">
                                             <div class="col-md-6 col-lg-5">
                                                 <span class="icon-quote ion-quote"></span>
-                                                <h2 class="title-uppercase text-white">Отзывы клиентов</h2>
+                                                <h2 class="title-uppercase text-white">{% trans %}Відгуки клієнтів{% endtrans %}</h2>
                                             </div>
                                             <div class="col-md-5 col-lg-5  col-md-offset-1 col-lg-offset-2">
                                                 <div class="review-carousel owl-carousel">
@@ -284,7 +283,7 @@
                                                     <div class="row-contact-info row">
                                                         <div class="col-contact-info col-md-6 col-lg-4">
                                                             <div class="row">
-                                                                <h3 class="col-sm-3 col-md-4">Електронна пошта: </h3>
+                                                                <h3 class="col-sm-3 col-md-4">{% trans %}Електронна адреса{% endtrans %}: </h3>
                                                                 <div class="col-right col-sm-8 col-md-7 col-sm-offset-1 col-md-offset-1">
                                                                     {% if contacts.isEmailShow == true %}
                                                                     <div class="contact-info-row col-sm-6 col-md-12">

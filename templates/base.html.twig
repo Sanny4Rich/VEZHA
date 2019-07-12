@@ -9,7 +9,7 @@
         <link rel="apple-touch-icon" href="{{ asset('images/favicon/apple-touch-icon.png') }}">
         <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('images/favicon/apple-touch-icon-72x72.png') }}">
         <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('images/favicon/apple-touch-icon-114x114.png') }}">
-        <title>Bauhaus - Architecture & Interior HTML Template</title>
+        <title>Вежа Житлової Групи</title>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7CPoppins:300,400,500,600,700"
               rel="stylesheet">
@@ -64,14 +64,13 @@
                     <ul>
                         <li><a href="post-image.html">Фотографии</a></li>
                         <li><a href="post-gallery.html">Галерея</a></li>
-                        <li><a href="post-video.html">Видео</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="{{ path('about',{'_locale': app.request.locale}) }}">Наша компания</a>
+                    <a href="{{ path('about',{'_locale': app.request.locale}) }}">{% trans %}Наша компанія{% endtrans %}</a>
                     <ul>
-                        <li><a href="{{ path('about',{'_locale': app.request.locale}) }}">О нас</a></li>
-                        <li><a href="{{ path('contacts',{'_locale': app.request.locale}) }}">Контакты</a></li>
+                        <li><a href="{{ path('about',{'_locale': app.request.locale}) }}">{% trans %}О нас{% endtrans %}</a></li>
+                        <li><a href="{{ path('contacts',{'_locale': app.request.locale}) }}">{% trans %}Контакти{% endtrans %}</a></li>
                     </ul>
                 </li>
             </ul>
