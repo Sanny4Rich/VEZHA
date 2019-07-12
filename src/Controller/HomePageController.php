@@ -38,7 +38,7 @@ class HomePageController extends AbstractController
         $contacts = $contactsRepository->findBy(['language'=>$locale]);
             if ($contacts == [])
                 $contacts = $contactsRepository->findBy(['language'=> $this->getParameter('kernel.default_locale')]);
-
+        $contacts = $contacts[0];
         $services = $servicesRepository->createQueryBuilder('s')
             ->where('s.isOnHomePage IS NOT NULL')
             ->getQuery()

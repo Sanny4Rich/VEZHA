@@ -116,6 +116,46 @@ class Contacts
      */
     private $isInstagramShow;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $secondPhoneNumber;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : 0})
+     */
+    private $isSecondPhoneNumberShow;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $phoneNumberTitle;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $secondPhoneNumberTitle;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $secondEmail;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : 0})
+     */
+    private $isSecondEmailShow;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $firstEmailTitle;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $secondEmailTitle;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -357,6 +397,102 @@ class Contacts
     public function setIsInstagramShow(bool $isInstagramShow): self
     {
         $this->isInstagramShow = $isInstagramShow;
+
+        return $this;
+    }
+
+    public function getSecondPhoneNumber(): ?string
+    {
+        return $this->secondPhoneNumber;
+    }
+
+    public function setSecondPhoneNumber(?string $secondPhoneNumber): self
+    {
+        $this->secondPhoneNumber = $secondPhoneNumber;
+
+        return $this;
+    }
+
+    public function getIsSecondPhoneNumberShow(): ?bool
+    {
+        return $this->isSecondPhoneNumberShow;
+    }
+
+    public function setIsSecondPhoneNumberShow(bool $isSecondPhoneNumberShow): self
+    {
+        $this->isSecondPhoneNumberShow = $isSecondPhoneNumberShow;
+
+        return $this;
+    }
+
+    public function getPhoneNumberTitle(): ?string
+    {
+        return $this->phoneNumberTitle;
+    }
+
+    public function setPhoneNumberTitle(?string $phoneNumberTitle): self
+    {
+        $this->phoneNumberTitle = $phoneNumberTitle;
+
+        return $this;
+    }
+
+    public function getSecondPhoneNumberTitle(): ?string
+    {
+        return $this->secondPhoneNumberTitle;
+    }
+
+    public function setSecondPhoneNumberTitle(?string $secondPhoneNumberTitle): self
+    {
+        $this->secondPhoneNumberTitle = $secondPhoneNumberTitle;
+
+        return $this;
+    }
+
+    public function getSecondEmail(): ?string
+    {
+        return $this->secondEmail;
+    }
+
+    public function setSecondEmail(?string $secondEmail): self
+    {
+        $this->secondEmail = $secondEmail;
+
+        return $this;
+    }
+
+    public function getIsSecondEmailShow(): ?bool
+    {
+        return $this->isSecondEmailShow;
+    }
+
+    public function setIsSecondEmailShow(bool $isSecondEmailShow): self
+    {
+        $this->isSecondEmailShow = $isSecondEmailShow;
+
+        return $this;
+    }
+
+    public function getFirstEmailTitle(): ?string
+    {
+        return $this->firstEmailTitle;
+    }
+
+    public function setFirstEmailTitle(?string $firstEmailTitle): self
+    {
+        $this->firstEmailTitle = $firstEmailTitle;
+
+        return $this;
+    }
+
+    public function getSecondEmailTitle(): ?string
+    {
+        return $this->secondEmailTitle;
+    }
+
+    public function setSecondEmailTitle(?string $secondEmailTitle): self
+    {
+        $this->secondEmailTitle = $secondEmailTitle;
 
         return $this;
     }

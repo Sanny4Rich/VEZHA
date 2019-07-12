@@ -12,34 +12,56 @@
                         <div class="col-md-3">
                             <div class="section-info">
                                 <div class="title-hr"></div>
-                                <div class="info-title">Контакты</div>
+                                <div class="info-title">{% trans %}Контакти{% endtrans %}</div>
                             </div>
                         </div>
                         <div class="col-md-9">
                             <div class="row-contact row">
                                 <div class="col-contact col-lg-6">
-                                    <h3 class="contact-title contact-top">Melbourne, <span>Australia</span></h3>
-                                    <p class="contact-address text-muted"><strong>269 King Str, 05th Floor, Utral
-                                            Hosue Building, Melbourne, VIC 3000, Australia.</strong></p>
+                                    <h3 class="contact-title contact-top">{% trans %}Наша{% endtrans %} <span>{% trans %}адреса{% endtrans %}</span></h3>
+                                    {% if contacts.isAddressShow ==true %}
+                                    <p class="contact-address text-muted"><strong style="font-family: 'Microsoft Sans Serif', Tahoma, Arial, Verdana, Sans-Serif">{{ contacts.adress|raw }}</strong></p>
+                                    {% endif %}
+                                    {% if contacts.isEmailShow == true %}
                                     <p class="contact-row"><strong class="text-dark">Email:</strong> <a
-                                                href="../../../../cdn-cgi/l/email-protection.html" class="__cf_email__"
-                                                data-cfemail="93fafdf5fce1d3f1f2e6fbf2e6e0bdf0fc">[email&#160;protected]</a>
+                                                href="mailto:{{ contacts.email }}">{{ contacts.email }}</a>
                                     </p>
-                                    <p class="contact-row"><strong class="text-dark">Skype:</strong> bauhaus.arc</p>
+                                    {% endif %}
+                                    {% if contacts.isViberShow %}
+                                        <p class="contact-row"><strong class="text-dark">Viber:</strong> <a href="{{ contacts.viber }}">{{ contacts.phoneNumber }}
+                                        </a></p>
+                                            {% endif %}
+                                    {% if contacts.isTelegrammShow %}
+                                       <p class="contact-row"><strong class="text-dark">Telegram:</strong> <a href="{{ contacts.telegram }}">{{ contacts.phoneNumber }}
+                                        </a></p>
+                                            {% endif %}
                                 </div>
                                 <div class="col-contact col-lg-6">
-                                    <p class="contact-top"><strong class="text-muted">Call directly:</strong></p>
-                                    <p class="phone-lg text-dark">+99 (0) 344 956 4050</p>
-                                    <p class="text-muted"><strong class="text-dark">Work Hours</strong><br>
-                                        Monday - Friday : 08h00 - 17h30<br>
-                                        Saturday: 08h00 - 12h00, Sunday off work</p>
-                                    <div class="text-muted"><strong class="text-dark">Follow us</strong><br>
+                                    <p class="contact-top"><strong class="text-muted">{% trans %}Номер телефона:{% endtrans %}</strong></p>
+                                    {% if contacts.isPhoneShow %}
+                                    <p class="phone-lg text-dark">{{ contacts.phoneNumber }}</p>
+                                    {% endif %}
+                                    <p class="text-muted" style="font-family: 'Microsoft Sans Serif', Tahoma, Arial, Verdana, Sans-Serif"><strong class="text-dark">{% trans %}Години роботи:{% endtrans %} </strong><br>
+                                        {% trans %}Понеділок{% endtrans %} - {% trans %}П'ятниця{% endtrans %} : {% trans %}з{% endtrans %} {{ contacts.workStart }} - {% trans %}до{% endtrans %} {{ contacts.workEnd }}</p>
+                                    <div class="text-muted"><strong class="text-dark">{% trans %}Соціальні мережі{% endtrans %}</strong><br>
                                         <div class="contact-social social-list">
-                                            <a href="" class="icon ion-social-twitter"></a>
-                                            <a href="" class="icon ion-social-facebook"></a>
-                                            <a href="" class="icon ion-social-googleplus"></a>
-                                            <a href="" class="icon ion-social-linkedin"></a>
-                                            <a href="" class="icon ion-social-dribbble-outline"></a>
+                                            {% if contacts is not empty %}
+                                                {% if contacts.isViberShow==true %}
+                                                    <a href="{{ contacts.viber }}" class="icon fab fa-viber"></a>
+                                                {% endif %}
+                                                {% if contacts.isTelegrammShow== true %}
+                                                    <a href="{{ contacts.telegram }}" class="icon fab fa-telegram"></a>
+                                                {% endif %}
+                                                {% if contacts.isFacebookShow == true%}
+                                                    <a href="{{ contacts.facebook }}" class="icon ion-social-facebook"></a>
+                                                {% endif %}
+                                                {% if contacts.isInstagramShow == true%}
+                                                    <a href="{{ contacts.instagram }}" class="icon fab fa-instagram"></a>
+                                                {% endif %}
+                                                {% if contacts.isTwitterShow == true %}
+                                                    <a href="{{ contacts.twitter }}" class="icon ion-social-twitter"></a>
+                                                {% endif %}
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
@@ -54,36 +76,43 @@
                         <div class="col-md-3">
                             <div class="section-info">
                                 <div class="title-hr"></div>
-                                <div class="info-title">Задать вопрос</div>
+                                <div class="info-title">{% trans %}Зворотній зв'язок{% endtrans %}</div>
                             </div>
                         </div>
                         <div class="col-md-9">
-                            <form class="js-form">
+                            {{ form_start(form) }}
+                                {% set translate = { 'ua' :{'name':'Ім\'я', 'email': 'Електронна пошта', 'phone': 'Номер телефону*', 'message':'Текст повідомлення*'},
+                                                    'ru' :{'name': 'Имя*','email':'Електронная почта','phone':'Номер телефона*','message':'Текст сообщения*'},
+                                                    'en' :{'name':'Name*','email':'Email','phone':'Phone Number*', 'Message':'Message*'}
+                                } %}
+                                {% set formlocal = translate['ua'] %}
+                                {% if app.request.locale == 'ru' %}
+                                    {% set formlocal = translate['ru'] %}
+                                {% endif %}
+                                {% if app.request.locale == 'en' %}
+                                    {% set formlocal = translate['en'] %}
+                                {% endif %}
                                 <div class="row">
                                     <div class="form-group col-sm-6 col-lg-4">
-                                        <input class="input-gray" type="text" name="name" required
-                                               placeholder="Name*">
+                                        {{ form_widget(form.name, {'attr':{'class':'input-grey','placeholder': formlocal['name'] }, 'required':'true'}) }}
                                     </div>
                                     <div class="form-group col-sm-6 col-lg-4">
-                                        <input class="input-gray" type="email" name="email" placeholder="Email">
+                                        {{ form_widget(form.phoneNumber, {'attr':{'class':'input-grey','placeholder': formlocal['phone'] }, 'required':'true'}) }}
                                     </div>
                                     <div class="form-group col-sm-12 col-lg-4">
-                                        <input class="input-gray" type="text" name="subject"
-                                               placeholder="Subject (Optinal)">
+                                        {{ form_widget(form.email, {'attr':{'class':'input-grey','placeholder': formlocal['email'] }, 'required':'false'}) }}
                                     </div>
                                     <div class="form-group col-sm-12">
-                                            <textarea class="input-gray" name="message" required
-                                                      placeholder="Message*"></textarea>
+                                        {{ form_widget(form.message, {'attr':{'class':'input-grey','placeholder': formlocal['message'] }, 'required':'true'}) }}
                                     </div>
                                     <div class="col-sm-12">
-                                        <button type="submit" class="btn-upper btn-yellow btn">Send Message</button>
+                                        <button type="submit" class="btn-upper btn-yellow btn">{% trans %}Відправити{% endtrans %}</button>
                                     </div>
                                 </div>
-                                <div class="success-message"><i class="fa fa-check text-primary"></i> Thank you!.
-                                    Your message is successfully sent...
+                                <div class="success-message"><i class="fa fa-check text-primary"></i> {% trans %}Дякуємо за Ваше повідомлення{% endtrans %}
                                 </div>
-                                <div class="error-message">We're sorry, but something went wrong</div>
-                            </form>
+                                <div class="error-message">{% trans %}Вибачте, але щось пішло не так{% endtrans %}</div>
+                            {{ form_end(form) }}
                         </div>
                     </div>
                 </div>

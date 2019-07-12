@@ -21,7 +21,7 @@ class CategoryController extends AbstractController
         $contacts = $contactsRepository->findBy(['language'=>$locale]);
         if ($contacts == [])
             $contacts = $contactsRepository->findBy(['language'=> $this->getParameter('kernel.default_locale')]);
-
+        $contacts = $contacts[0];
         $products = $productsRepository->createQueryBuilder('m')
             ->innerJoin('m.categories', 's', 'WITH', 's = :category')
             ->addSelect('i')
@@ -49,7 +49,7 @@ class CategoryController extends AbstractController
         $contacts = $contactsRepository->findBy(['language'=>$locale]);
         if ($contacts == [])
             $contacts = $contactsRepository->findBy(['language'=> $this->getParameter('kernel.default_locale')]);
-
+        $contacts = $contacts[0];
 
         $categories = $categoriesRepository->createQueryBuilder('c')
             ->where('c.isVisible IS NOT NULL')

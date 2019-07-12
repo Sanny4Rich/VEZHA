@@ -4,6 +4,7 @@ namespace App\Admin;
 
 use App\Entity\Categories;
 use Doctrine\Common\Cache\ChainCache;
+use function PHPSTORM_META\type;
 use function Sodium\add;
 use Sonata\AdminBundle\Admin\AbstractAdmin;
 use Sonata\AdminBundle\Datagrid\DatagridMapper;
@@ -41,11 +42,19 @@ class ContactAdmin extends AbstractAdmin
             ->tab('Основная информация')
             ->add('companyName')
             ->add('isAddressShow', null, ['label'=> 'Отображать адрес?'])
-            ->add('adress', TextareaType::class, ['attr' => ['class' => 'ckeditor'], 'label' => 'Адрес'])
+            ->add('adress', null, ['label' => 'Адрес'])
             ->add('isPhoneShow', null, ['label' => 'Отображать номер телефона?'])
-            ->add('phoneNumber', null, ['label' => 'Номер телефона', 'help' => 'Номер в формате "+380*********'])
+            ->add('phoneNumberTitle', null, ['label' => 'Описание основного номера телефона', 'help'=> 'Отедл продаж/Главный офис'])
+            ->add('phoneNumber', null, ['label' => 'Номер телефона', 'help' => 'Номер в формате "+38(0**)-***-**-**" | Отображается в HEAD'])
+            ->add('isSecondPhoneNumberShow',null, ['label' => 'Отображать дополнительный номер телефона?'])
+            ->add('secondPhoneNumberTitle', null, ['label' => 'Описание дополнительного номера телефона', 'help'=> 'Отдел продаж/главный офис'])
+            ->add('secondPhoneNumber', null, ['label' => 'Дополнительный номер телефона', 'help' => 'Номер в формате "+38(0**)-***-**-**"'])
             ->add('isEmailShow', null, ['label' => 'Отображать email?'])
+            ->add('firstEmailTitle', null, ['label' => 'Описание email', 'help'=> ' Отдел продаж/центральный офис...'])
             ->add('email', null,['label'=> 'Email'])
+            ->add('isSecondEmailShow', null, ['label' => 'Отображать дополнительный Email?'])
+            ->add('secondEmailTitle', null, ['label' => 'Описание дополнительного Email', 'help' =>'Отдел продаж/поддержка/главный офис...'])
+            ->add('secondEmail', null, ['label' => 'Дополнительный Email'])
             ->add('workStart', null, [
                 'label'=> 'Время открытия :',
                 'help' => 'Время вводить в формате 00:00'

@@ -25,7 +25,8 @@ class ProductsTranslationsAdmin extends AbstractAdmin
         $list
             ->addIdentifier('id')
             ->addIdentifier('name')
-            ->add('product');
+            ->add('product')
+            ->add('language');
     }
 
     protected function configureDatagridFilters(DatagridMapper $filter)
@@ -33,7 +34,8 @@ class ProductsTranslationsAdmin extends AbstractAdmin
         $filter
             ->add('id')
             ->add('name')
-            ->add('product');
+            ->add('product')
+            ->add('language');
     }
 
     protected function configureFormFields(FormMapper $form)

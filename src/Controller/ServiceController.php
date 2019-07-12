@@ -20,7 +20,7 @@ class ServiceController extends AbstractController
         $contacts = $contactsRepository->findBy(['language'=>$locale]);
         if ($contacts == [])
             $contacts = $contactsRepository->findBy(['language'=> $this->getParameter('kernel.default_locale')]);
-
+        $contacts = $contacts[0];
 
         $categories = $categoriesRepository->createQueryBuilder('c')
             ->where('c.isOnHomePage IS NOT NULL')

@@ -272,64 +272,66 @@
                 <div class="scrollable-content">
                     <div class="vertical-centred">
                         <div class="boxed boxed-inner">
-                            <div class="vertical-title text-dark hidden-xs hidden-sm"><span>Контакты</span></div>
+                            <div class="vertical-title text-dark hidden-xs hidden-sm"><span>{% trans %}Контакти{% endtrans %}</span></div>
                             <div class="boxed">
                                 <div class="container">
                                     <div class="intro overflow-hidden">
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <h2 class="title-uppercase">Где нас найти</h2>
+                                                <h2 class="title-uppercase">{% trans %}Наша адреса{% endtrans %}</h2>
                                                 <div id="map" class="map-2"></div>
                                                 <div class="contact-info">
                                                     <div class="row-contact-info row">
                                                         <div class="col-contact-info col-md-6 col-lg-4">
                                                             <div class="row">
-                                                                <h3 class="col-sm-3 col-md-4">Напишите нам</h3>
+                                                                <h3 class="col-sm-3 col-md-4">Електронна пошта: </h3>
                                                                 <div class="col-right col-sm-8 col-md-7 col-sm-offset-1 col-md-offset-1">
+                                                                    {% if contacts.isEmailShow == true %}
                                                                     <div class="contact-info-row col-sm-6 col-md-12">
-                                                                        <strong class="text-dark">Главный
-                                                                            офис</strong><br>
-                                                                        <a href="../../../../cdn-cgi/l/email-protection.html"
-                                                                           class="__cf_email__"
-                                                                           data-cfemail="2e464b4242416e4c4f5b464f5b5d004d41">[email&#160;protected]</a>
+                                                                        <strong class="text-dark">{{ contacts.firstEmailTitle  }}</strong><br>
+                                                                        <a href="mailto:{{ contacts.email }}" style="font-size: 0.8rem">{{ contacts.email }}</a>
                                                                     </div>
-                                                                    <div class="contact-info-row col-sm-6 col-md-12 ">
-                                                                        <strong class="text-dark">Отдел
-                                                                            продаж</strong><br>
-                                                                        <a href="../../../../cdn-cgi/l/email-protection.html"
-                                                                           class="__cf_email__"
-                                                                           data-cfemail="8be2e5ede4cbe9eafee3eafef8a5e8e4">[email&#160;protected]</a>
-                                                                    </div>
+                                                                    {% endif %}
+                                                                    {% if contacts.isSecondEmailShow == true %}
+                                                                        <div class="contact-info-row col-sm-6 col-md-12">
+                                                                            <strong class="text-dark">{{ contacts.secondEmailTitle }}</strong><br>
+                                                                            <a href="mailto:{{ contacts.secondEmail }}" style="font-size: 0.8rem">{{ contacts.secondEmail }}</a>
+                                                                        </div>
+                                                                    {% endif %}
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         <div class="col-contact-info col-md-6 col-lg-4">
                                                             <div class="row">
-                                                                <h3 class="col-sm-3 col-md-4">Позвоните нам</h3>
+                                                                <h3 class="col-sm-3 col-md-4">{% trans %}Зв'яжіться з нами{% endtrans %}</h3>
                                                                 <div class="col-right col-sm-8 col-md-7 col-sm-offset-1 col-md-offset-1">
+                                                                    {% if contacts.isPhoneShow == true %}
                                                                     <div class="contact-info-row col-sm-6 col-md-12">
-                                                                        <strong class="text-dark">Главный
-                                                                            офис</strong><br>
-                                                                        (0043) 568 456 902
+                                                                        <a href="tel:{{ contacts.phoneNumber }}"> <strong class="text-dark">{{ contacts.phoneNumberTitle }}</strong><br>
+                                                                        {{ contacts.phoneNumber|replace({'+38': ''}) }} </a>
                                                                     </div>
+                                                                    {% endif %}
+                                                                    {% if contacts.isSecondPhoneNumberShow == true %}
                                                                     <div class="contact-info-row col-sm-6 col-md-12 ">
-                                                                        <strong class="text-dark">Отдел
-                                                                            продаж</strong><br>
-                                                                        (00232) 568 323 901
+                                                                        <a href="tel:{{ contacts.secondPhoneNumber }}"> <strong class="text-dark">{{ contacts.secondPhoneNumberTitle }}</strong><br>
+                                                                            {{ contacts.secondPhoneNumber|replace({'+38': ''}) }} </a>
                                                                     </div>
+                                                                    {% endif %}
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        {% if contacts.adress is not empty %}
                                                         <div class="col-contact-info col-md-6 col-lg-4">
                                                             <div class="row">
-                                                                <h3 class="col-sm-3 col-md-4">Контакти</h3>
+                                                                <h3 class="col-sm-3 col-md-4">{% trans %}Контакти{% endtrans %}</h3>
                                                                 <div class="col-right col-sm-8 col-md-7 col-sm-offset-1 col-md-offset-1">
-                                                                    <div class="contact-info-row col-sm-6 col-md-12">
-                                                                        Україна, м.Дніпро, вул.Шевченко 37 оф.606
+                                                                    <div class="contact-info-row col-sm-6 col-md-12" style="font-family: 'Microsoft Sans Serif', Tahoma, Arial, Verdana, Sans-Serif">
+                                                                        {{ contacts.adress|raw }}
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        {% endif %}
                                                     </div>
                                                 </div>
                                             </div>
