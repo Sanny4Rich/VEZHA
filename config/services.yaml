@@ -75,3 +75,8 @@ services:
         arguments: [~, App\Entity\StaticTranslations,~]
         tags:
             - { name: sonata.admin, manager_type: orm, label: Статические переводы}
+
+    App\Admin\AboutAdmin:
+        arguments: [~,App\Entity\About,~]
+        tags:
+            - { name: sonata.admin, manager_type: orm, label: О нас}
