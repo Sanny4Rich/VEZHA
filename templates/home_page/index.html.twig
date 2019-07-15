@@ -7,9 +7,18 @@
     <div class="copy-bottom white boxed"></div>
     <div class="lang-bottom white boxed">
         <div class="menu-lang">
-            <a href="" class="active">Eng</a>
-            <a href="">Fra</a>
-            <a href="">Ger</a>
+            <a href="{{-
+            path(app.request.get('_route'),
+                app.request.get('_route_params')|merge({'_locale' : 'ua'}))
+            -}}" {% if app.request.locale == 'ua' %} class="active" {% endif %}>UA</a>
+            <a href="{{-
+            path(app.request.get('_route'),
+                app.request.get('_route_params')|merge({'_locale' : 'ru'}))
+            -}}" {% if app.request.locale == 'ru' %} class="active" {% endif %}>RU</a>
+            <a href="{{-
+            path(app.request.get('_route'),
+                app.request.get('_route_params')|merge({'_locale' : 'en'}))
+            -}}" {% if app.request.locale == 'en' %} class="active" {% endif %}>ENG</a>
         </div>
     </div>
     <div class="pagepiling">
@@ -52,15 +61,15 @@
                                         <div class="row">
                                             <div class="col-md-5 col-lg-5">
                                                 <p class="subtitle-top text-dark">{% trans %}Послуги{% endtrans %}</p>
-                                                <h2 class="title-uppercase">Наша миссия??<br> <span
-                                                            class="text-primary">{% trans %}дизайн{% endtrans %}</span> лучшей мебели?<br> для вас?
+                                                <h2 class="title-uppercase">{% trans %}Наша миссия{% endtrans %}<br> <span
+                                                            class="text-primary">{% trans %}дизайн{% endtrans %}</span>{% trans %}лучшей мебели{% endtrans %}<br>{% trans %}для вас?{% endtrans %}
                                                 </h2>
                                                 <ul class="service-list">
                                                     {% set increment = 1 %}
                                                     {% for service in services|sortbyfield('onHomePagePosition') %}
                                                         {% if service.isVisible == true %}
                                                             {% if service.isOnHomePage == true %}
-                                                            <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ increment }}. {{ service.name }}</a></li>
+                                                            <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ service.name }}</a></li>
                                                             {% set increment = increment + 1 %}
                                                             {% endif %}
                                                         {% endif %}
@@ -73,8 +82,8 @@
                                                          src="{{ asset('images/1-470x490.jpg') }}">
                                                     <div class="dots"></div>
                                                     <div class="experience-info">
-                                                        <div class="number">24</div>
-                                                        <div class="text">Года?<br>опыта?<br>работ?</div>
+                                                        <div class="number">{% trans %}24{% endtrans %}</div>
+                                                        <div class="text">{% trans %}Року{% endtrans %}<br>{% trans %}досвіду{% endtrans %}<br>{% trans %}робіт{% endtrans %}</div>
                                                     </div>
                                                 </div>
                                             </div>

@@ -17,6 +17,7 @@
 
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
     </head>
+    {% set lang = app.request.locale %}
     <body class="body-full-page">
     <div class="animsition">
         <div class="click-capture"></div>
@@ -46,7 +47,19 @@
                     <ul>
                         {% for category in categories|sortbyfield('onHomePagePosition') %}
                             {% if category.onHomePagePosition != 0 %}
-                                <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ category.name }}</a></li>
+                                {% if category.categoriesTranslations is not empty %}
+                                    {% for trans in category.categoriesTranslations %}
+                                        {% if trans.language == lang %}
+                                            {% if trans.name is not empty %}
+                                            <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ trans.name }}</a></li>
+                                            {% else %}
+                                            <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ category.name }}</a></li>
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% else %}
+                                        <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ category.name }}</a></li>
+                                {% endif %}
                             {% endif %}
                         {% endfor %}
                     </ul>

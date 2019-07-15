@@ -11,6 +11,7 @@ use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\Filter\NumberType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Liip\ImagineBundle\Imagine\Cache\CacheManager;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class CategoryAdmin extends AbstractAdmin
@@ -50,7 +51,7 @@ class CategoryAdmin extends AbstractAdmin
         $form
             ->tab('Основная информация')
             ->add('name')
-            ->add('description')
+            ->add('description', TextareaType::class, array('attr' => array('class' => 'ckeditor'), 'required' => false))
             ->add('shortDescription')
             ->add('isVisible')
             ->end()

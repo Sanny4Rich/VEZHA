@@ -36,6 +36,16 @@ class CategoriesTranslations
      */
     private $category;
 
+    /**
+     * @ORM\Column(type="string", length=2)
+     */
+    private $language;
+
+    public function __toString()
+    {
+        return (string)$this->getName();
+    }
+
     public function getId(): ?int
     {
         return $this->id;
@@ -85,6 +95,18 @@ class CategoriesTranslations
     public function setCategory(?Categories $category): self
     {
         $this->category = $category;
+
+        return $this;
+    }
+
+    public function getLanguage(): ?string
+    {
+        return $this->language;
+    }
+
+    public function setLanguage(string $language): self
+    {
+        $this->language = $language;
 
         return $this;
     }

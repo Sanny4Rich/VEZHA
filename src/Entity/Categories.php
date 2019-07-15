@@ -88,6 +88,11 @@ class Categories
      */
     private $categoriesTranslations;
 
+    public function __toString()
+    {
+        return (string)$this->getName();
+    }
+
     public function __construct()
     {
         $this->products = new ArrayCollection();
