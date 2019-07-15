@@ -15,6 +15,7 @@ use Sonata\AdminBundle\Datagrid\ListMapper;
 use Sonata\AdminBundle\Form\FormMapper;
 use Sonata\AdminBundle\Form\Type\ModelType;
 use Sonata\Form\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Vich\UploaderBundle\Form\Type\VichImageType;
@@ -39,7 +40,8 @@ class AboutAdmin extends AbstractAdmin
     {
         $list
             ->addIdentifier('id')
-            ->addIdentifier('aboutTitle');
+            ->addIdentifier('aboutTitle')
+            ->add('language');
     }
 
     protected function configureDatagridFilters(DatagridMapper $filter)
@@ -56,7 +58,7 @@ class AboutAdmin extends AbstractAdmin
         $form
             ->tab('О нас')
             ->add('aboutTitle')
-            ->add('aboutDescription')
+            ->add('aboutDescription', TextareaType::class, array('attr' => array('class' => 'ckeditor'), 'required' => false))
             ->add('imageFile', VichImageType::class, [
                 'required' => false,
                 'image_uri' => function (About $about, $resolverdUri) use ($cacheManager) {
@@ -66,6 +68,25 @@ class AboutAdmin extends AbstractAdmin
                     }
                     return $cacheManager->getBrowserPath($resolverdUri, 'squared_thumbnail');
                 }
-            ]);
+            ])
+            ->add('language', ChoiceType::class, ['label'=>'Язык' , 'choices'=> ['Українська'=>'ua', 'Русский'=> 'ru', 'English' => 'en']])
+            ->end()
+            ->end();
+
+            $form
+                ->tab('Основные направления')
+                ->with('Первая колонка', ['class'=>'col-4', 'box_class'   => 'box box-solid box-dange'])
+                ->add('firstOurDirectionTitle')
+                ->add('firstOurDirectionDescription')
+                ->end()
+                ->with('Вторая колонка', ['class'=>'col-4', 'box_class'   => 'box box-solid box-dange'])
+                ->add('secondOurDirectionTitle')
+                ->add('secondOurDirectionDescription')
+                ->end()
+                ->with('Третья колонка', ['class'=>'col-4', 'box_class'   => 'box box-solid box-dange'])
+                ->add('thirdOurDirectionTitle')
+                ->add('thirdOurDirectionDescription')
+                ->end()
+                ->end();
     }
 }

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Feedback;
 use App\Form\FeedbackType;
+use App\Repository\AboutRepository;
 use App\Repository\CategoriesRepository;
 use App\Repository\ContactsRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -15,7 +16,7 @@ class AboutController extends AbstractController
     /**
      * @Route("/{_locale}/about", name="about")
      */
-    public function about(CategoriesRepository $categoriesRepository, Request $request, ContactsRepository $contactsRepository)
+    public function about(AboutRepository $aboutRepository,CategoriesRepository $categoriesRepository, Request $request, ContactsRepository $contactsRepository)
     {
         $locale = $request->get('_locale');
         $contacts = $contactsRepository->findBy(['language'=>$locale]);
@@ -27,10 +28,28 @@ class AboutController extends AbstractController
             ->getQuery()
             ->getResult();
 
+        $about = $aboutRepository->createQueryBuilder('a')
+            ->addSelect('p')
+            ->leftJoin('a.partners', 'p')
+            ->where('a.language =:lang')
+            ->setParameter('lang', $locale)
+            ->getQuery()
+            ->getResult();
+        if($about == []) {
+            $about = $aboutRepository->createQueryBuilder('a')
+                ->addSelect('p')
+                ->leftJoin('a.partners', 'p')
+                ->where('a.language =:lang')
+                ->setParameter('lang', $this->getParameter('kernel.default_locale'))
+                ->getQuery()
+                ->getResult();
+        }
+
+        $about =$about[0];
         return $this->render('about/about.html.twig', [
             'categories' => $categories,
             'contacts' => $contacts,
-
+            'about' => $about,
         ]);
     }
 
