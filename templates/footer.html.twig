@@ -1,32 +1,58 @@
 <footer id="footer" class="footer section">
     <div class="footer-flex">
         <div class="flex-item">
-            <a class="brand pull-left" href="index.html#">
+            <a class="brand pull-left" href="{{ path('home_page',{'_locale': app.request.locale}) }}">
                 <img alt="" src="{{ asset('images/brand.png') }}">
             </a>
         </div>
-
         <div class="flex-item">
             <ul>
-
-                <li><a href="">Help</a></li>
-                <li><a href="">Affiliatep</a></li>
+                <li><a href="">About</a></li>
             </ul>
         </div>
         <div class="flex-item">
             <ul>
-                <li><a href="{{ path('about', {'_locale': app.request.locale}) }}">About</a></li>
-                <li><a href="{{ path('contacts', {'_locale': app.request.locale}) }}">Contact</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+        <div class="flex-item">
+            <ul class="lang-bot">
+                <li {% if app.request.locale == 'ua' %} class="active" {% endif %}><a href="{{-
+                    path(app.request.get('_route'),
+                        app.request.get('_route_params')|merge({'_locale' : 'ua'}))
+                    -}}" >UA</a></li>
+                <li {% if app.request.locale == 'ru' %} class="active" {% endif %}><a href="{{-
+                    path(app.request.get('_route'),
+                        app.request.get('_route_params')|merge({'_locale' : 'ru'}))
+                    -}}" >RU</a></li>
+                <li {% if app.request.locale == 'en' %} class="active" {% endif %}><a href="{{-
+                    path(app.request.get('_route'),
+                        app.request.get('_route_params')|merge({'_locale' : 'en'}))
+                    -}}" >ENG</a></li>
             </ul>
         </div>
         <div class="flex-item">
             <div class="social-list">
-                <a href="" class="icon ion-social-twitter"></a>
-                <a href="" class="icon ion-social-facebook"></a>
-                <a href="" class="icon ion-social-googleplus"></a>
-                <a href="" class="icon ion-social-linkedin"></a>
-                <a href="" class="icon ion-social-dribbble-outline"></a>
+                {% if contacts is not empty %}
+                    {% if contacts.isViberShow==true %}
+                        <a href="{{ contacts.viber }}" class="icon fab fa-viber"></a>
+                    {% endif %}
+                    {% if contacts.isTelegrammShow== true %}
+                        <a href="{{ contacts.telegram }}" class="icon fab fa-telegram"></a>
+                    {% endif %}
+                    {% if contacts.isFacebookShow == true%}
+                        <a href="{{ contacts.facebook }}" class="icon ion-social-facebook"></a>
+                    {% endif %}
+                    {% if contacts.isInstagramShow == true%}
+                        <a href="{{ contacts.instagram }}" class="icon fab fa-instagram"></a>
+                    {% endif %}
+                    {% if contacts.isTwitterShow == true %}
+                        <a href="{{ contacts.twitter }}" class="icon ion-social-twitter"></a>
+                    {% endif %}
+                {% endif %}
             </div>
         </div>
     </div>
 </footer>
+</div>
+</div>

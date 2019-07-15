@@ -89,11 +89,23 @@
             </ul>
             <div class="menu-footer right-boxed">
                 <div class="social-list">
-                    <a href="" class="icon ion-social-twitter"></a>
-                    <a href="" class="icon ion-social-facebook"></a>
-                    <a href="" class="icon ion-social-googleplus"></a>
-                    <a href="" class="icon ion-social-linkedin"></a>
-                    <a href="" class="icon ion-social-dribbble-outline"></a>
+                    {% if contacts is not empty %}
+                        {% if contacts.isViberShow==true %}
+                            <a href="{{ contacts.viber }}" class="icon fab fa-viber"></a>
+                        {% endif %}
+                        {% if contacts.isTelegrammShow== true %}
+                            <a href="{{ contacts.telegram }}" class="icon fab fa-telegram"></a>
+                        {% endif %}
+                        {% if contacts.isFacebookShow == true%}
+                            <a href="{{ contacts.facebook }}" class="icon ion-social-facebook"></a>
+                        {% endif %}
+                        {% if contacts.isInstagramShow == true%}
+                            <a href="{{ contacts.instagram }}" class="icon fab fa-instagram"></a>
+                        {% endif %}
+                        {% if contacts.isTwitterShow == true %}
+                            <a href="{{ contacts.twitter }}" class="icon ion-social-twitter"></a>
+                        {% endif %}
+                    {% endif %}
                 </div>
             </div>
         </div>

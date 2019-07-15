@@ -430,6 +430,19 @@ label.error{
 
 
 
+.lang-bot{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lang-bot li{
+  padding-right: 0.5rem;
+}
+
+.project-detail-text{
+  font-size: 1rem;
+}
+
 /* 1.4 Buttons */
 
 
@@ -2741,7 +2754,7 @@ a.brand:focus{
 
 .project-detail-info{
   background-color: #272727;
-  padding: 3.3rem;
+  padding: 0.1rem 3.3rem 3.3rem 3.3rem;
 }
 
 .project-detail-control{
@@ -4077,6 +4090,5 @@ a.brand:focus{
 .fa-phone{
   color: white !important;
 }
-
 
 

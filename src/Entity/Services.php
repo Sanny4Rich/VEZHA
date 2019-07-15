@@ -2,7 +2,9 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\DependencyInjection\Tests\Fixtures\Prototype\OtherDir\Component2\Dir1\Service4;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Gedmo\Mapping\Annotation as Gedmo;
@@ -45,18 +47,6 @@ class Services
     private $isOnHomePage;
 
     /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     * @var string
-     */
-    private $image;
-
-    /**
-     * @Vich\UploadableField(mapping="services_images", fileNameProperty="image")
-     * @var File
-     */
-    private $imageFile;
-
-    /**
      * @ORM\Column(type="datetime", nullable=true)
      * @var \DateTime
      */
@@ -75,6 +65,13 @@ class Services
      */
     private $url;
 
+    /**
+     * @var ServicesImages[]|ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="App\Entity\ServicesImages", mappedBy="service", cascade={"all"}, orphanRemoval=true)
+     */
+    private $images;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -83,10 +80,12 @@ class Services
     public function __toString()
     {
         return (string)$this->getName();
+
     }
 
     public function __construct()
     {
+        $this->images = new ArrayCollection();
         $this->updatedAt = new \DateTime('now');
     }
 
@@ -154,31 +153,44 @@ class Services
         return $this;
     }
 
-    public function setImageFile(File $image = null)
-    {
-        $this->imageFile = $image;
+    /**
+     * @return ProductImages[]|ArrayCollection
+     */
 
-        // VERY IMPORTANT:
-        // It is required that at least one field changes if you are using Doctrine,
-        // otherwise the event listeners won't be called and the file is lost
-        if ($image) {
-            // if 'updatedAt' is not defined in your entity, use another property
-            $this->updatedAt = new \DateTime('now');
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    /**
+     * Add image
+     *
+     * @param ServicesImages $image
+     *
+     * @return Services
+     */
+
+    public function addImage(ServicesImages $image)
+    {
+        $image->setService($this);
+        $this->images[] = $image;
+
+        dump($image);
+
+        return $this;
+    }
+
+    public function removeImage(ServicesImages $images): self
+    {
+        if ($this->images->contains($images)) {
+            $this->images->removeElement($images);
+            // set the owning side to null (unless already changed)
+            if ($images->getService() === $this) {
+                $images->setService(null);
+            }
         }
-    }
-    public function getImageFile()
-    {
-        return $this->imageFile;
-    }
 
-    public function setImage($image)
-    {
-        $this->image = $image;
-    }
-
-    public function getImage()
-    {
-        return $this->image;
+        return $this;
     }
 
     public function getOnHomePagePosition(): ?int
@@ -204,4 +216,6 @@ class Services
 
         return $this;
     }
+
+
 }
