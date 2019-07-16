@@ -7,10 +7,10 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ServicesImagesRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ServiceImagesRepository")
  * @Vich\Uploadable()
  */
-class ServicesImages
+class ServiceImages
 {
     /**
      * @ORM\Id()
@@ -20,7 +20,7 @@ class ServicesImages
     private $id;
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Products", inversedBy="images")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Services", inversedBy="images")
      */
     private $service;
 
@@ -32,7 +32,7 @@ class ServicesImages
     /**
      * @var File
      *
-     * @Vich\UploadableField(mapping="product_images", fileNameProperty="image")
+     * @Vich\UploadableField(mapping="services_images", fileNameProperty="image")
      */
     private $imageFile;
 
@@ -49,15 +49,12 @@ class ServicesImages
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $Description;
+    private $description;
 
     /**
-     * @return string
+     * @ORM\Column(type="string", length=255)
      */
-    public function getImage()
-    {
-        return $this->image;
-    }
+    private $language;
 
     public function __toString()
     {
@@ -74,16 +71,21 @@ class ServicesImages
         return $this->id;
     }
 
+    /**
+     * @return Services
+     */
+
     public function getService(): ?Services
     {
         return $this->service;
     }
 
     /**
-     * Set Service
+     * Set Services
      *
-     * @param Services|null $services
-     * @return ServicesImages
+     * @param Services $services
+     *
+     * @return ServiceImages
      */
 
     public function setService(?Services $services): self
@@ -94,12 +96,17 @@ class ServicesImages
     }
 
     /**
-     * @param string $image
-     * @return ServicesImages
+     * @param File|null $image
+     * @return ServiceImages
+     * @throws \Exception
      */
-    public function setImage($image)
+    public function setImageFile(File $image = null)
     {
-        $this->image = $image;
+        $this->imageFile = $image;
+
+        if ($image) {
+            $this->updatedAt = new \DateTime('now');
+        }
 
         return $this;
     }
@@ -113,19 +120,22 @@ class ServicesImages
     }
 
     /**
-     * @param File|null $image
-     * @return ServicesImages
-     * @throws \Exception
+     * @param string $image
+     * @return ServiceImages
      */
-    public function setImageFile(File $image = null)
+    public function setImage($image)
     {
-        $this->imageFile = $image;
-
-        if ($image) {
-            $this->updatedAt = new \DateTime('now');
-        }
+        $this->image = $image;
 
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
     }
 
     public function getTitle(): ?string
@@ -142,12 +152,24 @@ class ServicesImages
 
     public function getDescription(): ?string
     {
-        return $this->Description;
+        return $this->description;
     }
 
-    public function setDescription(?string $Description): self
+    public function setDescription(?string $description): self
     {
-        $this->Description = $Description;
+        $this->description = $description;
+
+        return $this;
+    }
+
+    public function getLanguage(): ?string
+    {
+        return $this->language;
+    }
+
+    public function setLanguage(string $language): self
+    {
+        $this->language = $language;
 
         return $this;
     }

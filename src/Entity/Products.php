@@ -80,7 +80,7 @@ class Products
     private $url;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\ProductsTranslations", mappedBy="product")
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductsTranslations", mappedBy="product", cascade={"all"}, orphanRemoval=true)
      */
     private $productsTranslations;
 

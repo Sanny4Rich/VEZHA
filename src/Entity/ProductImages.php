@@ -68,7 +68,7 @@ class ProductImages
     /**
      * Set Product
      *
-     * @param Products $product
+     * @param Products $products
      *
      * @return ProductImages
      */

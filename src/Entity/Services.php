@@ -3,11 +3,13 @@
 namespace App\Entity;
 
 use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
+use Gedmo\Mapping\Annotation as Gedmo;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\DependencyInjection\Tests\Fixtures\Prototype\OtherDir\Component2\Dir1\Service4;
 use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
-use Gedmo\Mapping\Annotation as Gedmo;
+
+
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ServicesRepository")
  * @Vich\Uploadable()
@@ -37,25 +39,31 @@ class Services
     private $shortDescription;
 
     /**
-     * @ORM\Column(type="boolean", options={"default" : false})
+     * @ORM\Column(type="boolean", options={"default" : true}, nullable=true))
      */
     private $isVisible;
 
     /**
-     * @ORM\Column(type="boolean", options={"default" : false})
+     * @ORM\Column(type="boolean", options={"default" : true}, nullable=true))
+     */
+    private $isTop;
+
+    /**
+     * @ORM\Column(type="boolean", options={"default" : false}, nullable=true))
      */
     private $isOnHomePage;
 
     /**
-     * @ORM\Column(type="datetime", nullable=true)
-     * @var \DateTime
+     * @var ServiceImages[]|ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="App\Entity\ServiceImages", mappedBy="service", cascade={"all"}, orphanRemoval=true)
      */
-    private $updatedAt;
+    private $images;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="datetime", nullable=true)
      */
-    private $onHomePagePosition;
+    private $createdAt;
 
     /**
      * @var string
@@ -66,33 +74,33 @@ class Services
     private $url;
 
     /**
-     * @var ServicesImages[]|ArrayCollection
-     *
-     * @ORM\OneToMany(targetEntity="App\Entity\ServicesImages", mappedBy="service", cascade={"all"}, orphanRemoval=true)
+     * @ORM\Column(type="datetime", nullable=true)
+     * @var \DateTime
      */
-    private $images;
+    private $updatedAt;
+
+    /**
+     * @ORM\Column(type="integer", options={"default":0})
+     */
+    private $onHomePagePosition;
+
+    public function __toString()
+    {
+        return (string)$this->getName();
+    }
+
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+        $this->createdAt = new \DateTime('now');
+        $this->updatedAt = new \DateTime('now');
+    }
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function __toString()
-    {
-        return (string)$this->getName();
-
-    }
-
-    public function __construct()
-    {
-        $this->images = new ArrayCollection();
-        $this->updatedAt = new \DateTime('now');
-    }
-
-    public function getUpdatedAt() :\DateTime
-    {
-        return $this->updatedAt;
-    }
     public function getName(): ?string
     {
         return $this->name;
@@ -122,7 +130,7 @@ class Services
         return $this->shortDescription;
     }
 
-    public function setShortDescription(?string $shortDescription): self
+    public function setShortDescription(string $shortDescription): self
     {
         $this->shortDescription = $shortDescription;
 
@@ -141,6 +149,18 @@ class Services
         return $this;
     }
 
+    public function getIsTop(): ?bool
+    {
+        return $this->isTop;
+    }
+
+    public function setIsTop(bool $isTop): self
+    {
+        $this->isTop = $isTop;
+
+        return $this;
+    }
+
     public function getIsOnHomePage(): ?bool
     {
         return $this->isOnHomePage;
@@ -154,7 +174,7 @@ class Services
     }
 
     /**
-     * @return ProductImages[]|ArrayCollection
+     * @return ServiceImages[]|ArrayCollection
      */
 
     public function getImages()
@@ -165,12 +185,12 @@ class Services
     /**
      * Add image
      *
-     * @param ServicesImages $image
+     * @param ServiceImages $image
      *
      * @return Services
      */
 
-    public function addImage(ServicesImages $image)
+    public function addImage(ServiceImages $image)
     {
         $image->setService($this);
         $this->images[] = $image;
@@ -180,7 +200,7 @@ class Services
         return $this;
     }
 
-    public function removeImage(ServicesImages $images): self
+    public function removeImage(ServiceImages $images): self
     {
         if ($this->images->contains($images)) {
             $this->images->removeElement($images);
@@ -193,14 +213,14 @@ class Services
         return $this;
     }
 
-    public function getOnHomePagePosition(): ?int
+    public function getCreatedAt(): ?\DateTimeInterface
     {
-        return $this->onHomePagePosition;
+        return $this->createdAt;
     }
 
-    public function setOnHomePagePosition(?int $onHomePagePosition): self
+    public function setCreatedAt(\DateTimeInterface $createdAt): self
     {
-        $this->onHomePagePosition = $onHomePagePosition;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
@@ -217,5 +237,20 @@ class Services
         return $this;
     }
 
+    public function getUpdatedAt() :\DateTime
+    {
+        return $this->updatedAt;
+    }
 
+    public function getOnHomePagePosition(): ?int
+    {
+        return $this->onHomePagePosition;
+    }
+
+    public function setOnHomePagePosition(int $onHomePagePosition): self
+    {
+        $this->onHomePagePosition = $onHomePagePosition;
+
+        return $this;
+    }
 }

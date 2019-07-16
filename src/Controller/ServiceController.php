@@ -14,7 +14,7 @@ class ServiceController extends AbstractController
     /**
      * @Route("/{_locale}/service/{url}", name="service")
      */
-    public function index(Request $request, ContactsRepository $contactsRepository,Services $services, CategoriesRepository $categoriesRepository)
+    public function index(Request $request, ContactsRepository $contactsRepository, Services $services, CategoriesRepository $categoriesRepository)
     {
         $locale = $request->get('_locale');
         $contacts = $contactsRepository->findBy(['language'=>$locale]);

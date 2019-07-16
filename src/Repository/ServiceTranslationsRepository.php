@@ -2,25 +2,25 @@
 
 namespace App\Repository;
 
-use App\Entity\ServicesImages;
+use App\Entity\ServiceTranslations;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 
 /**
- * @method ServicesImages|null find($id, $lockMode = null, $lockVersion = null)
- * @method ServicesImages|null findOneBy(array $criteria, array $orderBy = null)
- * @method ServicesImages[]    findAll()
- * @method ServicesImages[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
+ * @method ServiceTranslations|null find($id, $lockMode = null, $lockVersion = null)
+ * @method ServiceTranslations|null findOneBy(array $criteria, array $orderBy = null)
+ * @method ServiceTranslations[]    findAll()
+ * @method ServiceTranslations[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class ServicesImagesRepository extends ServiceEntityRepository
+class ServiceTranslationsRepository extends ServiceEntityRepository
 {
     public function __construct(RegistryInterface $registry)
     {
-        parent::__construct($registry, ServicesImages::class);
+        parent::__construct($registry, ServiceTranslations::class);
     }
 
     // /**
-    //  * @return ServicesImages[] Returns an array of ServicesImages objects
+    //  * @return ServiceTranslations[] Returns an array of ServiceTranslations objects
     //  */
     /*
     public function findByExampleField($value)
@@ -37,7 +37,7 @@ class ServicesImagesRepository extends ServiceEntityRepository
     */
 
     /*
-    public function findOneBySomeField($value): ?ServicesImages
+    public function findOneBySomeField($value): ?ServiceTranslations
     {
         return $this->createQueryBuilder('s')
             ->andWhere('s.exampleField = :val')

@@ -121,5 +121,6 @@ class ProductsAdmin extends AbstractAdmin
             ])
             ->end()
             ->end();
+
     }
 }
