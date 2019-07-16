@@ -6,6 +6,10 @@ vich_uploader:
             uri_prefix: /images/services
             upload_destination: '%kernel.project_dir%/public/images/services'
 
+        service_logo_images:
+            uri_prefix: /images/services/logo
+            upload_destination: '%kernel.project_dir%/public/images/services/logo'
+
         product_images:
             uri_prefix: /images/product
             upload_destination: '%kernel.project_dir%/public/images/product'

@@ -23,7 +23,8 @@ class CommentsAdmin extends AbstractAdmin
         $list
             ->addIdentifier('id')
             ->addIdentifier('name')
-            ->add('language');
+            ->add('language')
+            ->add('isShow', null, ['label'=> 'Отображать?']);
     }
 
     protected function configureDatagridFilters(DatagridMapper $filter)
@@ -31,7 +32,8 @@ class CommentsAdmin extends AbstractAdmin
         $filter
             ->add('id')
             ->add('name')
-            ->add('language');
+            ->add('language')
+            ->add('isShow');
     }
 
     protected function configureFormFields(FormMapper $form)
@@ -41,6 +43,7 @@ class CommentsAdmin extends AbstractAdmin
             ->add('text',TextareaType::class, array('attr' => array('class' => 'ckeditor'), 'required' => false))
             ->add('product', null, ['label' => 'Товар/Услуга текстом'])
             ->add('language', ChoiceType::class, ['label'=>'Язык на котором будет отображаться','choices'=>['Українська' => 'ua', 'Русский'=> 'ru', 'English' => 'en'] ])
+            ->add('isShow')
             ->end();
     }
 }

@@ -20,7 +20,7 @@
                                 </div>
                                 <div class="content">
                                     {% if category.categoriesTranslations is not empty %}
-                                        {% for trans in category.productsTranslations %}
+                                        {% for trans in category.categoriesTranslations %}
                                             {%if trans.language == loc %}
                                                 <h3 class="news-title">{{ trans.name }}</h3>
                                             {% else %}
@@ -31,7 +31,7 @@
                                         <h3 class="news-title">{{ category.name }}</h3>
                                     {% endif %}
                                     {% if category.categoriesTranslations is not empty %}
-                                        {% for trans in category.productsTranslations %}
+                                        {% for trans in category.categoriesTranslations %}
                                             {%if trans.language == loc %}
                                                 <p class="news-description">{{ trans.shortDescription }}</p>
                                             {% else %}

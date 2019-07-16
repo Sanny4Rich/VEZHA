@@ -79,5 +79,22 @@ class ServiceAdmin extends AbstractAdmin
             ->add('onHomePagePosition', ChoiceType::class, ['label' => 'Номер позиції', 'required'   => false, 'choices' => ['1'=> 1, '2'=> 2, '3'=> 3, '4'=> 4,'5'=>5, '6'=> 6, '7'=>7, '8'=>8, '9'=>9, '10'=>10, 'Не відображати' => 0]])
             ->end()
             ->end();
+
+        $form
+            ->tab('Картинка для карточки')
+            ->add('imageFile', VichImageType::class, [
+                'required' => false,
+                'help' => 'Для коректного отображения загружать квадратные изображения',
+                'image_uri' => function (Services $services, $resolverdUri) use ($cacheManager) {
+                    // $cacheManager is LiipImagine cache Manager
+                    if (!$resolverdUri) {
+                        return null;
+                    }
+                    return $cacheManager->getBrowserPath($resolverdUri, 'squared_thumbnail');
+                }
+            ])
+            ->end()
+            ->end();
+
             }
 }
