@@ -84,6 +84,11 @@ class Services
      */
     private $onHomePagePosition;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\ServiceTranslations", mappedBy="service")
+     */
+    private $serviceTranslations;
+
     public function __toString()
     {
         return (string)$this->getName();
@@ -94,6 +99,7 @@ class Services
         $this->images = new ArrayCollection();
         $this->createdAt = new \DateTime('now');
         $this->updatedAt = new \DateTime('now');
+        $this->serviceTranslations = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -250,6 +256,37 @@ class Services
     public function setOnHomePagePosition(int $onHomePagePosition): self
     {
         $this->onHomePagePosition = $onHomePagePosition;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|ServiceTranslations[]
+     */
+    public function getServiceTranslations(): Collection
+    {
+        return $this->serviceTranslations;
+    }
+
+    public function addServiceTranslation(ServiceTranslations $serviceTranslation): self
+    {
+        if (!$this->serviceTranslations->contains($serviceTranslation)) {
+            $this->serviceTranslations[] = $serviceTranslation;
+            $serviceTranslation->setService($this);
+        }
+
+        return $this;
+    }
+
+    public function removeServiceTranslation(ServiceTranslations $serviceTranslation): self
+    {
+        if ($this->serviceTranslations->contains($serviceTranslation)) {
+            $this->serviceTranslations->removeElement($serviceTranslation);
+            // set the owning side to null (unless already changed)
+            if ($serviceTranslation->getService() === $this) {
+                $serviceTranslation->setService(null);
+            }
+        }
 
         return $this;
     }

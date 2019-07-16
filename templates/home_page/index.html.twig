@@ -69,8 +69,18 @@
                                                     {% for service in services|sortbyfield('onHomePagePosition') %}
                                                         {% if service.isVisible == true %}
                                                             {% if service.isOnHomePage == true %}
-                                                            <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ service.name }}</a></li>
-                                                            {% set increment = increment + 1 %}
+                                                                {% if service.serviceTranslations is not empty %}
+                                                                    {% for trans in service.serviceTranslations %}
+                                                                    {% if trans.language == loc and trans.name is not empty %}
+                                                                        <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ trans.name }}</a></li>
+                                                                    {% else %}
+                                                                        <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ service.name }}</a></li>
+                                                                    {% endif %}
+                                                                    {% endfor %}
+                                                                {% else %}
+                                                                    <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ service.name }}</a></li>
+                                                                    {% endif %}
+                                                                 {% set increment = increment + 1 %}
                                                             {% endif %}
                                                         {% endif %}
                                                     {% endfor %}

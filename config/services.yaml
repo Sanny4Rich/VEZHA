@@ -39,17 +39,17 @@ services:
     App\Admin\ProductsAdmin:
         arguments: [~,App\Entity\Products,~, '@liip_imagine.cache.manager' ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Товары}
+            - { name: sonata.admin,group: Основной контент, manager_type: orm, label: Товары}
 
     App\Admin\CategoryAdmin:
         arguments: [~,App\Entity\Categories,~ ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Категории}
+            - { name: sonata.admin,group: Основной контент, manager_type: orm, label: Категории}
 
     App\Admin\CategoryTranslationsAdmin:
         arguments: [~,App\Entity\CategoriesTranslations,~,'@liip_imagine.cache.manager' ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Переводы Категорий}
+            - { name: sonata.admin,group: Переводы, manager_type: orm, label: Переводы Категорий}
 
     App\Admin\ProductImagesAdmin:
         arguments: [~,App\Entity\ProductImages,~, '@liip_imagine.cache.manager' ]
@@ -59,29 +59,34 @@ services:
     App\Admin\ProductsTranslationsAdmin:
         arguments: [~,App\Entity\ProductsTranslations,~,'@liip_imagine.cache.manager' ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Переводы товаров}
+            - { name: sonata.admin,group: Переводы, manager_type: orm, label: Переводы товаров}
 
     App\Admin\ContactAdmin:
         arguments: [~,App\Entity\Contacts,~ ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Контакты}
+            - { name: sonata.admin,group: Контакты, manager_type: orm, label: Контакты}
 
     App\Admin\TranslationsAdmin:
         arguments: [~, App\Entity\StaticTranslations,~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Статические переводы}
+            - { name: sonata.admin,group: Переводы, manager_type: orm, label: Статические переводы}
 
     App\Admin\AboutAdmin:
         arguments: [~,App\Entity\About,~]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: О нас}
+            - { name: sonata.admin,group: Контакты, manager_type: orm, label: О нас}
 
     App\Admin\ServiceAdmin:
         arguments: [~,App\Entity\Services,~, '@liip_imagine.cache.manager' ]
         tags:
-            - { name: sonata.admin, manager_type: orm, label: Услуги}
+            - { name: sonata.admin,group: Основной контент, manager_type: orm, label: Услуги}
+
+    App\Admin\ServiceTranslationAdmin:
+        arguments: [~,App\Entity\ServiceTranslations,~,'@liip_imagine.cache.manager' ]
+        tags:
+            - { name: sonata.admin,group: Переводы, manager_type: orm, label: Переводы услуг}
 
     App\Admin\ServiceImagesAdmin:
         arguments: [~,App\Entity\ServiceImages,~, '@liip_imagine.cache.manager' ]
         tags:
-            - { name: sonata.admin, manager_type: orm, show_in_dashboard: false}
+            - { name: sonata.admin,  manager_type: orm, show_in_dashboard: false}

@@ -27,9 +27,19 @@ class ServiceTranslations
     private $description;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="string", length=255, unique=true)
      */
     private $language;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Services", inversedBy="serviceTranslations")
+     */
+    private $service;
+
+    public function __toString()
+    {
+        return (string)$this->name;
+    }
 
     public function getId(): ?int
     {
@@ -68,6 +78,18 @@ class ServiceTranslations
     public function setLanguage(string $language): self
     {
         $this->language = $language;
+
+        return $this;
+    }
+
+    public function getService(): ?Services
+    {
+        return $this->service;
+    }
+
+    public function setService(?Services $service): self
+    {
+        $this->service = $service;
 
         return $this;
     }
