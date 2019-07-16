@@ -3,6 +3,7 @@
 {% block title %}Hello ServiceController!{% endblock %}
 
 {% block body %}
+    {% set loc = app.request.locale %}
     <div class="content" style="padding-top: 6rem">
         <div class="project-detail">
             <div class="slider-prev icon-chevron-left hidden-xs"></div>
@@ -10,81 +11,44 @@
             <div class="rev_slider_wrapper">
                 <div id="rev_slider2" class="rev_slider tp-overflow-hidden fullscreenbanner">
                     <ul>
-
-                        <li data-transition="slideleft" data-masterspeed="1200" data-fsmasterspeed="1200">
-                            <img src="{{ asset('images/projects/1-1920x1080.jpg') }}" alt="" data-bgposition="center center"
-                                 data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
-
-                            <div class="tp-caption tp-shape tp-shapewrapper " data-x="['left']" data-hoffset="['0']"
-                                 data-y="['top']" data-voffset="['50','50','40','40']" data-width="528"
-                                 data-minwidth="528" data-whitespace="normal" data-type="shape"
-                                 data-responsive_offset="on"
-                                 data-frames='[{"from":"opacity:0;z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":400,"to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                                 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]">
-                                <div class="project-detail-info">
-                                    <div class="project-detail-content">
-                                        <h3 class="project-detail-title">The Luxury Residence<br> In Forest</h3>
-                                        <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer
-                                            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. magna
-                                            aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure
-                                            dolor in hendrerit in.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li data-transition="slideleft" data-masterspeed="1200" data-fsmasterspeed="1200">
-
-                            <img src="{{ asset('images/projects/2-1920x1080.jpg') }}" alt="" data-bgposition="center center"
-                                 data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
-
-                            <div class="tp-caption tp-shape tp-shapewrapper " data-x="['left']" data-hoffset="['0']"
-                                 data-y="['top']" data-voffset="['50','50','40','40']" data-width="528"
-                                 data-minwidth="528" data-whitespace="normal" data-type="shape"
-                                 data-responsive_offset="on"
-                                 data-frames='[{"from":"opacity:0;z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":400,"to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                                 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]">
-                                <div class="project-detail-info">
-                                    <div class="project-detail-content">
-                                        <h3 class="project-detail-title">Small House Near<br>Wroclaw</h3>
-                                        <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer
-                                            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. magna
-                                            aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure
-                                            dolor in hendrerit in.</p>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li data-transition="slideleft" data-masterspeed="1200" data-fsmasterspeed="1200">
-
-                            <img src="{{ asset('images/projects/3-1920x1080.jpg') }}" alt="" data-bgposition="center center"
-                                 data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
-
-                            <div class="tp-caption tp-shape tp-shapewrapper " data-x="['left']" data-hoffset="['0']"
-                                 data-y="['top']" data-voffset="['50','50','40','40']" data-width="528"
-                                 data-minwidth="528" data-whitespace="normal" data-type="shape"
-                                 data-responsive_offset="on"
-                                 data-frames='[{"from":"opacity:0;z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":400,"to":"opacity:0;","ease":"Power3.easeInOut"}]'
-                                 data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
-                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
-                                 data-paddingleft="[0,0,0,0]">
-                                <div class="project-detail-info">
-                                    <div class="project-detail-content">
-                                        <h3 class="project-detail-title">Small House Near<br>Wroclaw</h3>
-                                        <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer
-                                            adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. magna
-                                            aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure
-                                            dolor in hendrerit in.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                            {% if service.images is not empty %}
+                            {% set count = 0 %}
+                                {% for image in service.images %}
+                                {% if image.language == loc %}
+                                <li data-transition="slideleft" data-masterspeed="1200" data-fsmasterspeed="1200">
+                                    <img src="{{ vich_uploader_asset(image, 'imageFile') }}" alt="" data-bgposition="center center"
+                                        data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
+                                        <div class="tp-caption tp-shape tp-shapewrapper " data-x="['left']" data-hoffset="['0']" data-y="['top']" data-voffset="['50','50','40','40']" data-width="528" data-minwidth="528" data-whitespace="normal" data-type="shape" data-responsive_offset="on" data-frames='[{"from":"opacity:0;z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":400,"to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
+                                            <div class="project-detail-info">
+                                                <div class="project-detail-content">
+                                                    <h3 class="project-detail-title">{{ image.title|raw }}</h3>
+                                                        <p class="project-detail-text">{{ image.description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                </li>
+                                    {% set  count = count+1 %}
+                                {% endif %}
+                        {% endfor %}
+                            {% if count == 0 %}
+                                {% for image in service.images %}
+                                    {% if image.language == 'ua' %}
+                                        <li data-transition="slideleft" data-masterspeed="1200" data-fsmasterspeed="1200">
+                                            <img src="{{ vich_uploader_asset(image, 'imageFile') }}" alt="" data-bgposition="center center"
+                                                 data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
+                                            <div class="tp-caption tp-shape tp-shapewrapper " data-x="['left']" data-hoffset="['0']" data-y="['top']" data-voffset="['50','50','40','40']" data-width="528" data-minwidth="528" data-whitespace="normal" data-type="shape" data-responsive_offset="on" data-frames='[{"from":"opacity:0;z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":400,"to":"opacity:0;","ease":"Power3.easeInOut"}]' data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]" data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,0,0,0]">
+                                                <div class="project-detail-info">
+                                                    <div class="project-detail-content">
+                                                        <h3 class="project-detail-title">{{ image.title|raw }}</h3>
+                                                        <p class="project-detail-text">{{ image.description }}</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    {% endif %}
+                                {% endfor %}
+                                {% endif %}
+                        {% endif %}
                     </ul>
                 </div>
             </div>
@@ -95,13 +59,27 @@
                     <div class="col-md-3">
                         <div class="section-info">
                             <div class="title-hr"></div>
-                            <div class="info-title">{% trans %}Об услуге{% endtrans %}</div>
+                            <div class="info-title">{% trans %}О нас{% endtrans %}</div>
                         </div>
                     </div>
                     <div class="col-md-9">
-                        <div class="text-display-1"><p><strong class="text-dark">Lorem Ipsum</strong><br>
-                                <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ducimus illo minus quibusdam quidem recusandae, reiciendis, repellendus repudiandae saepe ullam vel vitae. Doloribus eius explicabo, laudantium provident quaerat quisquam saepe!</span><span>Aut consequuntur cupiditate debitis delectus distinctio ducimus ipsum nihil quasi quia quidem, similique temporibus voluptatem! Ad blanditiis cum ducimus hic impedit molestias, officia possimus quam quas quos sapiente sint, sit?</span><span>Accusantium, atque consequatur cum dolore fuga fugit incidunt laborum modi nam nihil nisi nostrum pariatur, qui repudiandae, rerum. Dignissimos doloremque fugiat inventore minus numquam quas quia quibusdam recusandae sed vero!</span><span>Amet doloremque doloribus quas suscipit totam! Aperiam architecto asperiores earum est et expedita, facilis impedit labore magni nam nisi, nulla quas quasi quibusdam quisquam recusandae rem sequi sit temporibus vitae?</span><span>Aliquid aspernatur, consequatur eius ipsum officiis possimus quae quisquam vero. Aspernatur autem dolorem doloribus error esse ipsam ipsum, iste molestias natus nobis perferendis placeat possimus quasi quia quidem reiciendis repellat.</span>
-                        </div>
+                        {% if service.serviceTranslations is not empty %}
+                            {% for trans in service.serviceTranslations %}
+                                {% if trans.language == loc %}
+                                    <div class="text-display-1"><p><strong class="text-dark">{{ trans.name }}</strong><br>
+                                        {{ trans.description|raw }}
+                                    </div>
+                                {% else %}
+                                <div class="text-display-1"><p><strong class="text-dark">{{ service.name }}</strong><br>
+                                    {{ service.description|raw }}
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% else %}
+                                <div class="text-display-1"><p><strong class="text-dark">{{ trans.name }}</strong><br>
+                                    {{ trans.description|raw }}
+                                </div>
+                        {% endif %}
                     </div>
                 </div>
             </div>

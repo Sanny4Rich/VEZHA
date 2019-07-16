@@ -247,33 +247,21 @@
                                             </div>
                                             <div class="col-md-5 col-lg-5  col-md-offset-1 col-lg-offset-2">
                                                 <div class="review-carousel owl-carousel">
+                                                    {% for comment in comments %}
+                                                    {% if comment.language == loc %}
                                                     <div class="review-carousel-item">
                                                         <div class="text" >
-                                                            <p>“ Заказывала фасады и корпуса Рим-Венециано для двух встроенных шкафов по 3 м+-. Отдельное огромное спасибо менеджеру Оле за квалифицированную консультацию, ответы на все вопросы, помощь! Остались очень довольны. За такую цену такую красоту приобрели! Волновались за доставку зеркальных фасадов, но все доставили в целости и сохранности! Советую всем! Не пожалеете!"</p>
+                                                            {{ comment.text|raw }}
                                                         </div>
                                                         <div class="review-author">
-                                                            <div class="author-name">Elisa</div>
-                                                            <i>Apartment view lake at Brooklyn</i>
+                                                            <div class="author-name">{{ comment.name }}</div>
+                                                            {% if comment.product is not empty %}
+                                                            <i>{{ comment.product }}</i>
+                                                                {% endif %}
                                                         </div>
                                                     </div>
-                                                    <div class="review-carousel-item">
-                                                        <div class="text">
-                                                            <p>“ Заказала кухню Колор-микс. Менеджер,чудесная девочка Оля, всё просчитала,нарисовала план и подсказала по комплектации ящиков.Приехала моя кухня без корпуса нижней тумбы.Прислали её бесплатно,через день,но сборку пришлось отложить,так как на этот ящик крепится столешница с евростыком. Дальше стали собирать,оказалось,что в фасаде под посудомойку,сделали отверстия под петли!! Фасады отлично прокрашены,без претензий, надеюсь что кухня прослужит своё без каких либо непоправимых проблем."</p>
-                                                        </div>
-                                                        <div class="review-author">
-                                                            <div class="author-name">Amanda</div>
-                                                            <i>Apartment view lake at Brooklyn</i>
-                                                        </div>
-                                                    </div>
-                                                    <div class="review-carousel-item">
-                                                        <div class="text">
-                                                            <p>“ Очень хорошая и порядочная фирма. В срок, а самое главное качественно выполняют работу. Особое спасибо менеджеру Оле. Она работает даже поздно вечером. Рекомендую.В Житомире нет магазина в котором было бы дешевле."</p>
-                                                        </div>
-                                                        <div class="review-author">
-                                                            <div class="author-name">John</div>
-                                                            <i>Apartment view lake at Brooklyn</i>
-                                                        </div>
-                                                    </div>
+                                                    {% endif %}
+                                                    {% endfor %}
                                                 </div>
                                             </div>
                                         </div>

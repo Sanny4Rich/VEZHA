@@ -28,10 +28,16 @@ class ServiceController extends AbstractController
             ->leftJoin('s.images', 'i')
             ->addSelect('t')
             ->leftJoin('s.serviceTranslations', 't')
+            ->where('s = :service')
+            ->setParameter('service', $services)
             ->getQuery()
             ->getResult();
+
+        $service= $service[0];
         $categories = $categoriesRepository->createQueryBuilder('c')
             ->where('c.isOnHomePage IS NOT NULL')
+            ->addSelect('t')
+            ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
             ->getResult();
         return $this->render('service/index.html.twig', [

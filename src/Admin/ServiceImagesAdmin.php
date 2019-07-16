@@ -44,7 +44,7 @@ class ServiceImagesAdmin extends AbstractAdmin
         $form
             ->add('title')
             ->add('description')
-            ->add('language', ChoiceType::class, ['label' => 'Язык','choices'=> ['Українська'=> 'UA', 'Русский'=> 'RU','English'=>'en']])
+            ->add('language', ChoiceType::class, ['label' => 'Язык','choices'=> ['Українська'=> 'ua', 'Русский'=> 'ru','English'=>'en']])
             ->add('imageFile', VichImageType::class, [
                 'required' => false,
                 'image_uri' => function (ServiceImages $images, $resolvedUri) use ($cacheManager) {

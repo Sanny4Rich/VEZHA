@@ -20,6 +20,13 @@ class ProductController extends AbstractController
     }
 
     /**
+     * @Route("/product/{url}")
+     */
+    public function to_product(Products $products){
+        return $this->redirectToRoute('product', ['_locale' => 'ua', 'url' => $products->getUrl()]);
+    }
+
+    /**
      * @Route("/{_locale}/product/{url}", name="product")
      */
     public function index(Request $request, ContactsRepository $contactsRepository, Products $product, ProductsRepository $productsRepository, CategoriesRepository $categoriesRepository)
@@ -32,12 +39,16 @@ class ProductController extends AbstractController
 
         $categories = $categoriesRepository->createQueryBuilder('c')
             ->where('c.isOnHomePage IS NOT NULL')
+            ->addSelect('t')
+            ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
             ->getResult();
 
         $products = $productsRepository->createQueryBuilder('m')
             ->addSelect('t')
             ->leftJoin('m.productsTranslations', 't')
+            ->addSelect('i')
+            ->leftJoin('m.images', 'i')
             ->getQuery()
             ->getResult();
         return $this->render('product/index.html.twig', [
@@ -65,6 +76,8 @@ class ProductController extends AbstractController
             ->getResult();
         $categories = $categoriesRepository->createQueryBuilder('c')
             ->where('c.isOnHomePage IS NOT NULL')
+            ->addSelect('t')
+            ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
             ->getResult();
         return $this->render('product/allprod.html.twig', [

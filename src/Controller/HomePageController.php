@@ -2,9 +2,11 @@
 
 namespace App\Controller;
 
+use App\Entity\Comments;
 use App\Entity\Products;
 use App\Entity\Services;
 use App\Repository\CategoriesRepository;
+use App\Repository\CommentsRepository;
 use App\Repository\ContactsRepository;
 use App\Repository\ProductsRepository;
 use App\Repository\ServicesRepository;
@@ -31,7 +33,7 @@ class HomePageController extends AbstractController
     /**
      * @Route("/{_locale}/", name="home_page", defaults={"_locale" = "ua"}, requirements={"_locale" = "ua|ru|en" })
      */
-    public function index(Request $request,ContactsRepository $contactsRepository, ProductsRepository $productsRepository, ServicesRepository $servicesRepository, CategoriesRepository $categoriesRepository)
+    public function index(Request $request,ContactsRepository $contactsRepository, ProductsRepository $productsRepository, ServicesRepository $servicesRepository, CategoriesRepository $categoriesRepository, CommentsRepository $commentsRepository)
     {
 
         $locale = $request->get('_locale');
@@ -53,15 +55,20 @@ class HomePageController extends AbstractController
 
         $categories = $categoriesRepository->createQueryBuilder('c')
             ->where('c.isOnHomePage IS NOT NULL')
+            ->addSelect('t')
+            ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
             ->getResult();
+
+        $comments = $commentsRepository->findAll();
 
         return $this->render('home_page/index.html.twig', [
             'controller_name' => 'HomePageController',
             'products' => $products,
             'services' => $services,
             'categories' => $categories,
-            'contacts' => $contacts
+            'contacts' => $contacts,
+            'comments' => $comments
         ]);
     }
 

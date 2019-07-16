@@ -25,6 +25,8 @@ class AboutController extends AbstractController
         $contacts = $contacts[0];
         $categories = $categoriesRepository->createQueryBuilder('c')
             ->where('c.isOnHomePage IS NOT NULL')
+            ->addSelect('t')
+            ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
             ->getResult();
 
