@@ -7,12 +7,12 @@
         </div>
         <div class="flex-item">
             <ul>
-                <li><a href="">About</a></li>
+                <li><a href="{{ path('about', {'_locale': app.request.locale}) }}">{% trans %}О нас{% endtrans %}</a></li>
             </ul>
         </div>
         <div class="flex-item">
             <ul>
-                <li><a href="">Contact</a></li>
+                <li><a href="{{ path('contacts', {'_locale': app.request.locale}) }}">{% trans %}Контакти{% endtrans %}</a></li>
             </ul>
         </div>
         <div class="flex-item">

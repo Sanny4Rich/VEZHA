@@ -84,7 +84,7 @@ class ServiceAdmin extends AbstractAdmin
             ->tab('Картинка для карточки')
             ->add('imageFile', VichImageType::class, [
                 'required' => false,
-                'help' => 'Для коректного отображения загружать квадратные изображения',
+                'help' => 'Для коректного отображения загружать квадратные изображения больше чем 360Х360',
                 'image_uri' => function (Services $services, $resolverdUri) use ($cacheManager) {
                     // $cacheManager is LiipImagine cache Manager
                     if (!$resolverdUri) {
