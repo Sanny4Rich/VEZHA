@@ -14,7 +14,7 @@
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i%7CPoppins:300,400,500,600,700"
               rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400i" rel="stylesheet">
-
+        <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6"></script>
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
     </head>
     {% set lang = app.request.locale %}
@@ -43,7 +43,7 @@
                     <a href="{{ path('home_page') }}">{% trans %}Головна{% endtrans %}</a>
                 </li>
                 <li>
-                    <a href="{{ path('categories', {'_locale': app.request.locale}) }}" >Категорії</a>
+                    <a href="{{ path('categories', {'_locale': app.request.locale}) }}" >{% trans %}Категорії{% endtrans %}</a>
                     <ul>
                         {% for category in categories|sortbyfield('onHomePagePosition') %}
                             {% if category.onHomePagePosition != 0 %}
@@ -62,17 +62,11 @@
                                 {% endif %}
                             {% endif %}
                         {% endfor %}
+                        <li><a href="{{ path('categories', {'_locale': app.request.locale}) }}">{% trans %}Всі категорії{% endtrans %}</a></li>
                     </ul>
                 </li>
                 <li>
-                    <a href="home-fullpage.html#">Услуги</a>
-                </li>
-                <li>
-                    <a href="home-fullpage.html#">{% trans %}Портфоліо{% endtrans %}</a>
-                    <ul>
-                        <li><a href="post-image.html">Фотографии</a></li>
-                        <li><a href="post-gallery.html">Галерея</a></li>
-                    </ul>
+                    <a href="{{ path('services', {'_locale': app.request.locale }) }}">{% trans %}Послуги{% endtrans %}</a>
                 </li>
                 <li>
                     <a href="{{ path('about',{'_locale': app.request.locale}) }}">{% trans %}Наша компанія{% endtrans %}</a>

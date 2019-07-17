@@ -23,7 +23,7 @@ class ProductController extends AbstractController
      * @Route("/product/{url}")
      */
     public function to_product(Products $products){
-        return $this->redirectToRoute('product', ['_locale' => 'ua', 'url' => $products->getUrl()]);
+        return $this->redirectToRoute('product', ['_locale' => 'kernel.default_locale', 'url' => $products->getUrl()]);
     }
 
     /**

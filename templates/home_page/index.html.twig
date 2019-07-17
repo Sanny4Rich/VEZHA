@@ -24,7 +24,7 @@
     <div class="pagepiling">
         <div class="pp-scrollable text-white section section-1">
             <div class="scroll-wrap">
-                <div class="section-bg" style="background-image:url('{{ asset('images/bg/bg1.jpg') }}');"></div>
+                <div class="section-bg" style="background: url('{{ asset('images/bg/bg1.jpg') }}')"></div>
                 <div class="scrollable-content">
                     <div class="vertical-centred">
                         <div class="boxed boxed-inner">
@@ -169,56 +169,18 @@
                                             <div class="col-md-12">
                                                 <h2 class="title-uppercase">{% trans %}Наші партнери{% endtrans %}</h2>
                                                 <div class="row-partners">
+                                                    {% if partners is not empty %}
+                                                    {% for partner in partners|sortbyfield('onHomePagePosition') %}
+                                                    {% if partner.imageLogo is not empty and partner.isOnHomePage == true and partner.isVisible == true %}
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><img alt=""
-                                                                                        src="{{ asset('images/partners/1.png') }}">
+                                                        <div class="partner-inner"><a href="{{ path('partner', {'_locale': loc, 'url': partner.url}) }}"><img alt=""
+                                                                                        src="{{ vich_uploader_asset(partner, 'imageLogoFile') }}"></a>
                                                         </div>
                                                     </div>
-                                                    <div class="col-partner">
-                                                        <div class="partner-inner"><img alt=""
-                                                                                        src="{{ asset('images/partners/2.png') }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-partner">
-                                                        <div class="partner-inner"><img alt=""
-                                                                                        src="{{ asset('images/partners/3.png') }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-partner">
-                                                        <div class="partner-inner"><img alt=""
-                                                                                        src="{{ asset('images/partners/4.png') }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-partner">
-                                                        <div class="partner-inner"><img alt=""
-                                                                                        src="{{ asset('images/partners/5.png') }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-partner">
-                                                        <div class="partner-inner"><img alt=""
-                                                                                        src="{{ asset('images/partners/4.png') }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-partner">
-                                                        <div class="partner-inner"><img alt=""
-                                                                                        src="{{ asset('images/partners/3.png') }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-partner">
-                                                        <div class="partner-inner"><img alt=""
-                                                                                        src="{{ asset('images/partners/2.png') }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-partner">
-                                                        <div class="partner-inner"><img alt=""
-                                                                                        src="{{ asset('images/partners/1.png') }}">
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-partner">
-                                                        <div class="partner-inner"><img alt=""
-                                                                                        src="{{ asset('images/partners/5.png') }}">
-                                                        </div>
-                                                    </div>
+                                                    {% endif %}
+                                                    {% endfor %}
+                                                    {% endif %}
+
                                                 </div>
                                             </div>
                                         </div>

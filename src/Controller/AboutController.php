@@ -41,6 +41,8 @@ class AboutController extends AbstractController
             $about = $aboutRepository->createQueryBuilder('a')
                 ->addSelect('p')
                 ->leftJoin('a.partners', 'p')
+                ->addSelect('k')
+                ->leftJoin('a.partners', 'k')
                 ->where('a.language =:lang')
                 ->setParameter('lang', $this->getParameter('kernel.default_locale'))
                 ->getQuery()

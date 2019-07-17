@@ -1,6 +1,6 @@
 liip_imagine:
     # valid drivers options include "gd" or "gmagick" or "imagick"
-    driver: "gd"
+    driver: "imagick"
 
     # define your filter sets under this option
     filter_sets:
@@ -76,5 +76,20 @@ liip_imagine:
                     allow_upscale:  true
                 background:
                     size:           [377,377]
+                    position:       center
+                    color:          '#272727'
+
+        partners_logo:
+            jpeg_quality:           95
+            png_compression_level:  10
+            filters:
+                auto_rotate: ~
+                strip: ~
+                thumbnail:
+                    size:           [116,24]
+                    mode:           inset
+                    allow_upscale:  true
+                background:
+                    size:           [116,24]
                     position:       center
                     color:          '#272727'

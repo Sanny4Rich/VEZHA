@@ -63,21 +63,15 @@
                             </div>
                             <div class="col-md-9">
                                 <div class="row-partners">
-                                    <div class="col-partner">
-                                        <img alt="" src="{{ asset('images/partners/1.png') }}">
-                                    </div>
-                                    <div class="col-partner">
-                                        <img alt="" src="{{ asset('images/partners/2.png') }}">
-                                    </div>
-                                    <div class="col-partner">
-                                        <img alt="" src="{{ asset('images/partners/3.png') }}">
-                                    </div>
-                                    <div class="col-partner">
-                                        <img alt="" src="{{ asset('images/partners/4.png') }}">
-                                    </div>
-                                    <div class="col-partner">
-                                        <img alt="" src="{{ asset('images/partners/5.png') }}">
-                                    </div>
+                                    {% if about.partners is not empty %}
+                                    {% for partner in about.partners %}
+                                        {% if partner.imageLogo != null and partner.isVisible %}
+                                            <div class="col-partner">
+                                                <a href="{{ path('partner', {'_locale': lang , 'url': partner.url }) }}"><img alt="" src="{{ vich_uploader_asset(partner, 'imageLogoFile') }}"></a>
+                                            </div>
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>

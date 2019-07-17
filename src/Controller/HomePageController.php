@@ -3,11 +3,16 @@
 namespace App\Controller;
 
 use App\Entity\Comments;
+use App\Entity\HomePage;
+use App\Entity\Partners;
+use App\Entity\PartnersTranslations;
 use App\Entity\Products;
 use App\Entity\Services;
 use App\Repository\CategoriesRepository;
 use App\Repository\CommentsRepository;
 use App\Repository\ContactsRepository;
+use App\Repository\HomePageRepository;
+use App\Repository\PartnersRepository;
 use App\Repository\ProductsRepository;
 use App\Repository\ServicesRepository;
 use Entity\Repository\CategoryRepository;
@@ -33,7 +38,11 @@ class HomePageController extends AbstractController
     /**
      * @Route("/{_locale}/", name="home_page", defaults={"_locale" = "ua"}, requirements={"_locale" = "ua|ru|en" })
      */
-    public function index(Request $request,ContactsRepository $contactsRepository, ProductsRepository $productsRepository, ServicesRepository $servicesRepository, CategoriesRepository $categoriesRepository, CommentsRepository $commentsRepository)
+    public function index(Request $request,ContactsRepository $contactsRepository,
+                          ProductsRepository $productsRepository,
+                          ServicesRepository $servicesRepository,
+                          CategoriesRepository $categoriesRepository,
+                          CommentsRepository $commentsRepository, PartnersRepository $partnersRepository)
     {
 
         $locale = $request->get('_locale');
@@ -55,12 +64,18 @@ class HomePageController extends AbstractController
 
         $categories = $categoriesRepository->createQueryBuilder('c')
             ->where('c.isOnHomePage IS NOT NULL')
-            ->addSelect('t')
+             ->addSelect('t')
             ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
             ->getResult();
 
         $comments = $commentsRepository->findAll();
+
+        $partners = $partnersRepository->createQueryBuilder('p')
+            ->addSelect('t')
+            ->leftJoin('p.partnersTranslations', 't')
+            ->getQuery()
+            ->getResult();
 
         return $this->render('home_page/index.html.twig', [
             'controller_name' => 'HomePageController',
@@ -68,7 +83,8 @@ class HomePageController extends AbstractController
             'services' => $services,
             'categories' => $categories,
             'contacts' => $contacts,
-            'comments' => $comments
+            'comments' => $comments,
+            'partners' => $partners,
         ]);
     }
 

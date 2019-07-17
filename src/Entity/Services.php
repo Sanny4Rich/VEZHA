@@ -80,7 +80,7 @@ class Services
     private $updatedAt;
 
     /**
-     * @ORM\Column(type="integer", options={"default":0})
+     * @ORM\Column(type="integer", options={"default":0}, nullable=true)
      */
     private $onHomePagePosition;
 

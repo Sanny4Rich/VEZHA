@@ -100,3 +100,13 @@ services:
         arguments: [~,App\Entity\Feedback,~]
         tags:
             - { name: sonata.admin,group: Коментарии и отзывы, manager_type: orm, label: Форма обратной связи}
+
+    App\Admin\PartnersAdmin:
+        arguments: [~,App\Entity\Partners,~,'@liip_imagine.cache.manager']
+        tags:
+            - { name: sonata.admin, group: Основной контент, manager_type: orm, label: Партнеры }
+
+    App\Admin\PartnersTranslationsAdmin:
+        arguments: [~,App\Entity\PartnersTranslations,~]
+        tags:
+            - { name: sonata.admin,group: Переводы, manager_type: orm, label: Переводы партнеров}

@@ -91,7 +91,6 @@ class ServiceImages
     public function setService(?Services $services): self
     {
         $this->service = $services;
-
         return $this;
     }
 

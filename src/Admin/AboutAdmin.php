@@ -5,6 +5,7 @@ namespace App\Admin;
 
 use App\Entity\About;
 use App\Entity\Categories;
+use App\Entity\Partners;
 use App\Entity\Products;
 use App\Entity\Services;
 use Liip\ImagineBundle\Imagine\Cache\CacheManager;
@@ -88,5 +89,22 @@ class AboutAdmin extends AbstractAdmin
                 ->add('thirdOurDirectionDescription')
                 ->end()
                 ->end();
+
+        $form
+            ->tab('Партнеры')
+            ->add('partners', ModelType::class, [
+                'by_reference'          => false,
+                'multiple'              => true,
+                'expanded'              => true,     // or false
+                'class'                 => Partners::class,
+                'property'              => 'name',   // or any field in your media entity
+                'label'                 => 'Партнеры',
+                'btn_add'               => true,
+                'btn_list'              => false,
+                'btn_delete'            => true,
+                'btn_catalogue'         => 'admin',   // or your own translate catalogue in my case file admin.en.yml
+            ])
+            ->end()
+            ->end();
     }
 }
