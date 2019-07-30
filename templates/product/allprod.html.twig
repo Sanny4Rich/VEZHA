@@ -39,5 +39,10 @@
             </div>
         </div>
     </div>
+    {% if products is empty %}
+    <div class="container" style="height: 70%">
+        <h5>{% trans %}Товарів не знайдено{% endtrans %}</h5>
+    </div>
+    {% endif %}
     {{ include('footer.html.twig') }}
 {% endblock %}

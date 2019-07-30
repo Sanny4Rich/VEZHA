@@ -17,13 +17,14 @@
         <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6"></script>
         <link href="{{ asset('css/style.css') }}" rel="stylesheet" media="screen">
     </head>
-    {% set lang = app.request.locale %}
     <body class="body-full-page">
+    {% set lang = app.request.locale %}
     <div class="animsition">
         <div class="click-capture"></div>
         <div class="menu">
             <span class="close-menu icon-cross2 right-boxed"></span>
             <div class="menu-lang right-boxed">
+                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
                 <a href="{{-
                 path(app.request.get('_route'),
                     app.request.get('_route_params')|merge({'_locale' : 'ua'}))
@@ -36,7 +37,13 @@
                 <a href="{{-
                 path(app.request.get('_route'),
                     app.request.get('_route_params')|merge({'_locale' : 'en'}))
-                -}}" {% if app.request.locale == 'en' %} class="active" {% endif %}>ENG</a>
+                -}}" {% if app.request.locale == 'en' %} class="active" {% endif %}>EN</a>
+                {% else %}
+                    <a href="{{ 'ua' ~ app.request.requestUri }}" {% if app.request.locale == 'ua' %} class="active" {% endif %}>UA</a>
+
+                <a href="{{ 'ru' ~ app.request.requestUri }}" {% if app.request.locale == 'ru' %} class="active" {% endif %}>RU</a>
+                <a href="{{ 'en' ~ app.request.requestUri }}" {% if app.request.locale == 'en' %} class="active" {% endif %}>EN</a>
+                {% endif %}
             </div>
             <ul class="menu-list right-boxed">
                 <li class="active">
@@ -45,20 +52,23 @@
                 <li>
                     <a href="{{ path('categories', {'_locale': app.request.locale}) }}" >{% trans %}Категорії{% endtrans %}</a>
                     <ul>
-                        {% for category in categories|sortbyfield('onHomePagePosition') %}
-                            {% if category.onHomePagePosition != 0 %}
+                        {% for category in categories %}
+                            {% if category.isOnHomePage == 1 %}
                                 {% if category.categoriesTranslations is not empty %}
+                                    {% set t = 0 %}
                                     {% for trans in category.categoriesTranslations %}
                                         {% if trans.language == lang %}
                                             {% if trans.name is not empty %}
                                             <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ trans.name }}</a></li>
-                                            {% else %}
-                                            <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ category.name }}</a></li>
+                                                {% set t = 1 %}
                                             {% endif %}
                                         {% endif %}
                                     {% endfor %}
-                                    {% else %}
-                                        <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ category.name }}</a></li>
+                                {% if t == 0 %}
+                                    <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ category.name }}</a></li>
+                                {% endif %}
+                                {% else %}
+                                    <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ category.name }}</a></li>
                                 {% endif %}
                             {% endif %}
                         {% endfor %}

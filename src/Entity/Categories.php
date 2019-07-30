@@ -10,6 +10,7 @@ use Symfony\Component\HttpFoundation\File\File;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 
 /**
+ * @Gedmo\Tree(type="nested")
  * @ORM\Entity(repositoryClass="App\Repository\CategoriesRepository")
  * @Vich\Uploadable()
  */
@@ -53,7 +54,7 @@ class Categories
     private $isOnHomePage;
 
     /**
-     * @ORM\Column(type="integer", options={"default":0}, nullable=true)
+     * @ORM\Column(type="integer", options={"default" : 0}, nullable=true)
      */
     private $onHomePagePosition;
 
@@ -84,9 +85,45 @@ class Categories
     private $updatedAt;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\CategoriesTranslations", mappedBy="category")
+     * @ORM\OneToMany(targetEntity="App\Entity\CategoriesTranslations", mappedBy="category", cascade={"persist"}, orphanRemoval=true)
      */
     private $categoriesTranslations;
+
+
+    /**
+     * @Gedmo\TreeLeft
+     * @ORM\Column(name="lft", type="integer")
+     */
+    private $left;
+
+    /**
+     * @Gedmo\TreeLevel
+     * @ORM\Column(name="lvl", type="integer")
+     */
+    private $level;
+
+    /**
+     * @Gedmo\TreeRight
+     * @ORM\Column(name="rgt", type="integer")
+     */
+    private $right;
+
+    /**
+     * @Gedmo\TreeParent
+     * @ORM\ManyToOne(targetEntity="App\Entity\Categories", inversedBy="children")
+     */
+    private $parent;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Categories", mappedBy="parent", cascade={"persist"}, orphanRemoval=true)
+     * @ORM\OrderBy({"left" = "ASC"})
+     */
+    private $children;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Products", inversedBy="primaryCategory")
+     */
+    private $prodInPrimCat;
 
     public function __toString()
     {
@@ -98,6 +135,7 @@ class Categories
         $this->products = new ArrayCollection();
         $this->updatedAt = new \DateTime('now');
         $this->categoriesTranslations = new ArrayCollection();
+        $this->children = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -279,4 +317,97 @@ class Categories
 
         return $this;
     }
+
+    public function getLeft(): ?int
+    {
+        return $this->left;
+    }
+
+    public function setLeft(int $left): self
+    {
+        $this->left = $left;
+
+        return $this;
+    }
+
+    public function getLevel(): ?int
+    {
+        return $this->level;
+    }
+
+    public function setLevel(int $level): self
+    {
+        $this->level = $level;
+
+        return $this;
+    }
+
+    public function getRight(): ?int
+    {
+        return $this->right;
+    }
+
+    public function setRight(int $right): self
+    {
+        $this->right = $right;
+
+        return $this;
+    }
+
+
+    public function getParent(): ?self
+    {
+        return $this->parent;
+    }
+
+    public function setParent(?self $parent): self
+    {
+        $this->parent = $parent;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|self[]
+     */
+    public function getChildren(): Collection
+    {
+        return $this->children;
+    }
+
+    public function addChild(self $child): self
+    {
+        if (!$this->children->contains($child)) {
+            $this->children[] = $child;
+            $child->setParent($this);
+        }
+
+        return $this;
+    }
+
+    public function removeChild(self $child): self
+    {
+        if ($this->children->contains($child)) {
+            $this->children->removeElement($child);
+            // set the owning side to null (unless already changed)
+            if ($child->getParent() === $this) {
+                $child->setParent(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getProdInPrimCat(): ?Products
+    {
+        return $this->prodInPrimCat;
+    }
+
+    public function setProdInPrimCat(?Products $prodInPrimCat): self
+    {
+        $this->prodInPrimCat = $prodInPrimCat;
+
+        return $this;
+    }
+
 }

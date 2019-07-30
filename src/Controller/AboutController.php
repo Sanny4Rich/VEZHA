@@ -14,6 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AboutController extends AbstractController
 {
     /**
+     * @Route("/about", defaults={"_locale" = "ua"}, name="about_nolocale")
      * @Route("/{_locale}/about", name="about")
      */
     public function about(AboutRepository $aboutRepository,CategoriesRepository $categoriesRepository, Request $request, ContactsRepository $contactsRepository)
@@ -24,7 +25,7 @@ class AboutController extends AbstractController
             $contacts = $contactsRepository->findBy(['language'=> $this->getParameter('kernel.default_locale')]);
         $contacts = $contacts[0];
         $categories = $categoriesRepository->createQueryBuilder('c')
-            ->where('c.isOnHomePage IS NOT NULL')
+            ->where('c.isOnHomePage = 1')
             ->addSelect('t')
             ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
@@ -58,6 +59,7 @@ class AboutController extends AbstractController
     }
 
     /**
+     * @Route("/contacts", defaults={"_locale" = "ua"}, name="contacts_nolocale")
      * @Route("/{_locale}/contacts", name="contacts")
      */
     public function contacts(CategoriesRepository $categoriesRepository, Request $request, ContactsRepository $contactsRepository){

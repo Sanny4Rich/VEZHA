@@ -110,3 +110,13 @@ services:
         arguments: [~,App\Entity\PartnersTranslations,~]
         tags:
             - { name: sonata.admin,group: Переводы, manager_type: orm, label: Переводы партнеров}
+
+    App\Admin\ImageAdmin:
+        arguments: [~,App\Entity\Images,~,'@liip_imagine.cache.manager']
+        tags:
+            - { name: sonata.admin, manager_type: orm, show_in_dashboard: false }
+
+    App\Admin\PictureAdmin:
+        arguments: [~,App\Entity\Pictures,~]
+        tags:
+            - { name: sonata.admin,group: Картинки для статей, manager_type: orm, label: Картинки}

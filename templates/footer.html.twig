@@ -17,6 +17,7 @@
         </div>
         <div class="flex-item">
             <ul class="lang-bot">
+                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
                 <li {% if app.request.locale == 'ua' %} class="active" {% endif %}><a href="{{-
                     path(app.request.get('_route'),
                         app.request.get('_route_params')|merge({'_locale' : 'ua'}))
@@ -28,7 +29,12 @@
                 <li {% if app.request.locale == 'en' %} class="active" {% endif %}><a href="{{-
                     path(app.request.get('_route'),
                         app.request.get('_route_params')|merge({'_locale' : 'en'}))
-                    -}}" >ENG</a></li>
+                    -}}" >EN</a></li>
+                {% else %}
+                    <li {% if app.request.locale == 'ua' %} class="active" {% endif %}><a href="{{ 'ua' ~ app.request.requestUri }}" >UA</a></li>
+                    <li {% if app.request.locale == 'ru' %} class="active" {% endif %}><a href="{{ 'ru' ~ app.request.requestUri }}" >RU</a></li>
+                    <li {% if app.request.locale == 'en' %} class="active" {% endif %}><a href="{{ 'en' ~ app.request.requestUri }}" >EN</a></li>
+                {% endif %}
             </ul>
         </div>
         <div class="flex-item">

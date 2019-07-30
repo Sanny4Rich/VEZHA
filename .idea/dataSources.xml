@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="VEZHA@localhost" uuid="c27a1cb4-9a8b-471f-a715-21c0ccb32bf3">
+    <data-source source="LOCAL" name="webheads_v@localhost" uuid="3108a9c9-903c-48e3-9662-c5041c81b50d">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/VEZHA</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/webheads_v</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />

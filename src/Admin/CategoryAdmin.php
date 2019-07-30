@@ -34,14 +34,20 @@ class CategoryAdmin extends AbstractAdmin
     {
         $list
             ->addIdentifier('id')
-            ->addIdentifier('name');
+            ->addIdentifier('name')
+            ->addIdentifier('parent')
+            ->addIdentifier('isVisible')
+            ->addIdentifier('isOnHomePage');
     }
 
     protected function configureDatagridFilters(DatagridMapper $filter)
     {
         $filter
             ->add('id')
-            ->add('name');
+            ->add('name')
+            ->add('parent')
+            ->add('isVisible')
+            ->add('isOnHomePage', null, ['label' => 'Отображается в боковом меню']);
     }
 
     protected function configureFormFields(FormMapper $form)
@@ -51,6 +57,7 @@ class CategoryAdmin extends AbstractAdmin
         $form
             ->tab('Основная информация')
             ->add('name')
+            ->add('parent')
             ->add('description', TextareaType::class, array('attr' => array('class' => 'ckeditor'), 'required' => false))
             ->add('shortDescription')
             ->add('isVisible')
@@ -59,7 +66,7 @@ class CategoryAdmin extends AbstractAdmin
         $form
             ->tab('Бокове меню')
             ->add('isOnHomePage', null, ['label' => 'Відображати?'])
-            ->add('onHomePagePosition', ChoiceType::class, ['label' => 'Номер позиції', 'required'   => false, 'choices' => ['1'=> 1, '2'=> 2, '3'=> 3, '4'=> 4,'5'=>5, '6'=> 6, '7'=>7, '8'=>8, '9'=>9, '10'=>10, 'Не відображати' => 0]])
+//            ->add('onHomePagePosition', ChoiceType::class, ['label' => 'Номер позиції', 'required'   => false, 'choices' => ['1'=> 1, '2'=> 2, '3'=> 3, '4'=> 4,'5'=>5, '6'=> 6, '7'=>7, '8'=>8, '9'=>9, '10'=>10, 'Не відображати' => 0]])
             ->end()
             ->end();
 
@@ -67,6 +74,7 @@ class CategoryAdmin extends AbstractAdmin
             ->tab('Картинка')
             ->add('imageFile', VichImageType::class, [
                 'required' => false,
+                'help' => 'Размер картинки 370*370',
                 'image_uri' => function (Categories $categories, $resolverdUri) use ($cacheManager) {
                     // $cacheManager is LiipImagine cache Manager
                     if (!$resolverdUri) {

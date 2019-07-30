@@ -433,6 +433,7 @@ label.error{
 .lang-bot{
   display: flex;
   justify-content: space-between;
+  max-width: 6rem;
 }
 
 .lang-bot li{
@@ -3657,6 +3658,7 @@ a.brand:focus{
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding-left: 4.2857rem;
 }
 
 .footer-flex .flex-item{

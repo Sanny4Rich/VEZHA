@@ -61,20 +61,22 @@ class ProductsAdmin extends AbstractAdmin
             ->end();
         //Услуги
         $form
-            ->tab('Картиник')
+            ->tab('Картинки')
             ->add('images',
                 CollectionType::class,
                 ['by_reference' => false],
-                    [
-                        'edit' => 'inline',
-                        'inline' => 'table'
-                    ]
-                )
+                [
+                    'edit' => 'inline',
+                    'inline' => 'table'
+                ]
+            )
             ->end()
             ->end();
         $form
             ->tab('Категории')
+            ->add('primaryCategory')
             ->add('categories', ModelType::class, [
+
                 'by_reference'          => false,
                 'multiple'              => true,
                 'expanded'              => true,     // or false

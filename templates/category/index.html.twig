@@ -4,6 +4,43 @@
 
 {% block body %}
     <div class="content" style="padding-top: 6rem">
+        {% set loc = app.request.locale %}
+        {% if cat.categoriesTranslations is not empty %}
+        {% set t = 0 %}
+        {% for trans in cat.categoriesTranslations %}
+        {% if t == 0 %}
+        {%if trans.language == loc  %}
+        <div class="container"><h1>{{ trans.name }}</h1>
+            {% set t = 1 %}
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% if t == 0 %}
+            <div class="container"><h1>{{ cat.name }}</h1>
+                {% endif %}
+                {% else %}
+                <div class="container"><h1>{{ cat.name }}</h1>
+                    {% endif %}
+                    <div><p><a href="{{ path('categories', {'_locale': loc}) }}">{% trans %}Всі категорії{% endtrans %}</a>/
+                            {% if par.categoriesTranslations is not empty %}
+                            {% set t = 0 %}
+                            {% for trans in par.categoriesTranslations %}
+                            {% if t == 0 %}
+                            {%if trans.language == loc  %}
+                                <a href="{{ path('category', {'_locale': loc , 'url': par.url}) }}">{{ trans.name }}</a>
+                            {% set t = 1 %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor %}
+                            {% if t == 0 %}
+                                <a href="{{ path('category', {'_locale': loc , 'url': par.url}) }}">{{ par.name }}</a>
+                                {% endif %}
+                                {% else %}
+                                    <a href="{{ path('category', {'_locale': loc , 'url': par.url}) }}">{{ par.name }}</a>
+                                    {% endif %}
+
+                            </p></div>
+                    <div>
         <div class="projects">
             <div class="grid-items js-isotope js-grid-items">
                {% for product in products|sortbyfield('createdAt')|reverse %}
@@ -26,5 +63,11 @@
             </div>
         </div>
     </div>
+    {% if products is empty %}
+        <div class="container" style="height: 70%">
+            <h5>{% trans %}Товарів не знайдено{% endtrans %}</h5>
+        </div>
+    {% endif %}
+
 {{ include('footer.html.twig') }}
 {% endblock %}

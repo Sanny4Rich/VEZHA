@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Categories;
 use App\Entity\Products;
 use App\Repository\CategoriesRepository;
 use App\Repository\ContactsRepository;
@@ -13,20 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/products")
-     */
-    public function to_products(){
-        return $this->redirectToRoute('products');
-    }
-
-    /**
-     * @Route("/product/{url}")
-     */
-    public function to_product(Products $products){
-        return $this->redirectToRoute('product', ['_locale' => 'kernel.default_locale', 'url' => $products->getUrl()]);
-    }
-
-    /**
+     * @Route("/product/{url}", defaults={"_locale" = "ua"})
      * @Route("/{_locale}/product/{url}", name="product")
      */
     public function index(Request $request, ContactsRepository $contactsRepository, Products $product, ProductsRepository $productsRepository, CategoriesRepository $categoriesRepository)
@@ -38,7 +26,7 @@ class ProductController extends AbstractController
         $contacts = $contacts[0];
 
         $categories = $categoriesRepository->createQueryBuilder('c')
-            ->where('c.isOnHomePage IS NOT NULL')
+            ->where('c.isOnHomePage = 1')
             ->addSelect('t')
             ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
@@ -51,15 +39,17 @@ class ProductController extends AbstractController
             ->leftJoin('m.images', 'i')
             ->getQuery()
             ->getResult();
+
         return $this->render('product/index.html.twig', [
             'categories' => $categories,
             'product' => $product,
             'products' => $products,
-            'contacts' => $contacts
+            'contacts' => $contacts,
         ]);
     }
 
     /**
+     * @Route("/products", defaults={"_locale" = "ua"})
      * @Route("/{_locale}/products", name="products")
      */
     public function allProducts(Request $request, ContactsRepository $contactsRepository,ProductsRepository $productsRepository, CategoriesRepository $categoriesRepository){

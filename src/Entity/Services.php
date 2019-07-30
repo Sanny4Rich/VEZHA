@@ -212,9 +212,6 @@ class Services
     {
         $image->setService($this);
         $this->images[] = $image;
-
-        dump($image);
-
         return $this;
     }
 

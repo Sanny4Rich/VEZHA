@@ -2,64 +2,1032 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baec99f3-2be6-46b7-898b-0d42369f3566" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Admin/PartnersAdmin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Admin/PartnersTranslationsAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/1111.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/1_MIES_415_PBI_low.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/2-status.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/222.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/2reverse-c-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/2reverse-lounge-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/3reversec-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/AC2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ADARAC1750.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ADARAC1760.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ALKAIDC1810.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ALKAIDC400.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARCA_2_G3647.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-BASE0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-BASE4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-BASE5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-BASE6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-STOOL0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-STOOL10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-STOOL15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-STOOL5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-TABLE0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-TABLE13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ARKI-TABLE14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/AZHAC1880.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/AZHAC1890.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Afrodite0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Aida0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Air-TV.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Air-textle_.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Aisha0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Alba0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Alcide0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Alfred0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Allison0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Andy0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Anxie0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Apollo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ara0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Arca_1_G7281.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Arca_3_G3963.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Arca_4_G6382.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Arena_armchair0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Arena_sofa0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Argo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Aria0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Aria1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Aria2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ArkabC1570.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ArkabC1580.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ArkabC1590.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ArkabC1600.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Arlekin0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Astol0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Astrid0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Asya0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Atlante0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Atlante_20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Atlante_30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Atlante_40.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Atlante_50.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Atlante_60.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Atlante_TV0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Aura_Chest_of_Drawers0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Aura_Night_Table0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BABILA1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BABILA12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BABILA3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BALI6790.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BALI6800.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BITTA_Lounge.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BOSTON6820.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BOSTON6830.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BUDDY0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BUDDY19.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BUDDY22.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BUDDY24.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BUDDY30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Baby0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bayus_10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bayus_20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bayus_30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bayus_50.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bayus_60.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bayus_70.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bayus_TV0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bea0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Beauty0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Beiras0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Beiras1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Beiras2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bellavista0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Belt0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Biblo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bilot0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bitta2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bitta3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bitta4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BittaSwing.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Blush0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BonnetBright0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BonnetBright1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BonnetBright2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BonnetIndoor0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BonnetIndoor1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BonnetIndoor2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BonnetOutdoor0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BonnetOutdoor1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BonnetOutdoor2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/BonnetPanels0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Boston6810.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Botero_10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Botero_20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bouchon0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bryant_specchio0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Bryant_tavolo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Buddy_poof.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Buffo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Buffo1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Buffo2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Button1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Button2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Button3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/CabEx2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cabinetwith1door47x60cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cabinetwith1doorandLEDlight60x75cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cabinetwith2doorsandLEDlight60x47cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cabinetwith2doorsandLEDlight80x75cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cabinetwith3doorsandLEDlight120x75cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Camille0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Camper0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Caro0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Caro1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Celine0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cell0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cello0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cello1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cello2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Chantal0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Charlotte0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Circe0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Connie0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Corbu0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Corbu1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Corbu2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/CosmoBamboo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/CosmoBamboo1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/CosmoBamboo2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cottage.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Countertopwashbasin-reversedpyramid50.6x40.6cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/CrackedEarth0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/CrackedEarth1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/CrackedEarth2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/CrackedEarth3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Creta5550.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Creta5560.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Creta6760.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Cucu0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Daisy_girevole0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Dalida0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Daphne0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Daybed1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Deck0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Demetra0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge15.svg+xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Diverge9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Domino0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Domino_TV0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Domino_expo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Double2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Double3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/DoubleH.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ELINOR0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ELINOR14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ELINOR3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER17.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER19.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER21.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER22.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER23.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER24.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ESTER9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/EXTESO0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/EXTESO10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/EXTESO11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/EXTESO13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/EXTESO14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/EXTESO15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/EXTESO2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Earth0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Earth1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Earth2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Earthobjects0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Earthobjects1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Earthobjects2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Edge-bord-tum.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Edge_floor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ego0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Eley0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Elika0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Elis0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ella0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Emma0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Empire0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Enya_quadri0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Escher0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ester0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ester_sgabello0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Eva0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ExCab.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FABBRICO0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FABBRICO12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FABBRICO13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FABBRICO14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FABBRICO15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FABBRICO16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FLORENCE3390.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FLUXO0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FLUXO10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FLUXO2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FLUXO6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FLUXO7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FLUXO9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FOLK0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FOLK14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FOX0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FOX12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FOX14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/FOX15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Fancy0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Fellow_armchair0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Fellow_sofa0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/First0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Flag0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Flamingo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Flavio0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Flutes-Reeds0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Flutes-Reeds1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Flutes-Reeds2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Flutes-Reeds3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Forvanity0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Four_Seasons_glass0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Four_Seasons_square0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Freestanding_round.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Fritz0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Fuji0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/GLISS_bench0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/GLISS_bench11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/GLISS_bench3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/GLISS_bench4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Galaxy0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Galaxy1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Galaxy2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Garbo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Gheo-K0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Gheo-Off0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Gilda0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Giocondo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Giolino0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Giolo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Giove0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Grace0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/H.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/H2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/H3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/HOST1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/HOST27.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/HOST28.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/HOST29.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/HOST30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Hamilton0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Hamilton_chest_of_drawers0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Harald_2400.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Heather0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Hermitage3010.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Hermitage3040.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Hook0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Hotto0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/I040_Altamira.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON21.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON22.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON23.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON24.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON25.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON26.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON27.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON28.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/IKON4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ics0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Infinity0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/InvestUnion.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ionis0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JAMAICA0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JAMAICA10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JAMAICA8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JAZZ0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JAZZ14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JAZZ15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JAZZ4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JAZZ7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JAZZ9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JUMP1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JUMP10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JUMP11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JUMP12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/JUMP13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Jean0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Jenny_1560.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Joint0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Jok0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Joy0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/KUADRA_XL_bench0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/KUADRA_XL_bench7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/KUADRO0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/KUADRO16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/KUADRO18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/KUADRO19.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Kepler0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/KettalBitta Swing.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Kevin0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Killian0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Kilt0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Kirk0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Kirk_bed0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Kosmo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Koster_150x800.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Kvadro0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LAJA2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LAJA23.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LAJA26.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LAJA3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LOGICO0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LOGICO5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LOGICO6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LOGICO7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LPanoram.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LPavil.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LUNAR0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LUNAR14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LUNAR15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LUNAR16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LUNAR17.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Landscape_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Landscape_comedor_con_pergola.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Leevn0.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Leevn1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Leevn2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Lenie0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Levante0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Liala0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Liala_bergere0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Liala_bergere_straw0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Liala_straw0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Life2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Life3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Lineas_1170.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Lineas_580.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Linka0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Lintex-ONE-Screen.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LiquidForms0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LiquidForms1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LiquidForms3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/LiquidForms4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Lolita0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Londra0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Loretta0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Loretta_pouf0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Louis0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Lounge.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MATRIX0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MATRIX12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MATRIX13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MATRIX14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MATRIX15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MATRIX16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MATRIX17.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MATRIX20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MIRZUM6910.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MIRZUM6920.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MIRZUM6930.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MODUS1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MODUS10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MODUS12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MODUS15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MODUS16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MODUS18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MODUS4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MODUS9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MORE0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MORE10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MORE9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Madison5630.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Madison6480.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Masai0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Maskara_coiffeuse0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Maya0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Mediacenter0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Micol0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Mies-Pedrali_01.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Milano0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Minifrasca_&amp;_Minilotus0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Mirrorwith2integratedhorizontalLEDlightbandsanddefogger198x65cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Mirrorwith2integratedhorizontalLEDlightbandsanddefogger90x70cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Mirrorwith2verticallyintegratedLEDlightbandsanddefogger140x90cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Mirrorwith2verticallyintegratedLEDlightbandsanddefogger65x198cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MirrorwithLEDLightinLshapetop-leftwithdefogger70x90cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MirrorwithframeandLEDbacklightinganddefogger70x90cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MirrorwithframeandrectangularLEDlightbandanddefogger140x90cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MirrorwithglassframewithLEDlightinganddefogger70x90cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MirrorwithintegratedrectangularLEDlightbandanddefogger60x85cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/MirrorwithintegratedrectangularLEDlightbandanddefogger70x90cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Miss_tondo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Mix0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Miyabi_console0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Mobila-skrivtavlor.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Modus_10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/My_suite0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Myria0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NOLITA2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NOLITA29.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NOLITA30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NOLITA31.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NOLITA32.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NOLITA6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NUNKIC1930.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NUNKIC1960.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NUNKIC1970.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NYM0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NYM3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NYM36.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NYM4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NYM4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NYM42.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/NYM47.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Net2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Nissa0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Noemi0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Nyan0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ONE-Flip.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal17.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal19.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKAMetal8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/OSAKA_metal9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ondo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ondo1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ondo2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Opera0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Opera1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Opera2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Opium0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ops_10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ops_20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ops_30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PARKLIFE_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PLS.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PLURAL10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PLURAL11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PLURAL12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PLURAL18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PLURAL2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PLURAL3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PLURAL8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PLURAL9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PRINCIPE4860.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PRINCIPE4880.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PRINCIPE6220.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Panarea6960.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Parentesit_Freestanding_round.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ParkLifeSofa.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ParkT2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/ParkTable.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Pausa0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PavL-evening.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PavL.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Pavilion_Doble_H.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Pearl0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Pello0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Pello1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Pello2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PelloWeave0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PelloWeave1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/PelloWeave2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Penelope0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Pentagramma0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Petal0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Petal1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Petal2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Petal3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Piroette0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Pit_Stop0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Place0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Polifemo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Quadilic2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Quadilic3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Quadilic4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Quadrifoglio_I0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Quay0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Quay_Rectangular0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Queen_10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Queen_20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/REGENCY2740.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/REUNION3080.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/REVA0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/REVA10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/REVA16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/REVA18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/REVA23.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/REVA25.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Raja0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Raja1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Raja2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Rani0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Rani1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Raster0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Regent_10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Regent_20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Riga0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Riga_TV0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Rimmel0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Riva1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Riva2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Rogers0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Roll1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Roll2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Rondo'_10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Rondo'_20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Round.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Royal3120.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Rucellai0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SERIF1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SERIF9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SNOW0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SNOW1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SNOW14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SNOW7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SOCIAL0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SOCIAL10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SOCIAL13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SOCIAL14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SOCIAL17.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SOCIAL18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SOCIAL24.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SOUL0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SOUL9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SPACE0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SPACE4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SPACE5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/STYLUS0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/STYLUS17.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/STYLUS18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/STYLUS19.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/STYLUS20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/STYLUS22.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SUNSET0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SUNSET13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SUNSET7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SURFACE0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SURFACE13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SURFACE14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SURFACE2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SURFACE9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Saffo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Sam0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Samar3440.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Scarlett0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Script0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Seed0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Seed1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Seed2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Seed3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Seed4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Shani0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Shingle0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Shingle1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Shingle2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Shingle3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Shingle4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Shingle5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Side0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Single0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Singlehandlefaucet0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SinglehandlefaucetCastle0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Singlewashbasin-square50x45cm0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Sir_Bis0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Sirio0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Sketch0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Slumber0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Slumber1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Slumber2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SlumberTextile0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SlumberTextile1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/SlumberTextile2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Snap0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Sonja0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Sonja_Night_10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Sonja_Night_20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Spin0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Spritz0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Stampa3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Stars0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Stylo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Stylo_Wood0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Suisse2950.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Suisse2960.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Suisse3450.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Suisse3480.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Surf0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/T-Tweed0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/T-Tweed1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/T-Tweed2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TABAR4050.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TABAR4060.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TEMPS0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TEMPS13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TEMPS16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TOGO0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TOGO13.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TOGO14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TOGO18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TOGO19.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TOGO8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TOGO9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TWEET0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TWEET10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TWEET22.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TWEET3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TWEET30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TWEET31.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/TWEET32.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tama0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tamok0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tenco0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Thayl0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Theta0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tiba10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tiba11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tiba12.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tiba6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tiba7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tiba8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tiba9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tilly0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Timber0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Timothy0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tondo0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tony0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Torii0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca15.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca16.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca17.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca19.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca21.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca22.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca23.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca24.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca25.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca26.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca27.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca28.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca29.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca31.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca32.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca33.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tribeca6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Trilot0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Triple0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Trittico0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Trunk0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tweed0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tweed1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Tweed2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ubiqua0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Unfold0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Unfold1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Unfold2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VIC0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VIC21.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VIC22.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VOLT0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VOLT11.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VOLT14.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VOLT17.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VOLT24.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VOLT29.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VOLT31.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VOLT32.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VOLT35.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/VOLT36.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Velden0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Velden1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Velden2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Vera0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Vil2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Vimin3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Vimini2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Vimini_central_table_135.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Vine2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Vine3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Vine4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Viq2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/WETAR6460.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/WETAR6470.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Wa0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Wa1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Wa2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Wa3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Wa4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave11.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave2.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave4.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave6.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave7.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave8.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Weave9.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Webby_10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Webby_20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Webby_30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Webby_day_bed0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Webby_sgabello0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Wendy_10.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Wendy_20.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Wendy_30.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Wood-whiteboard.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON1.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON18.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON21.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON22.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON23.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON24.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON40.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON419.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON420.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON421.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON422.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON424.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON425.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/YPSILON426.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ziggy0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ziggy_100.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ziggy_40.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ziggy_80.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ziggy_90.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ziggy_Night0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ziggy_Night_60.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ziggy_bed0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ziggy_table0.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/Ziggy_table_150x1500.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/air.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/air2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/airwhite.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/altea.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/altea2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/andreu-world-landscape-alu-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/arc-table-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/arc2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/arc3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/armchair1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/atl2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/atlant1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/azur.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/bathformosa-03.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/bathimpero-02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/closed.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/cottage1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/couve-table.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/couve-table2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/crescent-Lounge-1-wide.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/dining.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/dining2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/dining3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/double.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/dual-oc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/dual-occ2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/egg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/egg2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/emeraude.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/extra-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/flamberge1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/flmberge2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/formosa-.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/freestanding_rectangular_5107.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/freestanding_rectangular_5107_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/gardenfire4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/grilltole.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/harrow_grafito_A040_v29.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/impero.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/itek.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/itek2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/kettal_lounge_pavilion.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/land1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/laterza-16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/logstoretole3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/lounge2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/maia4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/maia5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/maia6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/merc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/mercury-Lounge-2-wide.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/meshsun.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/meshsun2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/miami-1-600x600.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/nashville-3-600x600.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/panama-1-600x600.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/parklifesun.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/parksun.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/radial.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/raglan-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/raglan-20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/raglan-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/reverse-c-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/reverse-lounge.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/roclette.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/shelftole.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/sideboardtole.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/sistemasp-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/sofa-couve-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/sofa-couve-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/status.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/sysr.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/systema.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/tab1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/table_Vimini.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/tao.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/tao2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/terracetole5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/uve.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/uve2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/uve3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/wok.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/zero.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/product/zero2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Admin/ImageAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Admin/PictureAdmin.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Form/ProductInputType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/c27a1cb4-9a8b-471f-a715-21c0ccb32bf3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/c27a1cb4-9a8b-471f-a715-21c0ccb32bf3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/doctrine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/doctrine.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/liip_imagine.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/vich_uploader.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/1-1170x572.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/1-1920x1080.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/1-1920x670.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/1-370x370.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/1-426x321.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/1-426x426.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/1-426x550.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/1-570x572.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/1-770x555.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/1-79x64.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/2-1920x670.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/2-370x370.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/2-426x321.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/2-426x426.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/2-426x550.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/2-570x572.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/2-770x555.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/2-79x64.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/3-1920x670.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/3-370x370.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/3-426x321.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/3-426x426.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/3-770x555.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/3-79x64.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/4-370x370.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/4-426x321.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/4-426x426.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/4-770x555.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/5-370x370.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/5-426x321.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/6-370x370.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/6-426x321.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/7-370x370.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/8-370x370.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/news/9-370x370.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Admin/AboutAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/AboutAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/.htaccess" beforeDir="false" afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/about/bg2-3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/about/bg2-5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/bg1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg/bg1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/bg2-2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg/bg2-2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/bg2-3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg/bg2-3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/bg2-4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg/bg2-4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/bg2-5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg/bg2-5.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/bg2-6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg/bg2-6.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/bg2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg/bg2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/bg3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg/bg3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/dots.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg/dots.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/dots2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/bg/dots2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/n_salone_2018_pregallery_01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/n_salone_2018_pregallery_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/n_salone_2018_pregallery_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/z_minotti_salone_2018_esterno_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/z_salone_2018_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/z_salone_2018_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/z_salone_2018_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/z_salone_2018_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/z_salone_2018_15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/z_salone_2018_31.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/z_salone_2018_36.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg/z_salone_2018_39.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/category/Krassky_Furniture_B-BItalia_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/category/Krassky_Furniture_B-BItalia_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/category/bg2-2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/clients/1-92x92.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/clients/2-92x92.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/favicon/apple-touch-icon-114x114.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon/apple-touch-icon-114x114.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/favicon/apple-touch-icon-72x72.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon/apple-touch-icon-72x72.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/favicon/apple-touch-icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon/apple-touch-icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/favicon/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/favicon/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/partners/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/partners/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/partners/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/partners/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/partners/5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/Krassky_B-BItalia_Wardrobe_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/Krassky_Furniture_B-BItalia_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/Krassky_Furniture_B-BItalia_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/Krassky_Furniture_B-BItalia_12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/Krassky_Furniture_Baxter_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/Krassky_Furniture_Baxter_SaloneInternatzionaleDeMilano.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/Krassky_Furniture_Promemoria_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/Krassky_Furniture_Promemoria_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/Krassky_Kitchen_Toncelli_Nantia_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/Krassky_Kitchens_LaCornue_Knowhow_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/n_salone_2018_pregallery_03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/n_salone_2018_pregallery_04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/top/Krassky_Furniture_B-BItalia_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/top/Krassky_Furniture_B-BItalia_Febo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/z_minotti_salone_2018_esterno_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/z_salone_2018_10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/z_salone_2018_13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/product/z_salone_2018_14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/1-1920x1080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/1-426x271.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/1-426x426.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/1-426x574.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/1-426x728.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/1-680x680.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/2-1920x1080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/2-426x426.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/2-426x574.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/2-426x728.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/2-680x680.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/3-1920x1080.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/3-426x426.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/3-426x574.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/3-426x728.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/3-680x680.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/4-426x426.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/4-426x574.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/4-680x680.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/5-426x426.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/5-426x574.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/5-680x680.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/6-426x574.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/6-680x680.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/7-426x574.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/projects/8-426x574.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/slider/slide1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/slider/slide2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/slider/slide3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/1-270x270.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/2-270x270.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/3-270x270.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/4-270x270.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/team/5-270x270.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/users/1-70x70.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/users/2-70x70.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/scripts.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/scripts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/smoothscroll.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/smoothscroll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/CategoryAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/CategoryAdmin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Admin/ProductsAdmin.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Admin/ProductsAdmin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/AboutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AboutController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/CategoryController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/HomePageController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/HomePageController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/PartnerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/PartnerController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Controller/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ServiceController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Categories.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categories.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/HomePage.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/HomePage.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/Partners.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/ServiceImages.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/ServiceImages.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Products.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Products.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/Services.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/HomePageRepository.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/PartnersRepository.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/about/about.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about/about.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/about/contact.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/about/contact.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/all.categories.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/all.categories.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/category/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/category/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/footer.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/footer.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/home_page/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/home_page/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/product/allprod.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/allprod.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/product/index.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/service/index.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/index.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/service/allservices.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/service/allservices.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/messages.en.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.en.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/messages.ru.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.ru.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/translations/messages.ua.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/translations/messages.ua.yaml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,64 +1052,27 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="VEZHA@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="webheads_v@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="VEZHA@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="webheads_v@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="VEZHA@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="webheads_v@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="VEZHA: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="webheads_v: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/about/about.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/product/allprod.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-207">
-              <folding>
-                <element signature="e#12#26#0#Twig" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Controller/AboutController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>subtitle</find>
-      <find>entry</find>
-      <find>home</find>
-      <find>cked</find>
       <find>link-arrow.h5</find>
       <find>map</find>
       <find>.menu-list</find>
@@ -162,12 +1093,16 @@
       <find>getImage</find>
       <find>Prod</find>
       <find>service</find>
-      <find>images</find>
       <find>image</find>
       <find>addImage</find>
       <find>category</find>
       <find>products</find>
       <find>cate</find>
+      <find>ser</find>
+      <find>images</find>
+      <find>$picture</find>
+      <find>lang</find>
+      <find>chi</find>
     </findStrings>
     <replaceStrings>
       <replace>products</replace>
@@ -185,64 +1120,70 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/translations/messages.ua.yaml" />
-        <option value="$PROJECT_DIR$/src/Admin/CategoryAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Entity/CategoriesTranslations.php" />
-        <option value="$PROJECT_DIR$/templates/service/project-detail.html" />
-        <option value="$PROJECT_DIR$/public/css/style.css" />
-        <option value="$PROJECT_DIR$/src/Repository/ServiceImagesRepository.php" />
-        <option value="$PROJECT_DIR$/src/Admin/ServicesAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Entity/ProductImages.php" />
-        <option value="$PROJECT_DIR$/src/Entity/ServicesImages.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Products.php" />
-        <option value="$PROJECT_DIR$/templates/edit.html.twig" />
-        <option value="$PROJECT_DIR$/src/Admin/ProductsAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Admin/ServiceTranslationAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Entity/ServiceTranslations.php" />
-        <option value="$PROJECT_DIR$/src/Admin/ServiceImagesAdmin.php" />
-        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/src/Controller/CategoryController.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Comments.php" />
         <option value="$PROJECT_DIR$/src/Admin/FeedbackAdmin.php" />
         <option value="$PROJECT_DIR$/src/Admin/CommentsAdmin.php" />
-        <option value="$PROJECT_DIR$/templates/category/all.categories.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/ServiceController.php" />
         <option value="$PROJECT_DIR$/src/Admin/ServiceAdmin.php" />
         <option value="$PROJECT_DIR$/templates/service/allservices.html.twig" />
-        <option value="$PROJECT_DIR$/templates/footer.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/About.php" />
         <option value="$PROJECT_DIR$/src/Entity/ServiceImages.php" />
         <option value="$PROJECT_DIR$/src/Entity/PartnersImages.php" />
         <option value="$PROJECT_DIR$/src/Admin/PartnersTranslationsAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Entity/Categories.php" />
         <option value="$PROJECT_DIR$/src/Entity/Services.php" />
         <option value="$PROJECT_DIR$/src/Entity/Partners.php" />
         <option value="$PROJECT_DIR$/src/Admin/AboutAdmin.php" />
-        <option value="$PROJECT_DIR$/config/packages/liip_imagine.yaml" />
-        <option value="$PROJECT_DIR$/src/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/templates/partner/post-image.html" />
         <option value="$PROJECT_DIR$/templates/service/index.html.twig" />
-        <option value="$PROJECT_DIR$/templates/product/index.html.twig" />
         <option value="$PROJECT_DIR$/src/Admin/PartnersAdmin.php" />
-        <option value="$PROJECT_DIR$/templates/base.html.twig" />
         <option value="$PROJECT_DIR$/src/Entity/PartnersTranslations.php" />
         <option value="$PROJECT_DIR$/src/Entity/HomePage.php" />
-        <option value="$PROJECT_DIR$/config/packages/vich_uploader.yaml" />
         <option value="$PROJECT_DIR$/src/Admin/HomePageAdmin.php" />
-        <option value="$PROJECT_DIR$/src/Controller/PartnerController.php" />
-        <option value="$PROJECT_DIR$/src/Controller/HomePageController.php" />
-        <option value="$PROJECT_DIR$/config/services.yaml" />
-        <option value="$PROJECT_DIR$/templates/home_page/index.html.twig" />
         <option value="$PROJECT_DIR$/templates/partner/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/Controller/AboutController.php" />
         <option value="$PROJECT_DIR$/templates/about/about.html.twig" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/config/packages/security.yaml" />
+        <option value="$PROJECT_DIR$/config/packages/liip_imagine.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/PartnerController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Pictures.php" />
+        <option value="$PROJECT_DIR$/src/Admin/PictureAdmin.php" />
+        <option value="$PROJECT_DIR$/config/packages/vich_uploader.yaml" />
+        <option value="$PROJECT_DIR$/src/Admin/ImageAdmin.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Images.php" />
+        <option value="$PROJECT_DIR$/config/services.yaml" />
+        <option value="$PROJECT_DIR$/src/Controller/ProductInputController.php" />
+        <option value="$PROJECT_DIR$/src/Entity/Categories.php" />
+        <option value="$PROJECT_DIR$/templates/product_input/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Form/ProductInputType.php" />
+        <option value="$PROJECT_DIR$/translations/messages.en.yaml" />
+        <option value="$PROJECT_DIR$/config/packages/dev/twig.yaml" />
+        <option value="$PROJECT_DIR$/src/EventSubscriber/LocaleSubscriber.php" />
+        <option value="$PROJECT_DIR$/templates/footer.html.twig" />
+        <option value="$PROJECT_DIR$/templates/category/all.categories.html.twig" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
+        <option value="$PROJECT_DIR$/templates/category/all.categories2.html.twig" />
+        <option value="$PROJECT_DIR$/templates/category/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/ProductController.php" />
+        <option value="$PROJECT_DIR$/templates/product/index.html.twig" />
+        <option value="$PROJECT_DIR$/templates/home_page/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/Controller/AboutController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/ServiceController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/HomePageController.php" />
+        <option value="$PROJECT_DIR$/src/Controller/CategoryController.php" />
+        <option value="$PROJECT_DIR$/templates/base.html.twig" />
+        <option value="$PROJECT_DIR$/.env.local" />
+        <option value="$PROJECT_DIR$/src/Admin/ProductsAdmin.php" />
       </list>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PhpServers">
     <servers />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration">
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP 7.2">
     <include_path>
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/vendor/psr/log" />
@@ -411,36 +1352,13 @@
             <path>
               <item name="BauhausProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="BauhausProject" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BauhausProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BauhausProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BauhausProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="BauhausProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BauhausProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BauhausProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BauhausProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BauhausProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BauhausProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BauhausProject" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="EventSubscriber" type="462c0819:PsiDirectoryNode" />
+              <item name="Migrations" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BauhausProject" type="b2602c69:ProjectViewProjectNode" />
@@ -451,19 +1369,12 @@
               <item name="BauhausProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="BauhausProject" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="about" type="462c0819:PsiDirectoryNode" />
+              <item name="category" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="BauhausProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="BauhausProject" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="home_page" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="BauhausProject" type="b2602c69:ProjectViewProjectNode" />
-              <item name="BauhausProject" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
+              <item name="var" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -480,26 +1391,27 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
     <property name="database.console.LAST_STATE" value="false" />
-    <property name="last_opened_file_path" value="/media/sanny4rich/Sanny/WORK/Макеты проектов/vg-design" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HealthyMeal/gymer" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="web.server" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/src/Entity/Machines.php" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/config/packages/dev" />
+      <recent name="$PROJECT_DIR$/src/Admin" />
+      <recent name="$PROJECT_DIR$/templates/partner" />
+      <recent name="$PROJECT_DIR$/src/Entity" />
+      <recent name="$PROJECT_DIR$/templates/service" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/public/images/product" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/public/js" />
       <recent name="$PROJECT_DIR$/public/css" />
       <recent name="$PROJECT_DIR$/public/css/plugins" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates/partner" />
-      <recent name="$PROJECT_DIR$/src/Admin" />
-      <recent name="$PROJECT_DIR$/src/Entity" />
-      <recent name="$PROJECT_DIR$/templates/service" />
-      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -587,7 +1499,21 @@
       <workItem from="1562914998874" duration="23042000" />
       <workItem from="1563174579193" duration="23139000" />
       <workItem from="1563211755728" duration="1700000" />
-      <workItem from="1563261112595" duration="36961000" />
+      <workItem from="1563261112595" duration="37822000" />
+      <workItem from="1563365023135" duration="2815000" />
+      <workItem from="1563536345291" duration="5402000" />
+      <workItem from="1563951275711" duration="8663000" />
+      <workItem from="1563960562715" duration="2699000" />
+      <workItem from="1563963450197" duration="1488000" />
+      <workItem from="1563968307398" duration="4214000" />
+      <workItem from="1563973229336" duration="485000" />
+      <workItem from="1563974682193" duration="929000" />
+      <workItem from="1563975639082" duration="89000" />
+      <workItem from="1564126182799" duration="862000" />
+      <workItem from="1564130682813" duration="2203000" />
+      <workItem from="1564381589320" duration="190000" />
+      <workItem from="1564381932225" duration="15630000" />
+      <workItem from="1564468766781" duration="1676000" />
     </task>
     <task id="LOCAL-00001" summary="sonata">
       <created>1561985643871</created>
@@ -792,15 +1718,28 @@
       <option name="project" value="LOCAL" />
       <updated>1563347682888</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="Fix images ,">
+      <created>1563364176611</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1563364176611</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Fix images ,">
+      <created>1563364207161</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1563364207161</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="381671000" />
+    <option name="totallyTimeSpent" value="429877000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="740" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.238653" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -815,14 +1754,14 @@
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32913387" />
-      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.8426061" visible="true" weight="0.2488189" />
+      <window_info anchor="bottom" id="Terminal" order="10" sideWeight="0.8426061" visible="true" weight="0.18267716" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.15739386" side_tool="true" weight="0.22047244" />
       <window_info anchor="bottom" id="Database Console" order="12" weight="0.32913387" />
       <window_info anchor="bottom" id="Messages" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.14128843" />
+      <window_info anchor="right" id="Database" order="3" weight="0.14128843" />
       <window_info anchor="right" id="Remote Host" order="4" weight="0.329429" />
     </layout>
   </component>
@@ -839,286 +1778,32 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fix images ," />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://c27a1cb4-9a8b-471f-a715-21c0ccb32bf3/schema/VEZHA/table/feedback">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Feedback.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/ServiceImages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="47" column="13" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+        <state relative-caret-position="230">
+          <caret line="12" column="19" lean-forward="true" selection-end-line="176" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Admin/FeedbackAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="43" column="68" selection-start-line="43" selection-start-column="68" selection-end-line="43" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Comments.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="39" column="78" selection-start-line="39" selection-start-column="78" selection-end-line="39" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/CommentsAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="91" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/ServiceImagesAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="46" column="135" selection-start-line="46" selection-start-column="135" selection-end-line="46" selection-end-column="135" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/category/all.categories.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="22" column="75" selection-start-line="22" selection-start-column="75" selection-end-line="22" selection-end-column="75" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2741#2749#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/CategoriesRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/footer.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="14" column="79" selection-start-line="14" selection-start-column="79" selection-end-line="14" selection-end-column="79" />
-          <folding>
-            <element signature="e#395#400#0#Twig" expanded="true" />
-            <element signature="e#600#608#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/service/allservices.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9">
-          <caret line="15" column="122" selection-start-line="15" selection-start-column="122" selection-end-line="15" selection-end-column="122" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#2157#2164#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/AboutRepository.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/ProductsTranslations.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/PartnersImages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="23">
-          <caret line="22" column="57" selection-start-line="22" selection-start-column="57" selection-end-line="22" selection-end-column="57" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/ServiceImages.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="88" column="7" selection-end-line="176" />
-          <folding>
-            <element signature="e#30#62#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-foundation/Request.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="709" column="32" lean-forward="true" selection-start-line="709" selection-start-column="32" selection-end-line="709" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/CategoriesTranslations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="5" lean-forward="true" selection-end-line="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/PartnersTranslationsAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding>
-            <element signature="e#30#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Categories.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-711">
-          <caret line="55" column="71" selection-start-line="55" selection-start-column="71" selection-end-line="55" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/ProductsAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="89" selection-end-column="20" />
-          <folding>
-            <element signature="e#30#56#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Services.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="82" column="71" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://c27a1cb4-9a8b-471f-a715-21c0ccb32bf3/schema/VEZHA/table/partners">
+    <entry file="das://c27a1cb4-9a8b-471f-a715-21c0ccb32bf3/schema/VEZHA/table/migration_versions">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/partners/logo/2.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/liip_imagine.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="46">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
+    <entry file="das://c27a1cb4-9a8b-471f-a715-21c0ccb32bf3/schema/VEZHA/table/images">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/category/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-138">
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/service/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="94" column="18" lean-forward="true" selection-start-line="86" selection-start-column="8" selection-end-line="94" selection-end-column="18" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="669">
-          <caret line="358" column="5" selection-start-line="358" selection-start-column="5" selection-end-line="358" selection-end-column="5" />
-          <folding>
-            <element signature="e#30#78#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partner/post-image.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2208">
-          <caret line="117" column="23" selection-start-line="117" selection-start-column="23" selection-end-line="117" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/CategoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="954">
-          <caret line="58" column="55" selection-start-line="58" selection-start-column="55" selection-end-line="58" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ProductController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-667">
-          <caret line="25" column="85" selection-start-line="25" selection-start-column="85" selection-end-line="25" selection-end-column="85" />
-          <folding>
-            <element signature="e#666#675#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1472">
-          <caret line="64" column="89" selection-start-line="64" selection-start-column="89" selection-end-line="64" selection-end-column="89" />
-          <folding>
-            <element signature="e#4068#4078#0#Twig" expanded="true" />
-            <element signature="e#4104#4112#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/PartnersTranslations.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="101" column="3" selection-start-line="101" selection-start-column="3" selection-end-line="111" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/packages/vich_uploader.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/CategoryAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="61" column="57" selection-end-line="80" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/ServiceAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="89" column="28" lean-forward="true" selection-end-line="99" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/PartnersAdmin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="59" column="38" lean-forward="true" selection-end-line="96" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Repository/HomePageRepository.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Entity/HomePage.php">
@@ -1131,127 +1816,328 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/PartnerController.php">
+    <entry file="file://$PROJECT_DIR$/src/Admin/ImageAdmin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="52" column="34" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+        <state relative-caret-position="129">
+          <caret line="65" column="52" selection-start-line="65" selection-start-column="49" selection-end-line="65" selection-end-column="52" />
           <folding>
-            <element signature="e#34#58#0#PHP" expanded="true" />
+            <element signature="e#30#56#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/HomePageAdmin.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/ProductImages.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+        <state>
+          <caret selection-end-line="126" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/HomePageController.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Images.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="86" column="36" selection-start-line="86" selection-start-column="36" selection-end-line="86" selection-end-column="36" />
-          <folding>
-            <element signature="e#34#58#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="346">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+    <entry file="file://$PROJECT_DIR$/templates/about/contact.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="112" selection-start-line="112" selection-end-line="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/partner/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="41" column="51" selection-start-line="41" selection-start-column="51" selection-end-line="41" selection-end-column="51" />
+        <state relative-caret-position="-1794">
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Admin/AboutAdmin.php">
+    <entry file="file://$PROJECT_DIR$/src/Entity/Pictures.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="100" column="52" selection-start-line="100" selection-start-column="52" selection-end-line="100" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Controller/ServiceController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="75" column="39" selection-start-line="75" selection-start-column="39" selection-end-line="75" selection-end-column="39" />
-          <folding>
-            <element signature="e#34#58#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/About.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3567">
-          <caret line="236" selection-start-line="236" selection-end-line="236" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home_page/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="181" column="63" lean-forward="true" selection-start-line="181" selection-start-column="63" selection-end-line="181" selection-end-column="63" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/product/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="147" column="14" selection-start-line="147" selection-start-column="14" selection-end-line="147" selection-end-column="14" />
-          <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Entity/Partners.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4556">
-          <caret line="232" column="5" selection-start-line="232" selection-start-column="5" selection-end-line="232" selection-end-column="5" />
+        <state relative-caret-position="129">
+          <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
           <folding>
             <element signature="e#30#78#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/product/allprod.html.twig">
+    <entry file="file://$PROJECT_DIR$/templates/product_input/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-207">
+        <state relative-caret-position="138">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Form/ProductInputType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding>
+            <element signature="e#28#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c27a1cb4-9a8b-471f-a715-21c0ccb32bf3/schema/VEZHA/table/products_translations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c27a1cb4-9a8b-471f-a715-21c0ccb32bf3/schema/VEZHA/table/categories_translations">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProductInputController.php" />
+    <entry file="das://c27a1cb4-9a8b-471f-a715-21c0ccb32bf3/schema/VEZHA/table/products">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/var/log/prod.log">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-6348" />
+      </provider>
+      <provider selected="true" editor-type-id="LogFileEditorProvider" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/translations/messages.en.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="64" column="16" selection-start-line="64" selection-start-column="16" selection-end-line="64" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Categories.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="119" column="7" lean-forward="true" selection-start-line="119" selection-start-column="7" selection-end-line="119" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/PictureAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="22" column="4" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/sonata-project/admin-bundle/src/Form/Type/ModelType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1259">
+          <caret line="35" column="6" selection-start-line="35" selection-start-column="6" selection-end-line="35" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/twig.yaml" />
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="368">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/services.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2215">
+          <caret line="116" column="35" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/web_profiler.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/easy_log_handler.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/dev/routing.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/routes.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/vich_uploader.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/packages/cache.yaml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/EventSubscriber/LocaleSubscriber.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-578">
+          <folding>
+            <element signature="e#38#101#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/category/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="457">
+          <caret line="41" column="28" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#841#851#0#Twig" expanded="true" />
+            <element signature="e#1264#1272#0#Twig" expanded="true" />
+            <element signature="e#1594#1602#0#Twig" expanded="true" />
+            <element signature="e#1804#1812#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/ProductController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="46" column="36" selection-start-line="46" selection-start-column="36" selection-end-line="46" selection-end-column="36" />
+          <folding>
+            <element signature="e#34#60#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/category/all.categories2.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#877#887#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/home_page/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1791">
+          <caret line="181" column="79" selection-start-line="181" selection-start-column="79" selection-end-line="181" selection-end-column="79" />
           <folding>
             <element signature="e#12#26#0#Twig" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/product/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="46">
+          <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="26" selection-end-column="43" />
+          <folding>
+            <element signature="e#12#26#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/edit.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#12#54#0#Twig" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/footer.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-155">
+          <caret line="34" column="103" selection-start-line="34" selection-start-column="103" selection-end-line="34" selection-end-column="103" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Controller/AboutController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="44" column="43" selection-start-line="44" selection-start-column="43" selection-end-line="44" selection-end-column="43" />
+        <state relative-caret-position="276">
+          <caret line="61" column="80" selection-start-line="61" selection-start-column="80" selection-end-line="61" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/about/about.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/Controller/ServiceController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="68" column="44" selection-start-line="68" selection-start-column="44" selection-end-line="68" selection-end-column="44" />
+        <state relative-caret-position="282">
+          <caret line="51" column="79" selection-start-line="51" selection-start-column="79" selection-end-line="51" selection-end-column="79" />
           <folding>
-            <element signature="e#12#26#0#Twig" expanded="true" />
+            <element signature="e#34#58#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/HomePageController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="18" column="70" selection-start-line="18" selection-start-column="70" selection-end-line="18" selection-end-column="70" />
+          <folding>
+            <element signature="e#34#74#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/category/all.categories.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="55" column="68" lean-forward="true" selection-start-line="55" selection-start-column="68" selection-end-line="55" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://c27a1cb4-9a8b-471f-a715-21c0ccb32bf3/schema/VEZHA/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Controller/CategoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/3108a9c9-903c-48e3-9662-c5041c81b50d/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env.local">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="25" selection-start-column="25" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="68" column="43" selection-start-line="68" selection-start-column="43" selection-end-line="68" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/CategoryAdmin.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Entity/Products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="125" column="13" selection-start-line="125" selection-start-column="13" selection-end-line="125" selection-end-column="28" />
+          <folding>
+            <element signature="e#30#78#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Admin/ProductsAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1432">
+          <caret line="76" column="34" selection-start-line="76" selection-start-column="34" selection-end-line="76" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://3108a9c9-903c-48e3-9662-c5041c81b50d/schema/webheads_v/table/products_categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>

@@ -8,13 +8,13 @@
         $('html').addClass('no-mobile');
         mobileDevice = false;
     }
-    $(window).on('load', function() {
-        var wow = new WOW({
-            offset: 150,
-            mobile: false
-        });
-        wow.init();
-    });
+    // $(window).on('load', function() {
+    //     var wow = new WOW({
+    //         offset: 150,
+    //         mobile: false
+    //     });
+    //     wow.init();
+    // });
     var navbar = $('.js-navbar:not(.navbar-fixed)');
     $(".animsition").animsition({
         inClass: 'fade-in',
@@ -344,13 +344,13 @@
     }
 })(jQuery);
 
-
-$('.menu-list').hover(function() {
-    $(window).scroll().disable();
-    $(this).scroll().enable();
-}, function() {
-    $(window).scroll().enable();
-});
+//
+// $('.menu-list').hover(function() {
+//     $(window).scroll().disable();
+//     $(this).scroll().enable();
+// }, function() {
+//     $(window).scroll().enable();
+// });
 
 var map;
 

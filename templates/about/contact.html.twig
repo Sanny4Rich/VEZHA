@@ -37,11 +37,11 @@
                                             {% endif %}
                                 </div>
                                 <div class="col-contact col-lg-6">
-                                    <p class="contact-top"><strong class="text-muted">{% trans %}Номер телефона:{% endtrans %}</strong></p>
+                                    <p class="contact-top"><strong class="text-muted">{% trans %}Номер телефона{% endtrans %}:</strong></p>
                                     {% if contacts.isPhoneShow %}
                                     <p class="phone-lg text-dark">{{ contacts.phoneNumber }}</p>
                                     {% endif %}
-                                    <p class="text-muted" style="font-family: 'Microsoft Sans Serif', Tahoma, Arial, Verdana, Sans-Serif"><strong class="text-dark">{% trans %}Години роботи:{% endtrans %} </strong><br>
+                                    <p class="text-muted" style="font-family: 'Microsoft Sans Serif', Tahoma, Arial, Verdana, Sans-Serif"><strong class="text-dark">{% trans %}Години роботи{% endtrans %}: </strong><br>
                                         {% trans %}Понеділок{% endtrans %} - {% trans %}П'ятниця{% endtrans %} : {% trans %}з{% endtrans %} {{ contacts.workStart }} - {% trans %}до{% endtrans %} {{ contacts.workEnd }}</p>
                                     <div class="text-muted"><strong class="text-dark">{% trans %}Соціальні мережі{% endtrans %}</strong><br>
                                         <div class="contact-social social-list">

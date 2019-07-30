@@ -4,7 +4,9 @@
 
 {% block body %}
     <div class="content" style="padding-top: 6rem">
+        {% if about.imageTop != null %}
         <div class="content-entry-image" style="background: url({{ vich_uploader_asset(about, 'imageFile') }}) 50%"></div>
+        {% endif %}
         <div class="page-inner">
             <section class="section about-info">
                 <div class="container">

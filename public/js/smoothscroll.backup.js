@@ -24,7 +24,7 @@ if(event.deltaMode===1){deltaX*=40;deltaY*=40;}
 if(!options.touchpadSupport&&isTouchpad(deltaY)){return true;}
 if(Math.abs(deltaX)>1.2){deltaX*=options.stepSize/120;}
 if(Math.abs(deltaY)>1.2){deltaY*=options.stepSize/120;}
-scrollArray(overflowing,deltaX,deltaY);scheduleClearCache();}
+scrollArray(overflowing,deltaX,deltaY);event.preventDefault();scheduleClearCache();}
 function keydown(event){var target=event.target;var modifier=event.ctrlKey||event.altKey||event.metaKey||(event.shiftKey&&event.keyCode!==key.spacebar);if(!document.contains(activeElement)){activeElement=document.activeElement;}
 var inputNodeNames=/^(textarea|select|embed|object)$/i;var buttonTypes=/^(button|submit|radio|checkbox|file|color|image)$/i;if(inputNodeNames.test(target.nodeName)||isNodeName(target,'input')&&!buttonTypes.test(target.type)||isNodeName(activeElement,'video')||isInsideYoutubeVideo(event)||target.isContentEditable||event.defaultPrevented||modifier){return true;}
 if((isNodeName(target,'button')||isNodeName(target,'input')&&buttonTypes.test(target.type))&&event.keyCode===key.spacebar){return true;}

@@ -14,13 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class PartnerController extends AbstractController
 {
     /**
-     * @Route("/partner/{url}")
-     */
-    public function to_partner(Partners $partners){
-        return $this->redirectToRoute('partner', ['_locale' => $this->getParameter('kernel.default_locale'), 'url'=> $partners->getUrl()]);
-    }
-
-    /**
+     * @Route("/partner/{url}", defaults={"_locale" = "ua"})
      * @Route("/{_locale}/partner/{url}", name="partner")
      */
     public function index(Request $request, ContactsRepository $contactsRepository,Partners $partners, CategoriesRepository $categoriesRepository, PartnersRepository $partnersRepository )
@@ -32,7 +26,7 @@ class PartnerController extends AbstractController
         $contacts = $contacts[0];
 
         $categories = $categoriesRepository->createQueryBuilder('c')
-            ->where('c.isOnHomePage IS NOT NULL')
+            ->where('c.isOnHomePage = 1')
              ->addSelect('t')
             ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()

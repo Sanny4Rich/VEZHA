@@ -5,12 +5,29 @@
 {% block body %}
     {% set loc = app.request.locale %}
     <div class="content" style="padding-top: 6rem">
-        <div class="container"><h1>{% trans %}Всі категорії{% endtrans %}</h1></div>
+        {% if cat.categoriesTranslations is not empty %}
+            {% set t = 0 %}
+            {% for trans in cat.categoriesTranslations %}
+                {% if t == 0 %}
+                    {%if trans.language == loc  %}
+                        <div class="container"><h1>{{ trans.name }}</h1>
+                        {% set t = 1 %}
+                    {% endif %}
+                {% endif %}
+            {% endfor %}
+            {% if t == 0 %}
+                <div class="container"><h1>{{ cat.name }}</h1>
+            {% endif %}
+        {% else %}
+            <div class="container"><h1>{{ cat.name }}</h1>
+        {% endif %}
+                <div><p><a href="{{ path('categories', {'_locale': loc}) }}">{% trans %}Всі категорії{% endtrans %}</a></p></div>
+                <div>
         <div class="projects">
             <div class="container">
                 <div class="grid-items js-isotope js-grid-items">
                     {% for category in categories %}
-                    {% if category.isVisible != 0 and category.level == 0%}
+                    {% if category.isVisible != 0 and category.level == 1 %}
                     {% if category.image is not null %}
                     <div class="grid-item inspiration js-isotope-item js-grid-item">
                         <div class="news-item">
@@ -27,7 +44,7 @@
                                                 {%if trans.language == loc  %}
                                                     <h3 class="news-title" id="1">{{ trans.name }}</h3>
                                                     {% set t = 1 %}
-                                                    {% endif %}
+                                                {% endif %}
                                             {% endif %}
                                         {% endfor %}
                                         {% if t == 0 %}
@@ -40,20 +57,20 @@
                                         {% set t = 0 %}
                                         {% for trans in category.categoriesTranslations %}
                                             {% if t == 0 %}
-                                            {%if trans.language == loc %}
-                                                <p class="news-description">{{ trans.shortDescription }}</p>
-                                                {% set t = 1 %}
+                                                {%if trans.language == loc %}
+                                                    <p class="news-description">{{ trans.shortDescription }}</p>
+                                                    {% set t = 1 %}
                                                 {% endif %}
                                             {% endif %}
                                         {% endfor %}
-                                    {% if t == 0 %}
-                                        <p class="news-description">{{ category.shortDescription }}</p>
-                                    {% endif %}
+                                        {% if t == 0 %}
+                                            <p class="news-description">{{ category.shortDescription }}</p>
+                                        {% endif %}
                                     {% else %}
                                         <p class="news-description">{{ category.shortDescription }}</p>
                                     {% endif %}
                                 </div>
-                                <a class="read-more" href="{{ path('categoriesSecond', {'_locale': app.request.locale, 'url': category.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                <a class="read-more" href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
                             </div>
                         </div>
                     </div>

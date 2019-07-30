@@ -13,14 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ServiceController extends AbstractController
 {
     /**
-     * @Route("/service/{url}")
-     */
-    public function to_service(Services $services)
-    {
-        return $this->redirectToRoute('service', ['_locale' => $this->getParameter('kernel.default_locale'), 'url' => $services->getUrl()]);
-    }
-
-    /**
+     * @Route("/service/{url}", defaults={"_locale" = "ua"}, name="service_nolocale")
      * @Route("/{_locale}/service/{url}", name="service")
      */
     public function index(Request $request, ContactsRepository $contactsRepository, Services $services, CategoriesRepository $categoriesRepository, ServicesRepository $servicesRepository)
@@ -56,6 +49,7 @@ class ServiceController extends AbstractController
     }
 
     /**
+     * @Route("/services", defaults={"_locale" = "ua"}, name="services_nolocale")
      * @Route("/{_locale}/services", name="services")
      */
     public function Services(Request $request,CategoriesRepository $categoriesRepository, ContactsRepository $contactsRepository, ServicesRepository $servicesRepository){
@@ -66,14 +60,14 @@ class ServiceController extends AbstractController
         $contacts = $contacts[0];
 
         $categories = $categoriesRepository->createQueryBuilder('c')
-            ->where('c.isOnHomePage IS NOT NULL')
+            ->where('c.isOnHomePage = 1')
             ->addSelect('t')
             ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
             ->getResult();
 
         $services = $servicesRepository->createQueryBuilder('s')
-            ->where('s.isVisible = true')
+            ->where('s.isVisible = 1')
             ->addSelect('t')
             ->leftJoin('s.serviceTranslations', 't')
             ->getQuery()

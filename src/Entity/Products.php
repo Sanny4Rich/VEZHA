@@ -80,7 +80,7 @@ class Products
     private $url;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\ProductsTranslations", mappedBy="product", cascade={"all"}, orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\ProductsTranslations", mappedBy="product", cascade={"persist"}, orphanRemoval=true)
      */
     private $productsTranslations;
 
@@ -120,6 +120,11 @@ class Products
      */
     private $updatedAtTop;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Categories", mappedBy="prodInPrimCat")
+     */
+    private $primaryCategory;
+
     public function __toString()
     {
         return (string)$this->getName();
@@ -133,6 +138,7 @@ class Products
         $this->productsTranslations = new ArrayCollection();
         $this->updatedAt = new \DateTime('now');
         $this->updatedAtTop = new \DateTime('now');
+        $this->primaryCategory = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -233,9 +239,6 @@ class Products
     {
         $image->setProduct($this);
         $this->images[] = $image;
-
-        dump($image);
-
         return $this;
     }
 
@@ -395,5 +398,36 @@ class Products
     public function getUpdatedAtTop() :\DateTime
     {
         return $this->updatedAtTop;
+    }
+
+    /**
+     * @return Collection|Categories[]
+     */
+    public function getPrimaryCategory(): Collection
+    {
+        return $this->primaryCategory;
+    }
+
+    public function addPrimaryCategory(Categories $primaryCategory): self
+    {
+        if (!$this->primaryCategory->contains($primaryCategory)) {
+            $this->primaryCategory[] = $primaryCategory;
+            $primaryCategory->setProdInPrimCat($this);
+        }
+
+        return $this;
+    }
+
+    public function removePrimaryCategory(Categories $primaryCategory): self
+    {
+        if ($this->primaryCategory->contains($primaryCategory)) {
+            $this->primaryCategory->removeElement($primaryCategory);
+            // set the owning side to null (unless already changed)
+            if ($primaryCategory->getProdInPrimCat() === $this) {
+                $primaryCategory->setProdInPrimCat(null);
+            }
+        }
+
+        return $this;
     }
 }

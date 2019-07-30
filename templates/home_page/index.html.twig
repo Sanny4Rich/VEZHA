@@ -7,24 +7,32 @@
     <div class="copy-bottom white boxed"></div>
     <div class="lang-bottom white boxed">
         <div class="menu-lang">
-            <a href="{{-
-            path(app.request.get('_route'),
-                app.request.get('_route_params')|merge({'_locale' : 'ua'}))
-            -}}" {% if app.request.locale == 'ua' %} class="active" {% endif %}>UA</a>
-            <a href="{{-
-            path(app.request.get('_route'),
-                app.request.get('_route_params')|merge({'_locale' : 'ru'}))
-            -}}" {% if app.request.locale == 'ru' %} class="active" {% endif %}>RU</a>
-            <a href="{{-
-            path(app.request.get('_route'),
-                app.request.get('_route_params')|merge({'_locale' : 'en'}))
-            -}}" {% if app.request.locale == 'en' %} class="active" {% endif %}>ENG</a>
+            {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                <a href="{{-
+                path(app.request.get('_route'),
+                    app.request.get('_route_params')|merge({'_locale' : 'ua'}))
+                -}}" {% if app.request.locale == 'ua' %} class="active" {% endif %}>UA</a>
+
+                <a href="{{-
+                path(app.request.get('_route'),
+                    app.request.get('_route_params')|merge({'_locale' : 'ru'}))
+                -}}" {% if app.request.locale == 'ru' %} class="active" {% endif %}>RU</a>
+                <a href="{{-
+                path(app.request.get('_route'),
+                    app.request.get('_route_params')|merge({'_locale' : 'en'}))
+                -}}" {% if app.request.locale == 'en' %} class="active" {% endif %}>EN</a>
+            {% else %}
+                <a href="{{ 'ua' ~ app.request.requestUri }}" {% if app.request.locale == 'ua' %} class="active" {% endif %}>UA</a>
+
+                <a href="{{ 'ru' ~ app.request.requestUri }}" {% if app.request.locale == 'ru' %} class="active" {% endif %}>RU</a>
+                <a href="{{ 'en' ~ app.request.requestUri }}" {% if app.request.locale == 'en' %} class="active" {% endif %}>EN</a>
+            {% endif %}
         </div>
     </div>
     <div class="pagepiling">
         <div class="pp-scrollable text-white section section-1">
             <div class="scroll-wrap">
-                <div class="section-bg" style="background: url('{{ asset('images/bg/bg1.jpg') }}')"></div>
+                <div class="section-bg" style="background: url('{{ asset('images/bg/bg1.jpg') }}') no-repeat;background-position: center"></div>
                 <div class="scrollable-content">
                     <div class="vertical-centred">
                         <div class="boxed boxed-inner">
@@ -62,7 +70,7 @@
                                             <div class="col-md-5 col-lg-5">
                                                 <p class="subtitle-top text-dark">{% trans %}Послуги{% endtrans %}</p>
                                                 <h2 class="title-uppercase">{% trans %}Наша миссия{% endtrans %}<br> <span
-                                                            class="text-primary">{% trans %}дизайн{% endtrans %}</span>{% trans %}лучшей мебели{% endtrans %}<br>{% trans %}для вас?{% endtrans %}
+                                                            class="text-primary">{% trans %}дизайн{% endtrans %}</span><br>{% trans %}лучшей мебели{% endtrans %}<br>{% trans %}для вас?{% endtrans %}
                                                 </h2>
                                                 <ul class="service-list">
                                                     {% set increment = 1 %}
@@ -70,13 +78,16 @@
                                                         {% if service.isVisible == true %}
                                                             {% if service.isOnHomePage == true %}
                                                                 {% if service.serviceTranslations is not empty %}
+                                                                    {% set t = 0 %}
                                                                     {% for trans in service.serviceTranslations %}
                                                                     {% if trans.language == loc and trans.name is not empty %}
                                                                         <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ trans.name }}</a></li>
-                                                                    {% else %}
-                                                                        <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ service.name }}</a></li>
-                                                                    {% endif %}
+                                                                        {% set t = 1 %}
+                                                                        {% endif %}
                                                                     {% endfor %}
+                                                                {% if t == 0 %}
+                                                                    <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ service.name }}</a></li>
+                                                                {% endif %}
                                                                 {% else %}
                                                                     <li><a href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{{ service.name }}</a></li>
                                                                     {% endif %}
@@ -137,8 +148,38 @@
                                                         <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
                                                             <a href="{{ path('product', {'_locale': app.request.locale, 'url': product.url}) }}" class="project-box">
                                                                 <div class="project-box-inner">
-                                                                    <h5>{{ product.name }}</h5>
-                                                                    <div class="project-category">{{ product.shortDescription }}</div>
+                                                                    {% if product.productsTranslations is not empty  %}
+                                                                        {% set t = 0 %}
+                                                                        {% for trans in product.productsTranslations %}
+                                                                            {% if t == 0 %}
+                                                                                {%if trans.language == loc  %}
+                                                                                    <h5>{{ trans.name }}</h5>
+                                                                                    {% set t = 1 %}
+                                                                                {% endif %}
+                                                                            {% endif %}
+                                                                        {% endfor %}
+                                                                        {% if t == 0 %}
+                                                                            <h5>{{ product.name }}</h5>
+                                                                        {% endif %}
+                                                                    {% else %}
+                                                                        <h5>{{ product.name }}</h5>
+                                                                    {% endif %}
+                                                                    {% if product.productsTranslations is not empty  %}
+                                                                        {% set t = 0 %}
+                                                                        {% for trans in product.productsTranslations %}
+                                                                            {% if t == 0 %}
+                                                                                {%if trans.language == loc  %}
+                                                                                    <div class="project-category">{{ trans.shortDescription }}</div>
+                                                                                    {% set t = 1 %}
+                                                                                {% endif %}
+                                                                            {% endif %}
+                                                                        {% endfor %}
+                                                                        {% if t == 0 %}
+                                                                            <div class="project-category">{{ product.shortDescription }}</div>
+                                                                        {% endif %}
+                                                                    {% else %}
+                                                                        <div class="project-category">{{ product.shortDescription }}</div>
+                                                                    {% endif %}
                                                                 </div>
                                                             </a>
                                                         </div>
