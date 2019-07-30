@@ -69,7 +69,11 @@
                                     {% for partner in about.partners %}
                                         {% if partner.imageLogo != null and partner.isVisible %}
                                             <div class="col-partner">
-                                                <a href="{{ path('partner', {'_locale': lang , 'url': partner.url }) }}"><img alt="" src="{{ vich_uploader_asset(partner, 'imageLogoFile') }}"></a>
+                                                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                                    <a href="{{ path('partner', {'_locale': lang , 'url': partner.url }) }}"><img alt="" src="{{ vich_uploader_asset(partner, 'imageLogoFile') }}"></a>
+                                                {% else %}
+                                                    <a href="{{ path('partner_nolocale', { 'url': partner.url }) }}"><img alt="" src="{{ vich_uploader_asset(partner, 'imageLogoFile') }}"></a>
+                                                {% endif %}
                                             </div>
                                         {% endif %}
                                     {% endfor %}

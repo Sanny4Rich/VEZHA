@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ProductController extends AbstractController
 {
     /**
-     * @Route("/product/{url}", defaults={"_locale" = "ua"})
+     * @Route("/product/{url}", defaults={"_locale" = "ua"}, name="product_nolocale")
      * @Route("/{_locale}/product/{url}", name="product")
      */
     public function index(Request $request, ContactsRepository $contactsRepository, Products $product, ProductsRepository $productsRepository, CategoriesRepository $categoriesRepository)
@@ -26,7 +26,6 @@ class ProductController extends AbstractController
         $contacts = $contacts[0];
 
         $categories = $categoriesRepository->createQueryBuilder('c')
-            ->where('c.isOnHomePage = 1')
             ->addSelect('t')
             ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
@@ -49,7 +48,7 @@ class ProductController extends AbstractController
     }
 
     /**
-     * @Route("/products", defaults={"_locale" = "ua"})
+     * @Route("/products", defaults={"_locale" = "ua"}, name="products_nolocale")
      * @Route("/{_locale}/products", name="products")
      */
     public function allProducts(Request $request, ContactsRepository $contactsRepository,ProductsRepository $productsRepository, CategoriesRepository $categoriesRepository){
@@ -62,10 +61,11 @@ class ProductController extends AbstractController
         $products = $productsRepository->createQueryBuilder('m')
             ->addSelect('i')
             ->leftJoin('m.images', 'i')
+            ->addSelect('t')
+            ->leftJoin('m.productsTranslations', 't')
             ->getQuery()
             ->getResult();
         $categories = $categoriesRepository->createQueryBuilder('c')
-            ->where('c.isOnHomePage IS NOT NULL')
             ->addSelect('t')
             ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()

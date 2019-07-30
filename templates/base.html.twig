@@ -51,38 +51,118 @@
                 </li>
                 <li>
                     <a href="{{ path('categories', {'_locale': app.request.locale}) }}" >{% trans %}Категорії{% endtrans %}</a>
-                    <ul>
-                        {% for category in categories %}
-                            {% if category.isOnHomePage == 1 %}
-                                {% if category.categoriesTranslations is not empty %}
+                    {% for category in categories %}
+                        {% if category.level == 0 %}
+                        <ul class="thirdmenu">
+                            <li>
+                                {% if category.categoriesTranslations is not empty  %}
                                     {% set t = 0 %}
                                     {% for trans in category.categoriesTranslations %}
-                                        {% if trans.language == lang %}
-                                            {% if trans.name is not empty %}
-                                            <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ trans.name }}</a></li>
+                                        {% if t == 0 %}
+                                            {%if trans.language == lang  %}
+                                                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                                    <a href="{{ path('categoriesSecond', {'_locale': lang, 'url': category.url}) }}">{{ trans.name }}</a>
+                                                {% else %}
+                                                    <a href="{{ path('categoriesSecond_nolocale', {'url': category.url}) }}">{{ trans.name }}</a>
+                                                {% endif %}
                                                 {% set t = 1 %}
                                             {% endif %}
                                         {% endif %}
                                     {% endfor %}
-                                {% if t == 0 %}
-                                    <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ category.name }}</a></li>
-                                {% endif %}
+                                    {% if t == 0 %}
+                                        {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                            <a href="{{ path('categoriesSecond', {'_locale': lang, 'url': category.url}) }}">{{ category.name }}</a>
+                                        {% else %}
+                                            <a href="{{ path('categoriesSecond_nolocale', {'url': category.url}) }}">{{ category.name }}</a>
+                                        {% endif %}
+                                    {% endif %}
                                 {% else %}
-                                    <li><a href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{{ category.name }}</a></li>
+                                    {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                        <a href="{{ path('categoriesSecond', {'_locale': lang, 'url': category.url}) }}">{{ category.name }}</a>
+                                    {% else %}
+                                        <a href="{{ path('categoriesSecond_nolocale', {'url': category.url}) }}">{{ category.name }}</a>
+                                    {% endif %}
                                 {% endif %}
-                            {% endif %}
+
+                                        <ul  style=" padding-left: 1rem">
+                                            {% for cat in category.children %}
+                                                {% if cat.isVisible == 1 %}
+                                                {% if cat.categoriesTranslations is not empty  %}
+                                                    {% set t = 0 %}
+                                                    {% for trans in cat.categoriesTranslations %}
+                                                        {% if t == 0 %}
+                                                            {%if trans.language == lang  %}
+                                                                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                                                    <li>
+                                                                        <a href="{{ path('category', {'_locale': lang, 'url': cat.url }) }}">{{ trans.name }}</a>
+                                                                    </li>
+                                                                {% else %}
+                                                                    <li>
+                                                                        <a href="{{ path('category_nolocale', {'url': cat.url}) }}">{{ trans.name }}</a>
+                                                                    </li>
+                                                                {% endif %}
+                                                                {% set t = 1 %}
+                                                            {% endif %}
+                                                        {% endif %}
+                                                    {% endfor %}
+                                                    {% if t == 0 %}
+                                                        {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                                            <li>
+                                                                <a href="{{ path('category', {'_locale': lang, 'url': cat.url }) }}">{{ cat.name }}</a>
+                                                            </li>
+                                                        {% else %}
+                                                            <li>
+                                                                <a href="{{ path('category_nolocale', {'url': cat.url }) }}">{{ cat.name }}</a>
+                                                            </li>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                {% else %}
+                                                    {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                                        <li>
+                                                            <a href="{{ path('category', {'_locale': lang, 'url': cat.url }) }}">{{ cat.name }}</a>
+                                                        </li>
+                                                    {% else %}
+                                                        <li>
+                                                            <a href="{{ path('category_nolocale', {'url': cat.url }) }}">{{ cat.name }}</a>
+                                                        </li>
+                                                    {% endif %}
+                                                {% endif %}
+
+
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                               </li>
+                        </ul>
+                        {% endif %}
                         {% endfor %}
-                        <li><a href="{{ path('categories', {'_locale': app.request.locale}) }}">{% trans %}Всі категорії{% endtrans %}</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="{{ path('services', {'_locale': app.request.locale }) }}">{% trans %}Послуги{% endtrans %}</a>
-                </li>
-                <li>
-                    <a href="{{ path('about',{'_locale': app.request.locale}) }}">{% trans %}Наша компанія{% endtrans %}</a>
                     <ul>
-                        <li><a href="{{ path('about',{'_locale': app.request.locale}) }}">{% trans %}О нас{% endtrans %}</a></li>
-                        <li><a href="{{ path('contacts',{'_locale': app.request.locale}) }}">{% trans %}Контакти{% endtrans %}</a></li>
+                        <li><a href="{{ path('categories', {'_locale': lang}) }}">{% trans %}Всі категорії{% endtrans %}</a></li>
+                    </ul>
+                <li>
+                    {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                    <a href="{{ path('services', {'_locale': app.request.locale }) }}">{% trans %}Послуги{% endtrans %}</a>
+                        {% else %}
+                            <a href="{{ path('services_nolocale') }}">{% trans %}Послуги{% endtrans %}</a>
+                            {% endif %}
+                </li>
+                <li>
+                    {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                        <a href="{{ path('about',{'_locale': app.request.locale}) }}">{% trans %}Наша компанія{% endtrans %}</a>
+                    {% else %}
+                        <a href="{{ path('about_nolocale') }}">{% trans %}Наша компанія{% endtrans %}</a>
+                    {% endif %}
+                    <ul>
+                        {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                            <li><a href="{{ path('about',{'_locale': app.request.locale}) }}">{% trans %}О нас{% endtrans %}</a></li>
+                        {% else %}
+                            <li><a href="{{ path('about_nolocale') }}">{% trans %}О нас{% endtrans %}</a></li>
+                        {% endif %}
+                        {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                            <li><a href="{{ path('contacts',{'_locale': app.request.locale}) }}">{% trans %}Контакти{% endtrans %}</a></li>
+                        {% else %}
+                            <li><a href="{{ path('contacts_nolocale') }}">{% trans %}Контакти{% endtrans %}</a></li>
+                        {% endif %}
                     </ul>
                 </li>
             </ul>
@@ -117,7 +197,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+            {% if app.request.get('_locale') in '/'~app.request.requestUri %}
             <a class="brand" href="{{ path('home_page') }}">
+                {% else %}
+                <a class="brand" href="{{ path('home_page_nolocale') }}">
+                    {% endif %}
+
                 <img class="brand-img" alt="" src="{{ asset('images/brand.png') }}">
                 {% if contacts is not empty %}
             </a>

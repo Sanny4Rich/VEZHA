@@ -1,18 +1,30 @@
 <footer id="footer" class="footer section">
     <div class="footer-flex">
         <div class="flex-item">
+            {% if app.request.get('_locale') in '/'~app.request.requestUri %}
             <a class="brand pull-left" href="{{ path('home_page',{'_locale': app.request.locale}) }}">
+                {% else %}
+                <a class="brand pull-left" href="{{ path('home_page_nolocale') }}">
+                {% endif %}
                 <img alt="" src="{{ asset('images/brand.png') }}">
             </a>
         </div>
         <div class="flex-item">
             <ul>
+                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
                 <li><a href="{{ path('about', {'_locale': app.request.locale}) }}">{% trans %}О нас{% endtrans %}</a></li>
+                    {% else %}
+                        <li><a href="{{ path('about_nolocale') }}">{% trans %}О нас{% endtrans %}</a></li>
+                        {% endif %}
             </ul>
         </div>
         <div class="flex-item">
             <ul>
-                <li><a href="{{ path('contacts', {'_locale': app.request.locale}) }}">{% trans %}Контакти{% endtrans %}</a></li>
+                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                    <li><a href="{{ path('contacts', {'_locale': app.request.locale}) }}">{% trans %}Контакти{% endtrans %}</a></li>
+                {% else %}
+                    <li><a href="{{ path('contacts_nolocale') }}">{% trans %}Контакти{% endtrans %}</a></li>
+                {% endif %}
             </ul>
         </div>
         <div class="flex-item">

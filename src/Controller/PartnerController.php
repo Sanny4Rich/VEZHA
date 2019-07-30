@@ -14,7 +14,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class PartnerController extends AbstractController
 {
     /**
-     * @Route("/partner/{url}", defaults={"_locale" = "ua"})
+     * @Route("/partner/{url}", defaults={"_locale" = "ua"}, name="partner_nolocale")
      * @Route("/{_locale}/partner/{url}", name="partner")
      */
     public function index(Request $request, ContactsRepository $contactsRepository,Partners $partners, CategoriesRepository $categoriesRepository, PartnersRepository $partnersRepository )
@@ -26,7 +26,6 @@ class PartnerController extends AbstractController
         $contacts = $contacts[0];
 
         $categories = $categoriesRepository->createQueryBuilder('c')
-            ->where('c.isOnHomePage = 1')
              ->addSelect('t')
             ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()

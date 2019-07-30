@@ -111,19 +111,15 @@ class Categories
     /**
      * @Gedmo\TreeParent
      * @ORM\ManyToOne(targetEntity="App\Entity\Categories", inversedBy="children")
+     * @ORM\JoinColumn(name="parent_id", referencedColumnName="id", onDelete="CASCADE")
      */
     private $parent;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Categories", mappedBy="parent", cascade={"persist"}, orphanRemoval=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\Categories", mappedBy="parent")
      * @ORM\OrderBy({"left" = "ASC"})
      */
     private $children;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Products", inversedBy="primaryCategory")
-     */
-    private $prodInPrimCat;
 
     public function __toString()
     {
@@ -355,16 +351,12 @@ class Categories
     }
 
 
-    public function getParent(): ?self
-    {
-        return $this->parent;
+    public function setParent(Categories $parent = null) {
+        $this->parent = $parent;
     }
 
-    public function setParent(?self $parent): self
-    {
-        $this->parent = $parent;
-
-        return $this;
+    public function getParent() {
+        return $this->parent;
     }
 
     /**
@@ -398,16 +390,5 @@ class Categories
         return $this;
     }
 
-    public function getProdInPrimCat(): ?Products
-    {
-        return $this->prodInPrimCat;
-    }
-
-    public function setProdInPrimCat(?Products $prodInPrimCat): self
-    {
-        $this->prodInPrimCat = $prodInPrimCat;
-
-        return $this;
-    }
 
 }

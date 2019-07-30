@@ -146,7 +146,11 @@
                                                     {% for product in products|sortbyfield('updatedAt')|reverse %}
                                                         {% if product.isVisible and product.isOnHomePage %}
                                                         <div class="col-project-box col-sm-6 col-md-4 col-lg-3">
+                                                            {% if app.request.get('_locale') in '/'~app.request.requestUri %}
                                                             <a href="{{ path('product', {'_locale': app.request.locale, 'url': product.url}) }}" class="project-box">
+                                                            {% else %}
+                                                            <a href="{{ path('product_nolocale', {'url': product.url}) }}" class="project-box">
+                                                            {% endif %}
                                                                 <div class="project-box-inner">
                                                                     {% if product.productsTranslations is not empty  %}
                                                                         {% set t = 0 %}
@@ -186,7 +190,11 @@
                                                         {% endif %}
                                                     {% endfor %}
                                                 </div>
-                                                <a href="{{ path('products', {'_locale': app.request.locale}) }}" class="h5 link-arrow text-white">{% trans %}Дивитися усі роботи{% endtrans %}<i class="icon icon-chevron-right"></i></a>
+                                                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                                    <a href="{{ path('products', {'_locale': app.request.locale}) }}" class="h5 link-arrow text-white">{% trans %}Дивитися усі роботи{% endtrans %}<i class="icon icon-chevron-right"></i></a>
+                                                {% else %}
+                                                    <a href="{{ path('products_nolocale') }}" class="h5 link-arrow text-white">{% trans %}Дивитися усі роботи{% endtrans %}<i class="icon icon-chevron-right"></i></a>
+                                                {% endif %}
                                             </div>
                                         </div>
                                     </div>
@@ -214,8 +222,14 @@
                                                     {% for partner in partners|sortbyfield('onHomePagePosition') %}
                                                     {% if partner.imageLogo is not empty and partner.isOnHomePage == true and partner.isVisible == true %}
                                                     <div class="col-partner">
-                                                        <div class="partner-inner"><a href="{{ path('partner', {'_locale': loc, 'url': partner.url}) }}"><img alt=""
-                                                                                        src="{{ vich_uploader_asset(partner, 'imageLogoFile') }}"></a>
+                                                        <div class="partner-inner">
+                                                            {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                                            <a href="{{ path('partner', {'_locale': loc, 'url': partner.url}) }}">
+                                                            {% else %}
+                                                            <a href="{{ path('partner_nolocale', { 'url': partner.url}) }}">
+                                                            {% endif %}
+
+                                                                <img alt="" src="{{ vich_uploader_asset(partner, 'imageLogoFile') }}"></a>
                                                         </div>
                                                     </div>
                                                     {% endif %}

@@ -68,6 +68,15 @@
         $(this).closest('li').children('ul').slideToggle(200);
         return false;
     });
+
+
+    var dropThird = $('.thirdmenu > li').has('ul').children('a');
+    dropThird.on('click', function() {
+        dropThird.not(this).closest('li').find('ul').slideUp(200);
+        $(this).closest('li').children('ul').slideToggle(200);
+        return false;
+    });
+
     $('.js-target-scroll').on('click', function() {
         var target = $(this.hash);
         if (target.length) {

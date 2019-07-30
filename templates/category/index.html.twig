@@ -27,16 +27,24 @@
                             {% for trans in par.categoriesTranslations %}
                             {% if t == 0 %}
                             {%if trans.language == loc  %}
-                                <a href="{{ path('category', {'_locale': loc , 'url': par.url}) }}">{{ trans.name }}</a>
+                            {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                            <a href="{{ path('categoriesSecond', {'_locale': loc , 'url': par.url}) }}">{{ trans.name }}</a>
+                        {% else %}
+                            <a href="{{ path('categoriesSecond_nolocale', { 'url': par.url}) }}">{{ trans.name }}</a>
+                        {% endif %}
                             {% set t = 1 %}
                             {% endif %}
                             {% endif %}
                             {% endfor %}
                             {% if t == 0 %}
-                                <a href="{{ path('category', {'_locale': loc , 'url': par.url}) }}">{{ par.name }}</a>
+                                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                    <a href="{{ path('categoriesSecond', {'_locale': loc , 'url': par.url}) }}">{{ par.name }}</a>
+                                {% else %}
+                                    <a href="{{ path('categoriesSecond_nolocale', { 'url': par.url}) }}">{{ par.name }}</a>
+                                {% endif %}
                                 {% endif %}
                                 {% else %}
-                                    <a href="{{ path('category', {'_locale': loc , 'url': par.url}) }}">{{ par.name }}</a>
+                                    <a href="{{ path('categoriesSecond', {'_locale': loc , 'url': par.url}) }}">{{ par.name }}</a>
                                     {% endif %}
 
                             </p></div>
@@ -50,10 +58,30 @@
                         {% if product.images is not empty %}
                             <img alt="" class="img-responsive" src="{{ vich_uploader_asset(product.images[0], 'imageFile') }}">
                         {% endif %}
-                        <a href="{{ path('product', {'locale': app.request.locale, 'url': product.url}) }}" class="project-hover-2">
+                        {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                            <a href="{{ path('product', {'_locale': app.request.locale, 'url': product.url}) }}" class="project-hover-2">
+                        {% else %}
+                            <a href="{{ path('product_nolocale', { 'url': product.url}) }}" class="project-hover-2">
+                        {% endif %}
+
                             <i class="icon-plus"></i>
                             <div class="project-hover-content">
-                                <h3 class="project-title">{{ product.name|replace({' ':'<br>'})|raw}}</h3>
+                                {% if product.productsTranslations is not empty  %}
+                                    {% set t = 0 %}
+                                    {% for trans in product.productsTranslations %}
+                                        {% if t == 0 %}
+                                            {%if trans.language == loc  %}
+                                                <h3 class="project-title">{{ trans.name|replace({' ':'<br>'})|raw}}</h3>
+                                                {% set t = 1 %}
+                                            {% endif %}
+                                        {% endif %}
+                                    {% endfor %}
+                                    {% if t == 0 %}
+                                        <h3 class="project-title">{{ product.name|replace({' ':'<br>'})|raw}}</h3>
+                                    {% endif %}
+                                {% else %}
+                                    <h3 class="project-title">{{ product.name|replace({' ':'<br>'})|raw}}</h3>
+                                {% endif %}
                             </div>
                         </a>
                     </div>

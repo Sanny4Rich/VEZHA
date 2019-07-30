@@ -53,7 +53,12 @@
                                         <p class="news-description">{{ category.shortDescription }}</p>
                                     {% endif %}
                                 </div>
-                                <a class="read-more" href="{{ path('categoriesSecond', {'_locale': app.request.locale, 'url': category.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                    <a class="read-more" href="{{ path('categoriesSecond', {'_locale': app.request.locale, 'url': category.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                {% else %}
+                                    <a class="read-more" href="{{ path('categoriesSecond_nolocale', { 'url': category.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                {% endif %}
+
                             </div>
                         </div>
                     </div>

@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Categories;
+use App\Entity\Products;
 use App\Repository\CategoriesRepository;
 use App\Repository\ContactsRepository;
 use App\Repository\ProductsRepository;
@@ -27,6 +28,8 @@ class CategoryController extends AbstractController
             ->innerJoin('m.categories', 's', 'WITH', 's = :category')
             ->addSelect('i')
             ->leftJoin('m.images', 'i')
+            ->addSelect('t')
+            ->leftJoin('m.productsTranslations', 't')
             ->setParameter('category', $categories)
             ->getQuery()
             ->getResult();

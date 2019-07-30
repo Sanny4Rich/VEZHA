@@ -19,19 +19,28 @@
                                                 <div></div>
                                             </div>
                                             <div class="content">
-                                                {% if service.serviceTranslations is not empty %}
-                                                    {% for trans in service.serviceTranslations %}
-                                                        {%if trans.language == loc %}
-                                                            <h3 class="news-title">{{ trans.name }}</h3>
-                                                        {% else %}
-                                                            <h3 class="news-title">{{ service.name }}</h3>
+                                {% if service.serviceTranslations is not empty %}
+                                                    {% set t = 0 %}
+                                    {% for trans in service.serviceTranslations %}
+                                                        {% if t == 0 %}
+                                                            {%if trans.language == loc  %}
+                                                                <h3 class="news-title">{{ trans.name }}</h3>
+                                                                {% set t = 1 %}
+                                                            {% endif %}
                                                         {% endif %}
                                                     {% endfor %}
+                                                    {% if t == 0 %}
+                                                        <h3 class="news-title">{{ service.name }}</h3>
+                                                    {% endif %}
                                                 {% else %}
                                                     <h3 class="news-title">{{ service.name }}</h3>
                                                 {% endif %}
                                             </div>
-                                            <a class="read-more" href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">Детальніше</a>
+                                            {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                                <a class="read-more" href="{{ path('service', {'_locale': app.request.locale, 'url': service.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                            {% else %}
+                                                <a class="read-more" href="{{ path('services_nolocale', { 'url': service.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>

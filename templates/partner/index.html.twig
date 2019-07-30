@@ -9,16 +9,19 @@
             <div class="row">
                 <div class="col-md-10 col-lg-6 col-md-offset-1 col-lg-offset-2">
                     {% if partner.partnersTranslations is not empty %}
-                    {% for trans in partner.partnersTranslations %}
-                        {% if trans.language == lang and trans.name is not empty %}
-                            <h1 class="display-1">{{ trans.name }}</h1>
-                        {% else %}
+                        {% set t = 0 %}
+                    {% if trans.language == lang and trans.name is not empty %}
+                            {% if t == 0 %}
+                                {%if trans.language == loc  %}
+                                    <h1 class="display-1">{{ trans.name }}</h1>                                    {% set t = 1 %}
+                                {% endif %}
+                            {% endif %}
+                        {% endfor %}
+                        {% if t == 0 %}
                             <h1 class="display-1">{{ partner.name }}</h1>
                         {% endif %}
-                    {% endfor %}
-                        {% else %}
-                    <div class="title-info">{{ partner.name }}</div>
-                    <h1 class="display-1">{{ partner.name }}</h1>
+                    {% else %}
+                        <div class="title-info">{{ partner.name }}</div>
                     {% endif %}
                 </div>
             </div>
@@ -32,21 +35,19 @@
                         <div class="row">
                             <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
                                 {% if partner.partnersTranslations is not empty %}
-                                    {% for trans in partner.partnersTranslations %}
-                                        {% if trans.language == lang and trans.shortDescription is not empty %}
-                                            <h3 class="entry-description">{{ trans.shortDescription }}</h3>
-                                        {% else %}
-                                            <h3 class="entry-description">{{ partner.shortDescription }}</h3>
-                                        {% endif %}
-                                        {% if trans.language == lang and trans.description is not empty %}
-                                            {{ trans.description|raw }}
-                                        {% else %}
-                                            {{ partner.description|raw }}
-                                        {% endif %}
-                                    {% endfor %}
+                                {% set t = 0 %}
+                                {% if trans.language == lang and trans.name is not empty %}
+                                {% if t == 0 %}
+                                    {%if trans.language == loc  %}
+                                        <h3 class="entry-description">{{ trans.shortDescription }}</h3>
+                                    {% endif %}
+                                {% endif %}
+                                {% endfor %}
+                                {% if t == 0 %}
+                                    <h3 class="entry-description">{{ partner.shortDescription }}</h3>
+                                {% endif %}
                                 {% else %}
                                     <h3 class="entry-description">{{ partner.shortDescription }}</h3>
-                                    {{ partner.description|raw }}
                                 {% endif %}
                             </div>
                         </div>

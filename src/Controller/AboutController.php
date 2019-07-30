@@ -25,7 +25,6 @@ class AboutController extends AbstractController
             $contacts = $contactsRepository->findBy(['language'=> $this->getParameter('kernel.default_locale')]);
         $contacts = $contacts[0];
         $categories = $categoriesRepository->createQueryBuilder('c')
-            ->where('c.isOnHomePage = 1')
             ->addSelect('t')
             ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
@@ -69,7 +68,8 @@ class AboutController extends AbstractController
             $contacts = $contactsRepository->findBy(['language'=> $this->getParameter('kernel.default_locale')]);
         $contacts = $contacts[0];
         $categories = $categoriesRepository->createQueryBuilder('c')
-            ->where('c.isOnHomePage IS NOT NULL')
+            ->addSelect('t')
+            ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()
             ->getResult();
         $feedback = new Feedback();

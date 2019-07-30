@@ -121,7 +121,7 @@ class Products
     private $updatedAtTop;
 
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Categories", mappedBy="prodInPrimCat")
+     * @ORM\ManyToOne(targetEntity="App\Entity\Categories")
      */
     private $primaryCategory;
 
@@ -400,34 +400,16 @@ class Products
         return $this->updatedAtTop;
     }
 
-    /**
-     * @return Collection|Categories[]
-     */
-    public function getPrimaryCategory(): Collection
+    public function getPrimaryCategory(): ?Categories
     {
         return $this->primaryCategory;
     }
 
-    public function addPrimaryCategory(Categories $primaryCategory): self
+    public function setPrimaryCategory(?Categories $primaryCategory): self
     {
-        if (!$this->primaryCategory->contains($primaryCategory)) {
-            $this->primaryCategory[] = $primaryCategory;
-            $primaryCategory->setProdInPrimCat($this);
-        }
+        $this->primaryCategory = $primaryCategory;
 
         return $this;
     }
 
-    public function removePrimaryCategory(Categories $primaryCategory): self
-    {
-        if ($this->primaryCategory->contains($primaryCategory)) {
-            $this->primaryCategory->removeElement($primaryCategory);
-            // set the owning side to null (unless already changed)
-            if ($primaryCategory->getProdInPrimCat() === $this) {
-                $primaryCategory->setProdInPrimCat(null);
-            }
-        }
-
-        return $this;
-    }
 }

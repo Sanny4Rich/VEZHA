@@ -19,14 +19,19 @@
                                    class="project-hover-2">
                                     <i class="icon-plus"></i>
                                     <div class="project-hover-content">
-                                        {% if product.productsTranslations is not empty %}
+                                        {% if product.productsTranslations is not empty  %}
+                                            {% set t = 0 %}
                                             {% for trans in product.productsTranslations %}
-                                                {% if trans.language == loc %}
-                                                    <h3 class="project-title">{{ trans.name|replace({' ':'<br>'})|raw }}</h3>
-                                                {% else %}
-                                                    <h3 class="project-title">{{ product.name|replace({' ':'<br>'})|raw }}</h3>
+                                                {% if t == 0 %}
+                                                    {%if trans.language == loc  %}
+                                                        <h3 class="project-title">{{ trans.name|replace({' ':'<br>'})|raw }}</h3>
+                                                        {% set t = 1 %}
+                                                    {% endif %}
                                                 {% endif %}
                                             {% endfor %}
+                                            {% if t == 0 %}
+                                                <h3 class="project-title">{{ product.name|replace({' ':'<br>'})|raw }}</h3>
+                                            {% endif %}
                                         {% else %}
                                             <h3 class="project-title">{{ product.name|replace({' ':'<br>'})|raw }}</h3>
                                         {% endif %}

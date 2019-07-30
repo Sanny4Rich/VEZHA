@@ -21,8 +21,14 @@
         {% else %}
             <div class="container"><h1>{{ cat.name }}</h1>
         {% endif %}
+                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
                 <div><p><a href="{{ path('categories', {'_locale': loc}) }}">{% trans %}Всі категорії{% endtrans %}</a></p></div>
                 <div>
+                {% else %}
+                    <div><p><a href="{{ path('categories_nolocale') }}">{% trans %}Всі категорії{% endtrans %}</a></p></div>
+                    <div>
+                {% endif %}
+
         <div class="projects">
             <div class="container">
                 <div class="grid-items js-isotope js-grid-items">
@@ -70,7 +76,11 @@
                                         <p class="news-description">{{ category.shortDescription }}</p>
                                     {% endif %}
                                 </div>
-                                <a class="read-more" href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                    <a class="read-more" href="{{ path('category', {'_locale': app.request.locale, 'url': category.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                {% else %}
+                                    <a class="read-more" href="{{ path('category_nolocale', { 'url': category.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                {% endif %}
                             </div>
                         </div>
                     </div>

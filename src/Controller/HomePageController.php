@@ -45,7 +45,6 @@ class HomePageController extends AbstractController
             ->getResult();
 
         $categories = $categoriesRepository->createQueryBuilder('c')
-            ->where('c.isOnHomePage = 1')
             ->addSelect('t')
             ->leftJoin('c.categoriesTranslations', 't')
             ->getQuery()

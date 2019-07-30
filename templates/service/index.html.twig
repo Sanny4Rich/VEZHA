@@ -64,22 +64,28 @@
                     </div>
                     <div class="col-md-9">
                         {% if service.serviceTranslations is not empty %}
+                        {% set t = 0 %}
                             {% for trans in service.serviceTranslations %}
-                                {% if trans.language == loc %}
-                                    <div class="text-display-1"><p><strong class="text-dark">{{ trans.name }}</strong><br>
-                                        {{ trans.description|raw }}
-                                    </div>
-                                {% else %}
-                                <div class="text-display-1"><p><strong class="text-dark">{{ service.name }}</strong><br>
-                                    {{ service.description|raw }}
-                                </div>
-                                {% endif %}
-                            {% endfor %}
-                        {% else %}
+                        {% if t == 0 %}
+                            {%if trans.language == loc  %}
                                 <div class="text-display-1"><p><strong class="text-dark">{{ trans.name }}</strong><br>
-                                    {{ trans.description|raw }}
-                                </div>
+                                        {{ trans.description|raw }}
+                                </div>                                  {% set t = 1 %}
+                            {% endif %}
                         {% endif %}
+                        {% endfor %}
+                        {% if t == 0 %}
+                            <div class="text-display-1"><p><strong class="text-dark">{{ service.name }}</strong><br>
+                                    {{ service.description|raw }}
+                            </div>
+                        {% endif %}
+                        {% else %}
+                            <div class="text-display-1"><p><strong class="text-dark">{{ service.name }}</strong><br>
+                                    {{ service.description|raw }}
+                            </div>
+                        {% endif %}
+
+
                     </div>
                 </div>
             </div>

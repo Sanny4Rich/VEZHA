@@ -4,8 +4,17 @@
 
 {% block body %}
     {% set loc = app.request.get('_locale') %}
+    {{ dump(product.primaryCategory) }}
     <main class="page-header-2">
-        <div class="container" style="padding-top: 4rem">
+        <div class="container"style="padding-top: 4rem">
+            {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+            <a href="{{ path('categories', {'_locale': loc}) }}">{% trans %}Всі категорії{% endtrans %}/.../</a>
+                <a href="{{ path('category',{'_locale':loc, 'url': product.primaryCategory.url }) }}">{{ product.primaryCategory.name }}</a>
+            {% else %}
+                <a href="{{ path('categories_nolocale') }}">{% trans %}Всі категорії{% endtrans %}/</a>
+            {% endif %}
+        </div>
+        <div class="container" >
             <div class="row">
                 <div class="col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
                     <div class="title-info"></div>
@@ -162,7 +171,11 @@
                                         <p class="news-description">{{ prod.shortDescription }}</p>
                                     {% endif %}
                                 </div>
-                                <a class="read-more" href="{{ path('product', {'_locale': app.request.locale, 'url': prod.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                {% if app.request.get('_locale') in '/'~app.request.requestUri %}
+                                    <a class="read-more" href="{{ path('product', {'_locale': app.request.locale, 'url': prod.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                {% else %}
+                                    <a class="read-more" href="{{ path('product_nolocale', { 'url': prod.url}) }}">{% trans %}Детальніше{% endtrans %}</a>
+                                {% endif %}
                             </div>
                         </div>
                         {% endif %}
